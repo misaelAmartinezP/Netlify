@@ -4,7 +4,11 @@ body {
     font-family: sans-serif;
     background-image:url(imagen-inicio.jpg);
     background-position:center center;
+    height: 1800px;
     background-attachment:fixed;
     background-size: cover;
     
+}
+.botonInicio {
+    background:url(alhel.jpg);
 }
