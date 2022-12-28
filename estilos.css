@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-image:url(imagen-inicio.jpg);
+    background-image:url(alhel.png);
     background-position:center center;
     height: 1800px;
     background-attachment:fixed;
@@ -10,10 +10,5 @@ body {
     
 }
 .botonInicio {
-    background-image: url(alhel.png);
-    border: none;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 60px;
+
 }
