@@ -26,3 +26,9 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+
+.drag-area.active {
+    background-color: #b8d4fe;
+    color: black;
+    border: 2px dashed #618ac9;
+    }
