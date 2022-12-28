@@ -1,13 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background-image:url(alhel.png);
-    background-position:center center;
-    height: 1800px;
-    background-attachment:fixed;
+    background: url(imagen-inicio.jpg);
     background-size: cover;
-    
+    background-position: center;
+    font-family: sans-serif;
 }
 h1 {
 
