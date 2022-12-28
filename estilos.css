@@ -1,8 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(imagen-inicio.jpg);
-    background-size: cover;
-    background-position: center;
     font-family: sans-serif;
+}
+
+fondo {
+    background-image:url(imagen-inicio.jpg);
+    background-position:center center;
+    height: 1800px;
+    background-attachment:fixed;
+    background-size: cover;
+    
 }
