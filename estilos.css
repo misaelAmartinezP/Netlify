@@ -10,9 +10,12 @@ body {
     
 }
 .botonInicio {
-    background-image:url(alhel.jpg);
+    background-image:url(alhel.png);
     background-position: center  center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding:50px;
+    padding:60px;
+    border-radius:0;
+    margin-left: auto;
+    margin-right: auto;
 }
