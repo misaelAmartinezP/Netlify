@@ -10,5 +10,8 @@ body {
     
 }
 .botonInicio {
-    background:url(alhel.jpg);
+    background-image:url(alhel.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
