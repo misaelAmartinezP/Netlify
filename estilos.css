@@ -15,5 +15,5 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding:60px;
-
+    float: none;
 }
