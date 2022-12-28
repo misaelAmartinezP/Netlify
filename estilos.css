@@ -10,7 +10,9 @@ body {
     justify-content: center;
     min-height: 100vh;
     text-align: center;
-    background: url(alhel.png)
+    background: url(alhel.png);
+    background-size: cover;
+    background-position: center;
 }
 
 .drag-area {
