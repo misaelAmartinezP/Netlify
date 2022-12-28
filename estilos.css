@@ -5,6 +5,8 @@ body {
     background-size: cover;
     background-position: center center;
     font-family: sans-serif;
+    height: 1800px;
+    background-attachment: fixed;
 }
 h1 {
 
