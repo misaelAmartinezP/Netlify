@@ -12,7 +12,7 @@ body {
     text-align: center;
     background: url(alhel.png);
     background-size: cover;
-    background-position: center;
+    background-position: center center;
 }
 
 .drag-area {
