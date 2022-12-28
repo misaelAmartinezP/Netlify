@@ -4,6 +4,6 @@ const button = dropArea.querySelector('button');
 const input = dropArea.querySelector('#input-file');
 
 
-button.addEventListener('click', e => {
+button.addEventListener('click', (e) => {
     input.click();
 });
