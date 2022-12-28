@@ -1,14 +1,23 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    text-align:center;
-    background: url(alhel.png);
-    background-size: cover;
-    background-position: center center;
-    font-family: sans-serif;
-    height: 400px;
-    background-attachment: fixed;
+    box-sizing: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-h1 {
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.drag-area {
+    border: 5px dashed #ddd;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
