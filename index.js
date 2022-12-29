@@ -48,7 +48,7 @@ function showFiles(files) {
 
 function processFile(file) {
     const docType = file.type;
-    const validExtensions = (".pdf");
+    const validExtensions = /(.pdf)$/i;
 
     if (validExtensions.includes(docType)) {
         //archivo valido
