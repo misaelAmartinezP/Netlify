@@ -53,6 +53,6 @@ function processFile(file) {
     if (validExtensions.includes(docType)) {
         //archivo valido
     } else {
-        alert('Archivo no valido');
+        alert('El archivo tiene que ser un pdf');
     }
 }
