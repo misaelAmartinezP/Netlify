@@ -29,6 +29,8 @@ dropArea.addEventListener("dragleave", (e) => {
 
 dropArea.addEventListener("drop", (e) => {
     e.preventDefault();
+    files = e.dataTransfer.files;
+    showFiles(files)
     dropArea.classList.remove("active");
     dragText.textContent = "Arrastra y suelta archivo"
 });
@@ -46,7 +48,7 @@ function showFiles(files) {
 
 function processFile(file) {
     const docType = file.type;
-    const validExtensions = "application/pdf";
+    const validExtensions = ("application/pdf");
 
     if (validExtensions.includes(docType)) {
         //archivo valido
