@@ -1,4 +1,4 @@
- {
+* {
     margin: 0;
     padding: 0;
     box-sizing: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -44,6 +44,18 @@ body {
     font-weight: 500;
     color: #000;
     }
+
+.drop-area button{
+    padding:10px 25px;
+    font-size: 20px;
+    border:0;
+    outline: none;
+    background-color: #5256ad;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20 px; 
+}
 
 .file-container {
     display: flex;
