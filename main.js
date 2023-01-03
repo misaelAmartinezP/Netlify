@@ -3,6 +3,8 @@ const dragText = dropArea.querySelector('h2');
 const button = dropArea.querySelector('button');
 const input = dropArea.querySelector('#input-file');
 
+import * as fs from "fs";
+
 
 button.addEventListener('click', (e) => {
     input.click();
@@ -64,3 +66,15 @@ function readImage(file) {
     });
     reader.readAsDataURL(file);
 }
+const wordsApi = new WordsApi("####-####-####-####-####", "##################");
+
+const doc = fs.createReadStream("CSF_ACO9911198U0_16032022.pdf");
+const request = new model.ConvertDocumentRequest({
+    document: doc,
+    format: "pdf"
+});
+
+const convert = wordsApi.convertDocument(request)
+    .then((convertDocumentResult) => {
+        console.log("Result of ConvertDocument: ", convertDocumentResult);
+    });

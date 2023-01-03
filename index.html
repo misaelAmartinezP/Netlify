@@ -12,6 +12,32 @@
         <input type="file" name="" id="input-file" hidden multiple />
     </div>
     <div id="preview"></div>
+    <div>
+        <div class="rowLine"></div>
+        <div id="code" class="codeblock">
+            <div class="highlight">
+                <pre class="codeBox"><code id="snippet" class="node hljs">import * as fs from "fs";
+
+const wordsApi = new WordsApi("####-####-####-####-####", "##################");
+
+const doc = fs.createReadStream("Input.pdf");
+const request = new model.ConvertDocumentRequest({
+    document: doc,
+    format: "html"
+});
+
+const convert = wordsApi.convertDocument(request)
+.then((convertDocumentResult) => {
+    console.log("Result of ConvertDocument: ", convertDocumentResult);
+});</code></pre>
+                <div class="row run-code-button only-in-mobile-flex only-in-small-desktop-flex">
+                    <div class="col action">
+                        <a class="actionButton disabled" id="runCodeButtonMobile" type="button" onclick="runCode()">Ejecutar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html> 
