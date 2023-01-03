@@ -1,13 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <body>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.entry.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.worker.min.js"></script>
     <input type="file" id="file-id" name="file_name" onchange="ExtractText();">
-
-
-    <!-- a container for the output -->
+    <!-- a container for the output --> 
     <div id="output"></div>
 
     <script>
@@ -43,22 +41,18 @@
         }
 
         function getPageText(pageNum, PDFDocumentInstance) {
-            // Return a Promise that is solved once the text of the page is retrieven
             return new Promise(function (resolve, reject) {
                 PDFDocumentInstance.getPage(pageNum).then(function (pdfPage) {
-                    // The main trick to obtain the text of the PDF page, use the getTextContent method
                     pdfPage.getTextContent().then(function (textContent) {
                         var textItems = textContent.items;
                         var finalString = "";
 
-                        // Concatenate the string of the item to the final string
                         for (var i = 0; i < textItems.length; i++) {
                             var item = textItems[i];
 
                             finalString += item.str + " ";
                         }
 
-                        // Solve promise with the text retrieven from the page
                         resolve(finalString);
                     });
                 });
@@ -70,22 +64,16 @@
             PDFJS.getDocument(pdfAsArray).then(function (pdf) {
 
                 var pdfDocument = pdf;
-                // Create an array that will contain our promises
                 var pagesPromises = [];
 
                 for (var i = 0; i < pdf.pdfInfo.numPages; i++) {
-                    // Required to prevent that i is always the total of pages
                     (function (pageNumber) {
-                        // Store the promise of getPageText that returns the text of a page
                         pagesPromises.push(getPageText(pageNumber, pdfDocument));
                     })(i + 1);
                 }
 
-                // Execute all the promises
                 Promise.all(pagesPromises).then(function (pagesText) {
 
-                    // Display text of all the pages in the console
-                    // e.g ["Text content page 1", "Text content page 2", "Text content page 3" ... ]
                     console.log(pagesText); // representing every single page of PDF Document by array indexing
                     console.log(pagesText.length);
                     var outputStr = "";
@@ -100,9 +88,6 @@
 
                     }
 
-
-
-
                 });
 
             }, function (reason) {
@@ -113,5 +98,4 @@
 
     </script>
 </body>
-
 </html>
