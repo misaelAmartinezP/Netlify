@@ -8,15 +8,10 @@
     <div class="drop-area">
         <h2> Arrastras y suelta el archivo</h2>
         <span>O</span>
-        <button>Selecciona los archivos</button>
+        <button class="actionButton disabled" id="runCodeButtonMobile" type="button" onclick="runCode()"> Ejecutar </button>
         <input type="file" name="" id="input-file" hidden multiple />
     </div>
     <div id="preview"></div>
-    <div class="row run-code-button only-in-mobile-flex only-in-small-desktop-flex">
-        <div class="col action">
-            <a class="actionButton disabled" id="runCodeButtonMobile" type="button" onclick="runCode()">Ejecutar c&#xF3;digo</a>
-        </div>
-    </div>
     <script src="main.js"></script>
 </body>
 </html> 
