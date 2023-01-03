@@ -64,22 +64,3 @@ function readImage(file) {
     });
     reader.readAsDataURL(file);
 }
-
-function leerArch(evento) {
-    let archivo = evento.target.files[0];
-
-    if (archivo) {
-        let reader = new FileReader();
-
-        reader.onload = function (e) {
-            let contenico = e.target.result;
-            document.getElementById('contenido').innerText = contenido;
-        };
-        reader.readAsText(archivo);
-    } else {
-        document.getElementById('mensajes').innerText = 'no se ha seleccioando ningun archivo'
-    }
-    window.addEventListener('load', () => {
-        document.getElementById('file').addEventListener('change', leerArch)
-    })
-}
