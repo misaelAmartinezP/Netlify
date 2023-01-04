@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <body>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.entry.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.worker.min.js"></script>
     
+    <button>Selecciona el archivo</button>
     <input type="file" id="file-id" name="file_name"  accept="application/pdf" onchange="ExtractText();">
     <!-- a container for the output --> 
     <div id="output"></div> 
