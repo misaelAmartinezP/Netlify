@@ -79,9 +79,9 @@ function pdfAsArray(pdfAsArray) {
             for (var pageNum = 0; pageNum < pagesText.length; pageNum++) {
                 console.log(pagesText[pageNum]);
                 outputStr = "";
-                //outputStr = "<br/><br/>Page " + (pageNum + 1) + " contents <br/> <br/>";
+                outputStr = "<br/><br/>Page " + (pageNum + 1) + " contents <br/> <br/>";
 
-                var div = document.getElementById('output');
+                //var div = document.getElementById('output');
 
                 div.innerHTML += (outputStr + pagesText[pageNum]);
 
