@@ -1,7 +1,5 @@
 body {
-    display: flex;
     min-height: 100vh;
-    text-align: center;
     background: url(alhel.png);
     background-size: cover;
     background-position: center;
