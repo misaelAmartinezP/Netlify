@@ -9,15 +9,3 @@ body {
     background-position: center;
     background-position: center center;
 }
-
-button {
-    padding: 10px 25px;
-    font-size: 20px;
-    border: 0;
-    outline: none;
-    background-color: #5256ad;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 20 px;
-}
