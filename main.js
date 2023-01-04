@@ -43,8 +43,6 @@ function getPageText(pageNum, PDFDocumentInstance) {
                     var item = textItems[i];
 
                     finalString += item.str + " "; //separador
-                    if (item = 20)
-                        console.log("primer dato")
                 }
 
                 // Solve promise with the text retrieven from the page
@@ -81,7 +79,7 @@ function pdfAsArray(pdfAsArray) {
             for (var pageNum = 0; pageNum < pagesText.length; pageNum++) {
                 console.log(pagesText[pageNum]);
                 outputStr = "";
-                outputStr = "<br/><br/>Page " + (pageNum + 1) + " contents <br/> <br/>";
+                //outputStr = "<br/><br/>Page " + (pageNum + 1) + " contents <br/> <br/>";
 
                 var div = document.getElementById('output');
 
