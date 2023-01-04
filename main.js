@@ -43,6 +43,8 @@ function getPageText(pageNum, PDFDocumentInstance) {
                     var item = textItems[i];
 
                     finalString += item.str + " "; //separador
+
+                    console.log(textItems)
                 }
 
                 // Solve promise with the text retrieven from the page
