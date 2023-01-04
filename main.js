@@ -42,7 +42,7 @@ function getPageText(pageNum, PDFDocumentInstance) {
                 for (var i = 0; i < textItems.length; i++) {
                     var item = textItems[i];
 
-                    finalString += item.str + " ";
+                    finalString += item.str + " holaaa 132";
                 }
 
                 // Solve promise with the text retrieven from the page
