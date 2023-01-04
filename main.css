@@ -5,3 +5,10 @@ body {
     background-position: center;
     background-position: center ;
 }
+
+file-id {
+    flex: 7;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    padding: 5px;
+}
