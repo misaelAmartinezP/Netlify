@@ -81,12 +81,9 @@ function pdfAsArray(pdfAsArray) {
                 outputStr = "";
                 outputStr = "<br/><br/>Page " + (pageNum + 1) + " contents <br/> <br/>";
 
-                if (pageNum = 0) {
-                    var div = document.getElementById('output');
-                    div.innerHTML += (outputStr + pagesText[pageNum]);
-                }
+                var div = document.getElementById('output');
 
-               
+                div.innerHTML += (outputStr + pagesText[pageNum]);
 
             }
         });
