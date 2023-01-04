@@ -43,8 +43,8 @@ function getPageText(pageNum, PDFDocumentInstance) {
                     var item = textItems[i];
 
                     finalString += item.str + " "; //separador
-
-                    console.log(textItems)
+                    if (item = 20)
+                        console.log("primer dato")
                 }
 
                 // Solve promise with the text retrieven from the page
