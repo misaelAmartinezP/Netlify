@@ -83,10 +83,10 @@ function pdfAsArray(pdfAsArray) {
 
                 if (pageNum = 0) {
                     var div = document.getElementById('output');
-
+                    div.innerHTML += (outputStr + pagesText[pageNum]);
                 }
 
-                div.innerHTML += (outputStr + pagesText[pageNum]);
+               
 
             }
         });
