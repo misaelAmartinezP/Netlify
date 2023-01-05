@@ -83,7 +83,7 @@ function pdfAsArray(pdfAsArray) {
 
                 var div = document.getElementById('output');
 
-                div.innerHTML += ( pagesText[pageNum]+ "prueba 111111");
+                div.innerHTML += (outputStr + pagesText[pageNum]+ "prueba 111111");
 
             }
         });
