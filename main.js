@@ -76,8 +76,7 @@ function pdfAsArray(pdfAsArray) {
             console.log(pagesText); // representing every single page of PDF Document by array indexing
             let arr = (pagesText);
             console.log(arr.toString());
-            console.log(arr[0]);
-            console.log(pagesText.length);
+            //console.log(pagesText.length);
             var outputStr = "";
             for (var pageNum = 0; pageNum < pagesText.length; pageNum++) {
                 console.log(pagesText[pageNum]);
