@@ -74,6 +74,8 @@ function pdfAsArray(pdfAsArray) {
             // Display text of all the pages in the console
             // e.g ["Text content page 1", "Text content page 2", "Text content page 3" ... ]
             console.log(pagesText); // representing every single page of PDF Document by array indexing
+            let arr = pagesText.split('');
+            console.log(arr[0]);
             console.log(pagesText.length);
             var outputStr = "";
             for (var pageNum = 0; pageNum < pagesText.length; pageNum++) {
@@ -83,7 +85,6 @@ function pdfAsArray(pdfAsArray) {
                 var div = document.getElementById('output');
 
                 //div.innerHTML += (outputStr + pagesText[pageNum]);//esta linea de codigo se encarga de imprimir el contenido del archivo 
-                div.innerHTML
             }
         });
 
