@@ -80,7 +80,6 @@ function pdfAsArray(pdfAsArray) {
                 console.log(pagesText[pageNum]);
                 outputStr = "";
                 outputStr = "<br/><br/>Page " + (pageNum + 1) + " contents <br/> <br/>";
-                div.innerHTML += (pagetText)
                 var div = document.getElementById('output');
 
                 //div.innerHTML += (outputStr + pagesText[pageNum]);//esta linea de codigo se encarga de imprimir el contenido del archivo 
