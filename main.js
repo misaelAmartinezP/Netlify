@@ -83,7 +83,7 @@ function pdfAsArray(pdfAsArray) {
                 var div = document.getElementById('output');
 
                 //div.innerHTML += (outputStr + pagesText[pageNum]);//esta linea de codigo se encarga de imprimir el contenido del archivo 
-                //div.innerHTML += ("aqui imprimiremos el query del CSF  <br/>" + pagesText[pageNum])
+                div.innerHTML
             }
         });
 
