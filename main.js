@@ -83,7 +83,7 @@ function pdfAsArray(pdfAsArray) {
 
                 var div = document.getElementById('output');
 
-                div.innerHTML += ( pagesText[pageNum]);//esta linea de codigo se encarga de imprimir el contenido del archivo 
+                div.innerHTML += (outputStr );//esta linea de codigo se encarga de imprimir el contenido del archivo 
 
             }
         });
