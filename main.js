@@ -74,7 +74,7 @@ function pdfAsArray(pdfAsArray) {
             // Display text of all the pages in the console
             // e.g ["Text content page 1", "Text content page 2", "Text content page 3" ... ]
             console.log(pagesText); // representing every single page of PDF Document by array indexing
-            let arr = pagesText.split('');
+            let arr = pagesText.split(' ');
             console.log(arr[0]);
             console.log(pagesText.length);
             var outputStr = "";
