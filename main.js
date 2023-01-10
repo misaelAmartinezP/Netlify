@@ -76,7 +76,7 @@ function pdfAsArray(pdfAsArray) {
             const found = (arr.find=="RFC")
             console.log(found)
             //console.log(pagesText.length);
-            var outputStr = strPdf;
+            var outputStr = "strPdf";
             for (var pageNum = 0; pageNum < pagesText.length; pageNum++) {
                 console.log(pagesText[pageNum]);
                 outputStr = "";
