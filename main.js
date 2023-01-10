@@ -72,7 +72,7 @@ function pdfAsArray(pdfAsArray) {
         Promise.all(pagesPromises).then(function (pagesText) {
 
             let arr = (pagesText);
-            srtPdf = (arr.toString());
+            strPdf = (arr.toString());
             const found = (arr.find=="RFC")
             console.log(found)
             //console.log(pagesText.length);
