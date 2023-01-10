@@ -71,17 +71,12 @@ function pdfAsArray(pdfAsArray) {
         // Execute all the promises
         Promise.all(pagesPromises).then(function (pagesText) {
 
-            // Display text of all the pages in the console
-            // e.g ["Text content page 1", "Text content page 2", "Text content page 3" ... ]
-            //console.log(pagesText); // representing every single page of PDF Document by array indexing
             let arr = (pagesText);
             srtPdf = (arr.toString());
             const found = (arr.find=="RFC")
             console.log(found)
-            //console.log(srtPdf + "soy srtPdf");
-
             //console.log(pagesText.length);
-            var outputStr = "";
+            var outputStr = strPdf;
             for (var pageNum = 0; pageNum < pagesText.length; pageNum++) {
                 console.log(pagesText[pageNum]);
                 outputStr = "";
