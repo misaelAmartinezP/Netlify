@@ -4,14 +4,14 @@
     <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
-    <div id="drop_zone" ondrop="dropHandler(event);">
-        <p>Drag one or more files to this <i>drop zone</i>.</p>
-    </div>
-    <div id="drop_zone"
-         ondrop="dropHandler(event);"
-         ondragover="dragOverHandler(event);">
-        <p>Drag one or more files to this <i>drop zone</i>.</p>
-    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.entry.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.worker.min.js"></script>
+   
+    <input type="file" typeof="hidden" id="file-id" name="file_name"  accept="application/pdf" onchange="ExtractText();">
+    <!-- a container for the output --> 
+    <div id="output"></div> 
     <script src="main.js"></script>
 </body>
 </html>
