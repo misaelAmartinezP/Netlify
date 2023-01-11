@@ -103,7 +103,10 @@ function parceoDatos(string) {
 }
 
 function extraeRFC(string) {
-    console.log("funcion extraeRFC")
-    console.log(string)
-
+    var expresion = /FISCAL/;
+    var index = string.search(expresion);
+    console.log(index)
+    //console.log("funcion extraeRFC")
+    //console.log(string)
+    
 }
