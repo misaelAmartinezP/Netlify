@@ -16,7 +16,7 @@
         btnUpload.addEventListener("click", () => {
             const formData = new FormData();
 
-            formData.append("pdfFile", inpFile.files[1]);
+            formData.append("pdfFile", inpFile.files[0]);
 
             fetch("/extract-text", {
                 method: "post",
