@@ -103,7 +103,7 @@ function parceoDatos(string) {
 }
 
 function extraeRFC(string) {
-    arrInfo = objet.values(string)
+    arrInfo = Object.values(string)
     console.log(arrInfo);
     console.log(typeof arrInfo);
     var expresionRFC = "FISCAL";
