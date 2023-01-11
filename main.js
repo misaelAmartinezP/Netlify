@@ -78,6 +78,7 @@ function pdfAsArray(pdfAsArray) {
             srtPdf = (arr.toString());
             //console.log(srtPdf);
             parceoDatos(srtPdf);
+            div.innerHTML += (parceoDatos);
             //console.log(pagesText.length);
             var outputStr = "";
             for (var pageNum = 0; pageNum < pagesText.length; pageNum++) {
@@ -113,7 +114,6 @@ function extraeRFC(string) {
     if (indexRFC == "11") {
         console.log("obtiene RFC")
         console.log(arrInfo[13]);
-        div.innerHTML += arrInfo[13];
     }
 
     //console.log("funcion extraeRFC")
