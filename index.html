@@ -1,33 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-    <input type="file" id="btnUpload" />
-    <br />
-    <br />
-    <textarea style="width: 400px; height:150px;" id="resultText" placeholder="Contenido de la CSF"></textarea>
-    <script>
-        const inpFile = document.getElementById("inpFile");
-        const btnUpload = document.getElementById("btnUpload");
-        const resultText = document.getElementById("resultText");
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.entry.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.worker.min.js"></script>
 
-        btnUpload.addEventListener("click", () => {
-            const formData = new FormData();
-
-            formData.append("pdfFile", inpFile.files[0]);
-
-            fetch("/extract-text", {
-                method: "post",
-                boby: formData
-            }).then(response => {
-                return response.text();
-            }).then(extractedText => {
-                resultText.value = extractedText;
-            })
-        });
-
-    </script>
+    <input type="file" typeof="hidden" id="file-id" name="file_name" accept="application/pdf" onchange="ExtractText();">
+    <!-- a container for the output -->
+    <div id="output"></div>
+    <script src="main.js"></script>
 </body>
 </html>
