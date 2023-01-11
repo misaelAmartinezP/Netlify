@@ -107,7 +107,7 @@ function extraeRFC(string) {
     var expresionRFC1 = "Registro";
     var indexRFC = string.indexOf(expresionRFC);
     var indexRFC1 = string.indexOf(expresionRFC1);
-    if (indexRFC == '11' && indexRFC1 == '13') {
+    if (indexRFC == "11" && indexRFC1 == "13") {
         console.log("obtiene RFC")
         console.log(string[12]);
     }
