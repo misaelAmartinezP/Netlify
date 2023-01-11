@@ -104,13 +104,6 @@ function parceoDatos(string) {
 
 function extraeRFC(string) {
     arrInfo = Object.values(string)
-    console.log(arrInfo);
-    console.log(typeof arrInfo);
-    var expresionRFC = "FISCAL";
-    var expresionRFC1 = "Registro";
-    var indexRFC = string.indexOf(expresionRFC);
-    var indexRFC1 = string.indexOf(expresionRFC1);
-
     for (i = 0; i < arrInfo.length; i++) {
         if (arrInfo[i]=="RFC:") {
             console.log(arrInfo[i + 1]);
@@ -118,9 +111,20 @@ function extraeRFC(string) {
             div.innerHTML += ("<br/>" + arrInfo[i+1]);
         }
     }
-
-    //console.log("funcion extraeRFC")
-    //console.log(string)
-    
 }
 
+function extraeRaSo(string) {
+    arrInfo = Object.values(string)
+    for (i = 0; i < arrInfo.length; i++) {
+        if (arrInfo[i] == "Social:") {
+            if (arrInfo[i] != "Régimen") {
+                console.log(arrInfo[i]);
+                var div = document.getElementById('output');
+                div.innerHTML += ("<br/>" + arrInfo[i]);
+            } else {
+                break;
+            }
+                
+        }
+    }
+}
