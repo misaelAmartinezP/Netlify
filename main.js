@@ -103,6 +103,7 @@ function parceoDatos(string) {
 }
 
 function extraeRFC(string) {
+    console.log(typeof string);
     var expresionRFC = "FISCAL";
     var expresionRFC1 = "Registro";
     var indexRFC = string.indexOf(expresionRFC);
