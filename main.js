@@ -112,7 +112,7 @@ function extraeRFC(string) {
     var indexRFC1 = string.indexOf(expresionRFC1);
     if (indexRFC == "11") {
         console.log("obtiene RFC")
-        console.log(string[12]);
+        console.log(arrInfo[12]);
     }
 
     //console.log("funcion extraeRFC")
