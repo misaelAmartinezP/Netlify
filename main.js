@@ -97,6 +97,6 @@ function pdfAsArray(pdfAsArray) {
 }
 
 function parceoDatos(string) {
-    separaDatos = string.split(" ", 3);
+    separaDatos = string.split(" ");
     console.log(separaDatos);
 }
