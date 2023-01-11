@@ -112,7 +112,9 @@ function extraeRFC(string) {
     var indexRFC1 = string.indexOf(expresionRFC1);
 
     for (i = 0; i < arrInfo.length; i++) {
-        console.log(arrInfo[i]);
+        if (arrInfo[i]=="RFC") {
+            console.log(arrInfo[i+2]);
+        }
     }
 
     //console.log("funcion extraeRFC")
