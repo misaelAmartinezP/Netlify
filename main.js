@@ -1,6 +1,6 @@
-const express = requiere("express");
-const fileUpload = requiere("express-fileupload");
-const pdfParse = requiere("pdf-parse");
+const express = require("express");
+const fileUpload = require("express-fileupload");
+const pdfParse = require("pdf-parse");
 
 const app = express();
 
