@@ -122,8 +122,9 @@ function extraeRaSo(string) {
             console.log("estoy en el if inicial");
             var guardaRaSo = [];
             if (arrInfo[i] != "Régimen") {
-                console.log(arrInfo[i]);
-                guardaRaSo.push(arrInfo[i]);
+                console.log("segunda condicion donde guardamos el nombre de razon social");
+                console.log(arrInfo[i+1]);
+                guardaRaSo.push(arrInfo[i+1]);
             } else {
                 break;
             }
