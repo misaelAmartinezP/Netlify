@@ -100,6 +100,7 @@ function parceoDatos(string) {
     separaDatos = string.split(" ");
     //console.log(separaDatos);
     extraeRFC(separaDatos)
+    extraeRaSo(separaDatos)
 }
 
 function extraeRFC(string) {
