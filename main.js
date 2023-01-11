@@ -110,14 +110,13 @@ function extraeRFC(string) {
     var expresionRFC1 = "Registro";
     var indexRFC = string.indexOf(expresionRFC);
     var indexRFC1 = string.indexOf(expresionRFC1);
-    if (indexRFC == "11") {
-        console.log("obtiene RFC")
-        console.log(arrInfo[13]);
-        var div = document.getElementById('output');
-        div.innerHTML += ("<br/>"+arrInfo[13]);
+
+    arrInfo.forEach(function (RFC, index)){
+        console.log(RFC+arrInfo); 
     }
 
     //console.log("funcion extraeRFC")
     //console.log(string)
     
 }
+
