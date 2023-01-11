@@ -116,16 +116,20 @@ function extraeRFC(string) {
 
 function extraeRaSo(string) {
     arrInfo = Object.values(string)
+    console.log("estoy en la funcion extrraes razon social ")
     for (i = 0; i < arrInfo.length; i++) {
         if (arrInfo[i] == "Social:") {
+            cosole.log("estoy en el if inicial")
+            var guardaRaSo = [];
             if (arrInfo[i] != "Régimen") {
                 console.log(arrInfo[i]);
-                var div = document.getElementById('output');
-                div.innerHTML += ("<br/>" + arrInfo[i]);
+                guardaRaSo.push(arrInfo[i])
             } else {
                 break;
             }
-                
+            console.log(guardaRaSo)
+            var div = document.getElementById('output');
+            div.innerHTML += ("<br/>" + arrInfo[i]);
         }
     }
 }
