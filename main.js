@@ -78,6 +78,7 @@ function pdfAsArray(pdfAsArray) {
             srtPdf = (arr.toString());
             //console.log(srtPdf);
             parceoDatos(srtPdf);
+            var div = document.getElementById('output');
             div.innerHTML += (parceoDatos);
             //console.log(pagesText.length);
             var outputStr = "";
