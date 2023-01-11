@@ -114,7 +114,7 @@ function extraeRFC(string) {
         console.log("obtiene RFC")
         console.log(arrInfo[13]);
         var div = document.getElementById('output');
-        div.innerHTML += (arrInfo[13]);
+        div.innerHTML += ("< br /> <br />"+arrInfo[13]);
     }
 
     //console.log("funcion extraeRFC")
