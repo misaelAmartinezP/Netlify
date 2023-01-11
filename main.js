@@ -119,15 +119,15 @@ function extraeRaSo(string) {
     console.log("estoy en la funcion extrraes razon social ")
     for (i = 0; i < arrInfo.length; i++) {
         if (arrInfo[i] == "Social:") {
-            cosole.log("estoy en el if inicial")
+            cosole.log("estoy en el if inicial");
             var guardaRaSo = [];
             if (arrInfo[i] != "Régimen") {
                 console.log(arrInfo[i]);
-                guardaRaSo.push(arrInfo[i])
+                guardaRaSo.push(arrInfo[i]);
             } else {
                 break;
             }
-            console.log(guardaRaSo)
+            console.log(guardaRaSo);
             var div = document.getElementById('output');
             div.innerHTML += ("<br/>" + arrInfo[i]);
         }
