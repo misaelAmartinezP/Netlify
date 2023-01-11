@@ -22,7 +22,7 @@ const { response } = require("express");
 
             fetch("/extract-text", {
                 method: "post",
-                doby: formData
+                boby: formData
             }).then(response => {
                 return response.text();
             }).then(extractedText => {
