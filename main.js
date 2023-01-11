@@ -103,9 +103,14 @@ function parceoDatos(string) {
 }
 
 function extraeRFC(string) {
-    var expresion = "FISCAL";
-    var index = string.indexOf(expresion);
-    console.log(index);
+    var expresionRFC = "FISCAL";
+    var expresionRFC1 = "Registro";
+    var indexRFC = string.indexOf(expresionRFC);
+    var indexRFC1 = string.indexOf(expresionRFC1);
+    if (indexRFC == '11' && indexRFC1 == '13') {
+        console.log(string[12]);
+    }
+
     //console.log("funcion extraeRFC")
     //console.log(string)
     
