@@ -98,5 +98,12 @@ function pdfAsArray(pdfAsArray) {
 
 function parceoDatos(string) {
     separaDatos = string.split(" ");
-    console.log(separaDatos);
+    //console.log(separaDatos);
+    extraeRFC(separaDatos)
+}
+
+function extraeRFC(string) {
+    console.log("funcion extraeRFC")
+    console.log(string)
+
 }
