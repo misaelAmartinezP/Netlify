@@ -218,7 +218,7 @@ function extraeReg(string) {
     console.log(arrInfo.indexOf("Obligaciones:"));
     if (arrInfo.includes("Regímenes:") == true) {
         console.log("estoy en el if y soy true")
-        for (i = arrInfo.indexOf("Regímenes:") + 7 ; i <= arrInfo.indexOf("Obligaciones:") - 2; i++) {
+        for (i = arrInfo.indexOf("Regímenes:") + 8 ; i <= arrInfo.indexOf("Obligaciones:") - 2; i++) {
             console.log(arrInfo[i]);
             guardaReg.push(arrInfo[i]);
         }
