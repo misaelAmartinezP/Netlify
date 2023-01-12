@@ -138,6 +138,7 @@ function extraeNomVia(string) {
             }
             console.log(arrInfo[i]);
         }
+        console.log(guardaNomVia.reverse());
     }
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNomVia.join(' ') + "<br/>");
