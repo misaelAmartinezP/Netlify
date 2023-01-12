@@ -136,6 +136,7 @@ function extraeNomVia(string) {
             if (arrInfo[i] == "Vialidad:") {
                 break
             }
+            guardaNomVia.push(i);
             console.log(arrInfo[i]);
         }
     }
