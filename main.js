@@ -199,7 +199,7 @@ function extraeNomCol(string) {
             guardaNomCol.push(arrInfo[i]);
         }
     }
-    if (guardaNunInt.length == 0) {
+    if (guardaNomCol.length == 0) {
         console.log("SN")
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> SIN NUMERO INTERIOR <br/>");
