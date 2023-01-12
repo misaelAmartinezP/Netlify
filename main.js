@@ -123,7 +123,7 @@ function extraeRaSo(string) {
     if (arrInfo.includes("Social:") == true) {
         console.log("estoy en el if y soy true")
         for (i = 0; i <= arrInfo.length; i++) {
-            console.log(i);
+            //console.log(i);
             guardaRaSo.push(arrInfo[i]);
         }
     }
