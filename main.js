@@ -121,5 +121,5 @@ function extraeCodPos(string) {
         }
     }
     var div = document.getElementById('output');
-    div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");
+    div.innerHTML += ("<br/>" + guardaCodPos.join(' ') + "<br/>");
 }
