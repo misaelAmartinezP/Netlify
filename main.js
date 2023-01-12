@@ -137,7 +137,7 @@ function extraeNomVia(string) {
             if (arrInfo[i] == "Vialidad:") {
                 console.log("estoy en el if que tiene que igualar el el indice contra vialidad")
                 guardaNomVia.push(arrInfo[i+1]);
-            } else if (arrInfo[i] =='Número') {
+            } else if (arrInfo[i] =="Número") {
                 break
             }
             console.log(i);
