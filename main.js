@@ -125,11 +125,11 @@ function extraeRaSo(string) {
         for (i = arrInfo.indexOf("Contribuyentes")+1; i <= arrInfo.indexOf("Nombre,")-1; i++) {
             console.log(i);
             guardaRaSo.push(arrInfo[i]);
-        } else {
-            guardaRaSo.push('EL PDF NO ES UNA CONSTANCIA FISCAL');
-        }
-    }
-    
+        } 
+    } else {
+        var div = document.getElementById('output');
+        div.innerHTML += ("<br/> 'EL PDF NO ES UNA CONSTANCIA FISCAL'");
+    }    
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaRaSo.join(' '));
 }
