@@ -74,6 +74,7 @@ function parceoDatos(string) {
     extraeRFC(separaDatos)//extrae RFC
     extraeRaSo(separaDatos)//extrae razon social
     extraeCodPos(separaDatos)//extrae codigo postal
+    extraeNomVia(separaDatos)//extrae nombre de vialidad
 }
 
 function extraeRFC(string) {
@@ -122,4 +123,21 @@ function extraeCodPos(string) {
     }
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaCodPos.join(' ') + "<br/>");
+}
+
+function extraeNomVia(string) {
+    arrInfo = Object.values(string)
+    console.log("estoy en la funcion extrae razon social ")
+    var guardaNomVia = [];
+    console.log(arrInfo.indexOf("Vialidad:"));
+    console.log(arrInfo.indexOf("Número"));
+    if (arrInfo.includes("Contribuyentes") == true) {
+        console.log("estoy en el if y soy true")
+        for (i = arrInfo.indexOf("Vialidad:") + 1; i <= arrInfo.indexOf("Número") - 1; i++) {
+            console.log(i);
+            guardaNomVia.push(arrInfo[i]);
+        }
+    }
+    var div = document.getElementById('output');
+    div.innerHTML += ("<br/>" + guardaNomVia.join(' ') + "<br/>");
 }
