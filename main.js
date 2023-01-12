@@ -98,7 +98,7 @@ function pdfAsArray(pdfAsArray) {
 
 function parceoDatos(string) {
     separaDatos = string.split(" ");
-    //console.log(separaDatos);
+    console.log(separaDatos);
     extraeRFC(separaDatos)
     extraeRaSo(separaDatos)
 }
@@ -118,17 +118,13 @@ function extraeRaSo(string) {
     arrInfo = Object.values(string)
     console.log("estoy en la funcion extrraes razon social ")
     var guardaRaSo = [];
-    for (i = 0; i < arrInfo.length; i++) {
-        if (arrInfo[i] == "Social:") {
-            console.log("estoy en el if inicial");
-            if (arrInfo[i] != "Régimen") {
-                console.log("segunda condicion donde guardamos el nombre de razon social");
-                console.log(arrInfo[i+1]);
-                guardaRaSo.push(arrInfo[i + 1]);
-            } 
-            console.log(guardaRaSo);
+    console.log(arrInfo.indexOf("rason zocial"));
+    if (arrInfo.indexOf("Social:") == true) {
+        for (i = arrInfo.indexOf("Social:"); i < arrInfo.indexOf(""); i++) {
+            guardaRaSo.push(i)
         }
     }
+    
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaRaSo);
 }
