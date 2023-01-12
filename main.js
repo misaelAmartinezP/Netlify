@@ -154,8 +154,8 @@ function extraeNumExt(string) {
     if (arrInfo.includes("Exterior:") == true) {
         console.log("estoy en el if y soy true")
         for (i = arrInfo.indexOf("Exterior:")+1; i <= arrInfo.length; i++) {
-            console.log(i);
-            guardaNunExt.push(arrInfo[i] + 1);
+            console.log(arrInfo[i]);
+            guardaNunExt.push(arrInfo[i]);
             break
         }
     }
