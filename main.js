@@ -121,7 +121,7 @@ function extraeRaSo(string) {
     for (i = 0; i < arrInfo.length; i++) {
         if (arrInfo[i] == "Social:") {
             console.log("estoy en el if inicial");
-            if (arrInfo[i] == "Régimen") {
+            if (arrInfo[i] != "Régimen") {
                 console.log("segunda condicion donde guardamos el nombre de razon social");
                 console.log(arrInfo[i+1]);
                 guardaRaSo.push(arrInfo[i + 1]);
