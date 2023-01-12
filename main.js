@@ -126,6 +126,9 @@ function extraeRaSo(string) {
             console.log(i);
             guardaRaSo.push(arrInfo[i]);
         }
+        else {
+            guardaRaSo.push('EL PDF NO ES UNA CONSTANCIA FISCAL')
+        }
     }
     
     var div = document.getElementById('output');
