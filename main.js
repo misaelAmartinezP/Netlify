@@ -212,8 +212,17 @@ function extraeNomCol(string) {
 
 function extraeReg(string) {
     arrInfo = Object.values(string)
-    console.log("estoy en la funcion extrae numero interior")
+    console.log("estoy en la funcion extrae codigo postal ")
     var guardaReg = [];
     console.log(arrInfo.indexOf("Regímenes:"));
     console.log(arrInfo.indexOf("Obligaciones:"));
+    if (arrInfo.includes("Regímenes:") == true) {
+        console.log("estoy en el if y soy true")
+        for (i = arrInfo.indexOf("Regímenes:") + 7 ; i <= arrInfo.indexOf("Obligaciones:") - 2; i++) {
+            console.log(arrInfo[i]);
+            guardaReg.push(arrInfo[i]);
+        }
+    }
+    var div = document.getElementById('output');
+    div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");
 }
