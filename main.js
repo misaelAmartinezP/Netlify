@@ -82,7 +82,7 @@ function extraeRFC(string) {
         if (arrInfo[i]=="RFC:") {
             console.log(arrInfo[i + 1]);
             var div = document.getElementById('output');
-            div.innerHTML += ("<br/>" + arrInfo[i+1]);
+            div.innerHTML += ("<br/>" + arrInfo[i + 1] + "<br/>" );
         }
     }
 }
