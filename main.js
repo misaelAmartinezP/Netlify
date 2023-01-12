@@ -119,7 +119,7 @@ function extraeRaSo(string) {
     console.log("estoy en la funcion extrraes razon social ")
     var guardaRaSo = [];
     console.log(arrInfo.indexOf("Social:"));
-    if (arrInfo.includes("Social:") == true) {
+    if (arrInfo.includes("Social:") == 'true') {
         for (i = arrInfo.indexOf("Social:"); i < arrInfo.indexOf("Régimen"); i++) {
             guardaRaSo.push(arrInfo[i]);
         }
