@@ -130,10 +130,10 @@ function extraeNomVia(string) {
     console.log("estoy en la funcion extrae nombre vialidad")
     var guardaNomVia = [];
     console.log(arrInfo.indexOf("Vialidad:"));
-    console.log(arrInfo.indexOf("Número"));
+    console.log(arrInfo.indexOf("Exterior:"));
     if (arrInfo.includes("Vialidad:") == true) {
         console.log("estoy en el if y soy true")
-        for (i = arrInfo.indexOf("Vialidad:") + 1; i <= arrInfo.indexOf("Número") - 1; i++) {
+        for (i = arrInfo.indexOf("Vialidad:") + 1; i <= arrInfo.indexOf("Exterior:") - 1; i++) {
             console.log(i);
             guardaNomVia.push(arrInfo[i]);
         }
