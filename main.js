@@ -110,14 +110,14 @@ function extraeRaSo(string) {
 function extraeCodPos(string) {
     arrInfo = Object.values(string)
     console.log("estoy en la funcion extrae razon social ")
-    var guardacodPos = [];
+    var guardaCodPos = [];
     console.log(arrInfo.indexOf("Postal:"));
     console.log(arrInfo.indexOf("Tipo"));
     if (arrInfo.includes("Contribuyentes") == true) {
         console.log("estoy en el if y soy true")
         for (i = arrInfo.indexOf("Postal:") + 1; i <= arrInfo.indexOf("Tipo") - 1; i++) {
             console.log(i);
-            guardaRaSo.push(arrInfo[i]);
+            guardaCodPos.push(arrInfo[i]);
         }
     }
     var div = document.getElementById('output');
