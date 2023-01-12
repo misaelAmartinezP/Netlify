@@ -153,8 +153,8 @@ function extraeNumExt(string) {
     console.log(arrInfo.indexOf("Exterior:"));
     if (arrInfo.includes("Exterior:") == true) {
         console.log("estoy en el if y soy true")
-        for (i = arrInfo.indexOf("Exterior:"); i <= arrInfo.length; i++) {
-            console.log(i+1);
+        for (i = arrInfo.indexOf("Exterior:")+1; i <= arrInfo.length; i++) {
+            console.log(i);
             guardaNunExt.push(arrInfo[i] + 1);
             break
         }
