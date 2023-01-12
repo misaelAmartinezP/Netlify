@@ -215,5 +215,5 @@ function extraeReg(string) {
     console.log("estoy en la funcion extrae numero interior")
     var guardaReg = [];
     console.log(arrInfo.indexOf("Regímenes:"));
-    console.log(arrInfo.includes())
+    console.log(arrInfo.indexOf("Obligaciones:"));
 }
