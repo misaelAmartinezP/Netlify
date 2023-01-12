@@ -117,20 +117,18 @@ function extraeRFC(string) {
 function extraeRaSo(string) {
     arrInfo = Object.values(string)
     console.log("estoy en la funcion extrraes razon social ")
+    var guardaRaSo = [];
     for (i = 0; i < arrInfo.length; i++) {
-        var guardaRaSo = [];
         if (arrInfo[i] == "Social:") {
             console.log("estoy en el if inicial");
             if (arrInfo[i] != "Régimen") {
                 console.log("segunda condicion donde guardamos el nombre de razon social");
                 console.log(arrInfo[i+1]);
                 guardaRaSo.push(arrInfo[i + 1]);
-            } else {
-                break;
-            }
+            } 
             console.log(guardaRaSo);
-            var div = document.getElementById('output');
-            div.innerHTML += ("<br/>" + guardaRaSo);
         }
     }
+    var div = document.getElementById('output');
+    div.innerHTML += ("<br/>" + guardaRaSo);
 }
