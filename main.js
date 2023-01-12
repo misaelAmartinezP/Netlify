@@ -116,7 +116,7 @@ function extraeRFC(string) {
 
 function extraeRaSo(string) {
     arrInfo = Object.values(string)
-    console.log("estoy en la funcion extrraes razon social ")
+    console.log("estoy en la funcion extrae razon social ")
     var guardaRaSo = [];
     console.log(arrInfo.indexOf("Contribuyentes"));
     console.log(arrInfo.indexOf("Nombre,"));
@@ -131,5 +131,22 @@ function extraeRaSo(string) {
         div.innerHTML += ("<br/> 'EL PDF NO ES UNA CONSTANCIA FISCAL'");
     }    
     var div = document.getElementById('output');
-    div.innerHTML += ("<br/>" + guardaRaSo.join(' '));
+    div.innerHTML += ("<br/>" + guardaRaSo.join(' ')+"<br/>");
+}
+
+function codPos(string) {
+    arrInfo = Object.values(string)
+    console.log("estoy en la funcion extrae razon social ")
+    var guardacodPos = [];
+    console.log(arrInfo.indexOf("Postal:"));
+    console.log(arrInfo.indexOf("Tipo"));
+    if (arrInfo.includes("Contribuyentes") == true) {
+        console.log("estoy en el if y soy true")
+        for (i = arrInfo.indexOf("Postal:") + 1; i <= arrInfo.indexOf("Tipo") - 1; i++) {
+            console.log(i);
+            guardaRaSo.push(arrInfo[i]);
+        }
+    }
+    var div = document.getElementById('output');
+    div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");
 }
