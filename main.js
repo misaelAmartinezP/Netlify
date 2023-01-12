@@ -76,7 +76,8 @@ function parceoDatos(string) {
     extraeCodPos(separaDatos)//extrae codigo postal
     extraeNomVia(separaDatos)//extrae nombre de vialidad
     extraeNumExt(separaDatos)//extrae numero exterior 
-    extraeNumInt(separaDatos)//estre numero interior
+    extraeNumInt(separaDatos)//extrae numero interior
+    extraeNomCol(separaDatos) //extrae nombre de la colonia
 }
 
 function extraeRFC(string) {
@@ -183,5 +184,27 @@ function extraeNumInt(string) {
     } else {
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNunInt.join(' ') + "<br/>");
+    }
+}
+
+function extraeNomCol(string) {
+    arrInfo = Object.values(string)
+    console.log("estoy en la funcion extrae numero interior")
+    var guardaNomCol = [];
+    console.log(arrInfo.indexOf("Colonia:"));
+    if (arrInfo.includes("Colonia:") == true) {
+        console.log("estoy en el if y soy true")
+        for (i = arrInfo.indexOf("Colonia:") + 1; i <= arrInfo.indexOf("Localidad:") - 4; i++) {
+            console.log(arrInfo[i]);
+            guardaNomCol.push(arrInfo[i]);
+        }
+    }
+    if (guardaNunInt.length == 0) {
+        console.log("SN")
+        var div = document.getElementById('output');
+        div.innerHTML += ("<br/> SIN NUMERO INTERIOR <br/>");
+    } else {
+        var div = document.getElementById('output');
+        div.innerHTML += ("<br/>" + guardaNomCol.join(' ') + "<br/>");
     }
 }
