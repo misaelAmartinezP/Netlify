@@ -118,9 +118,9 @@ function extraeRaSo(string) {
     arrInfo = Object.values(string)
     console.log("estoy en la funcion extrraes razon social ")
     var guardaRaSo = [];
-    console.log(arrInfo.indexOf("rason zocial"));
+    console.log(arrInfo.indexOf("Social:"));
     if (arrInfo.indexOf("Social:") == true) {
-        for (i = arrInfo.indexOf("Social:"); i < arrInfo.indexOf(""); i++) {
+        for (i = arrInfo.indexOf("Social:"); i < arrInfo.indexOf("Régimen"); i++) {
             guardaRaSo.push(i)
         }
     }
