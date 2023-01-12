@@ -121,7 +121,7 @@ function extraeRaSo(string) {
     console.log(arrInfo.indexOf("Social:"));
     if (arrInfo.includes("Social:") == true) {
         for (i = arrInfo.indexOf("Social:"); i < arrInfo.indexOf("Régimen"); i++) {
-            guardaRaSo.push(i+1)
+            guardaRaSo.push(arrInfo[i]);
         }
     }
     
