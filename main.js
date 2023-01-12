@@ -202,7 +202,7 @@ function extraeNomCol(string) {
     if (guardaNomCol.length == 0) {
         console.log("SN")
         var div = document.getElementById('output');
-        div.innerHTML += ("<br/> SIN NUMERO INTERIOR <br/>");
+        div.innerHTML += ("<br/> SIN NOMBRE DE COLONIA <br/>");
     } else {
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNomCol.join(' ') + "<br/>");
