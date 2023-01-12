@@ -129,5 +129,5 @@ function extraeRaSo(string) {
     }
     
     var div = document.getElementById('output');
-    div.innerHTML += ("<br/>" + guardaRaSo);
+    div.innerHTML += ("<br/>" + guardaRaSo.join(' '));
 }
