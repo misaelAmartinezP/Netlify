@@ -176,6 +176,11 @@ function extraeNumInt(string) {
             guardaNunInt.push(arrInfo[i]);
         }
     }
-    var div = document.getElementById('output');
-    div.innerHTML += ("<br/>" + guardaNunInt.join(' ') + "<br/>");
+    if (guardaNunInt.length == 0) {
+        var div = document.getElementById('output');
+        div.innerHTML += ("<br/> SN <br/>");
+    } else {
+        var div = document.getElementById('output');
+        div.innerHTML += ("<br/>" + guardaNunInt.join(' ') + "<br/>");
+    }
 }
