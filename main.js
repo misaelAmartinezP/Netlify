@@ -75,6 +75,7 @@ function parceoDatos(string) {
     extraeRaSo(separaDatos)//extrae razon social
     extraeCodPos(separaDatos)//extrae codigo postal
     extraeNomVia(separaDatos)//extrae nombre de vialidad
+    extraeNumExt(separaDatos)//extrae numero exterior 
 }
 
 function extraeRFC(string) {
@@ -143,4 +144,21 @@ function extraeNomVia(string) {
     console.log(guardaNomVia.reverse());
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNomVia.join(' ') + "<br/>");
+}
+
+function extraeNumExt(string) {
+    arrInfo = Object.values(string)
+    console.log("estoy en la funcion extrae nombre vialidad")
+    var guardaNunExt = [];
+    console.log(arrInfo.indexOf("Exterior:"));
+    if (arrInfo.includes("Exterior:") == true) {
+        console.log("estoy en el if y soy true")
+        for (i = arrInfo.indexOf("Exterior:"); i <= arrInfo.length; i++) {
+            console.log(i+1);
+            guardaNunExt.push(arrInfo[i] + 1);
+            break
+        }
+    }
+    var div = document.getElementById('output');
+    div.innerHTML += ("<br/>" + guardaNunExt.join(' ') + "<br/>");
 }
