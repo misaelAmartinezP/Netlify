@@ -177,6 +177,7 @@ function extraeNumInt(string) {
         }
     }
     if (guardaNunInt.length == 0) {
+        console.log("SN")
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> SN <br/>");
     } else {
