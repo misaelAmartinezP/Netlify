@@ -149,7 +149,7 @@ function extraeNomVia(string) {
 
 function extraeNumExt(string) {
     arrInfo = Object.values(string)
-    console.log("estoy en la funcion extrae nombre vialidad")
+    console.log("estoy en la funcion extrae numero exterior")
     var guardaNunExt = [];
     console.log(arrInfo.indexOf("Exterior:"));
     if (arrInfo.includes("Exterior:") == true) {
@@ -166,7 +166,7 @@ function extraeNumExt(string) {
 
 function extraeNumInt(string) {
     arrInfo = Object.values(string)
-    console.log("estoy en la funcion extrae nombre vialidad")
+    console.log("estoy en la funcion extrae numero interior")
     var guardaNunInt = [];
     console.log(arrInfo.indexOf("Interior:"));
     if (arrInfo.includes("Interior:") == true) {
