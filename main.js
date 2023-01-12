@@ -133,9 +133,13 @@ function extraeNomVia(string) {
     console.log(arrInfo.indexOf("Exterior:"));
     if (arrInfo.includes("Vialidad:") == true) {
         console.log("estoy en el if y soy true")
-        for (i = arrInfo.indexOf("Vialidad:") + 1; i <= arrInfo.indexOf("Exterior:") - 1; i++) {
+        for (i = arrInfo.indexOf("Vialidad:") + 1; i <= arrInfo.indexOf("Exterior:") - 2; i++) {
+            if (arrInfo[i] == 'Nombre') {
+                guardaNomVia.push(arrInfo[i]);
+            } else if (arrInfo[i] =='Número') {
+                break
+            }
             console.log(i);
-            guardaNomVia.push(arrInfo[i]);
         }
     }
     var div = document.getElementById('output');
