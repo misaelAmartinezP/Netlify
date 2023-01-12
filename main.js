@@ -129,14 +129,14 @@ function extraeNomVia(string) {
     arrInfo = Object.values(string)
     console.log("estoy en la funcion extrae nombre vialidad")
     var guardaNomVia = [];
-    console.log(arrInfo.indexOf("Vialidad:"));
     console.log(arrInfo.indexOf("Exterior:"));
-    if (arrInfo.includes("Vialidad:") == true) {
+    if (arrInfo.includes("Exterior:") == true) {
         console.log("estoy en el if y soy true")
-        for (i = arrInfo.indexOf("Vialidad:") + 1; i <= arrInfo.indexOf("Exterior:") - 2; i++) {
-            switch ("Vialidad:") {
-                case arrInfo[i]:
-                    guardaNomVia.push(arrInfo[i]);
+        for (i = arrInfo.indexOf("Vialidad:"); i <= arrInfo.indexOf("Exterior:"); i++) {
+            if (arrInfo[i].includes("Exterior:" == true) {
+                for (i = arrInfo.indexOf("Exterior:"); i <= arrInfo.indexOf("Vialidad:"); i--) {
+                    console.log(i);
+                }
             }
             console.log(i);
         }
