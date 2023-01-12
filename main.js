@@ -110,7 +110,7 @@ function extraeRaSo(string) {
 
 function extraeCodPos(string) {
     arrInfo = Object.values(string)
-    console.log("estoy en la funcion extrae razon social ")
+    console.log("estoy en la funcion extrae codigo postal ")
     var guardaCodPos = [];
     console.log(arrInfo.indexOf("Postal:"));
     console.log(arrInfo.indexOf("Tipo"));
@@ -127,7 +127,7 @@ function extraeCodPos(string) {
 
 function extraeNomVia(string) {
     arrInfo = Object.values(string)
-    console.log("estoy en la funcion extrae razon social ")
+    console.log("estoy en la funcion extrae nombre vialidad")
     var guardaNomVia = [];
     console.log(arrInfo.indexOf("Vialidad:"));
     console.log(arrInfo.indexOf("Número"));
