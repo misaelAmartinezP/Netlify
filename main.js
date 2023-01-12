@@ -114,7 +114,7 @@ function extraeCodPos(string) {
     var guardaCodPos = [];
     console.log(arrInfo.indexOf("Postal:"));
     console.log(arrInfo.indexOf("Tipo"));
-    if (arrInfo.includes("Contribuyentes") == true) {
+    if (arrInfo.includes("Postal:") == true) {
         console.log("estoy en el if y soy true")
         for (i = arrInfo.indexOf("Postal:") + 1; i <= arrInfo.indexOf("Tipo") - 1; i++) {
             console.log(i);
@@ -131,7 +131,7 @@ function extraeNomVia(string) {
     var guardaNomVia = [];
     console.log(arrInfo.indexOf("Vialidad:"));
     console.log(arrInfo.indexOf("Número"));
-    if (arrInfo.includes("Contribuyentes") == true) {
+    if (arrInfo.includes("Vialidad:") == true) {
         console.log("estoy en el if y soy true")
         for (i = arrInfo.indexOf("Vialidad:") + 1; i <= arrInfo.indexOf("Número") - 1; i++) {
             console.log(i);
