@@ -78,6 +78,7 @@ function parceoDatos(string) {
     extraeNumExt(separaDatos)//extrae numero exterior 
     extraeNumInt(separaDatos)//extrae numero interior
     extraeNomCol(separaDatos) //extrae nombre de la colonia
+    extraeReg(separaDatos)//extrae regimen
 }
 
 function extraeRFC(string) {
@@ -207,4 +208,12 @@ function extraeNomCol(string) {
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNomCol.join(' ') + "<br/>");
     }
+}
+
+function extraeReg(string) {
+    arrInfo = Object.values(string)
+    console.log("estoy en la funcion extrae numero interior")
+    var guardaReg = [];
+    console.log(arrInfo.indexOf("Regímenes:"));
+    console.log(arrInfo.includes())
 }
