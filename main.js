@@ -122,7 +122,7 @@ function extraeRaSo(string) {
     console.log(arrInfo.indexOf("Nombre,"));
     if (arrInfo.includes("Contribuyentes") == true) {
         console.log("estoy en el if y soy true")
-        for (i = arrInfo.indexOf("Contribuyentes"); i <= arrInfo.indexOf("Nombre,"); i++) {
+        for (i = arrInfo.indexOf("Contribuyentes"+1); i <= arrInfo.indexOf("Nombre,"-1); i++) {
             console.log(i);
             guardaRaSo.push(arrInfo[i]);
         }
