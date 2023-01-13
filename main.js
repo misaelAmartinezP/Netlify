@@ -2,6 +2,7 @@
 var DataArr = [];
 PDFJS.workerSrc = '';
 
+//extraccion del pdf
 function ExtractText() {
     var input = document.getElementById("file-id");
     var fReader = new FileReader();
@@ -54,7 +55,7 @@ function pdfAsArray(pdfAsArray) {
         Promise.all(pagesPromises).then(function (pagesText) {
             let arr = (pagesText);
             srtPdf = (arr.toString());
-            parceoDatos(srtPdf);//imprime las funciones
+            parceoDatos(srtPdf);                                    //imprime las funciones
             var outputStr = "";
             for (var pageNum = 0; pageNum < pagesText.length; pageNum++) {
                 outputStr = "";
@@ -67,6 +68,8 @@ function pdfAsArray(pdfAsArray) {
         console.error(reason);
     });
 }
+
+//terimina extraccion del pdf
 
 function parceoDatos(string) {
     separaDatos = string.split(" ");
@@ -81,13 +84,14 @@ function parceoDatos(string) {
     extraeReg(separaDatos)//extrae regimen
 }
 
-function extraeRFC(string) {
+function extraeRFC(string) { //funcion que extrae el pdf 
     arrInfo = Object.values(string)
-    for (i = 0; i < arrInfo.length; i++) {
-        if (arrInfo[i]=="RFC:") {
-            console.log(arrInfo[i + 1]);
-            var div = document.getElementById('output');
-            div.innerHTML += ("<br/>" + arrInfo[i + 1] + "<br/>" );
+    for (i = 0; i < arrInfo.length; i++) { //recorrido del arreglo
+        if (arrInfo[i]=="RFC:") { //cuando el indice i del arreglo seo igual a rfc
+            console.log(arrInfo[i + 1]);  //imprime el contenido del indice+1 para obtener el rfc
+            var div = document.getElementById('output'); //variable para despues mandar el contenido que obtuvimos
+            div.innerHTML += ("<br/>" + arrInfo[i + 1] + "<br/>"); //imprime el contenido del arreglo el que se encuentra en la posicion i+1
+            break
         }
     }
 }
