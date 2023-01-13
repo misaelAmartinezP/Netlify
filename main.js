@@ -73,7 +73,7 @@ function pdfAsArray(pdfAsArray) {
 
 function parceoDatos(string) {
     separaDatos = string.split(" ");
-    console.log(separaDatos);
+    //console.log(separaDatos);
     extraeRFC(separaDatos)//extrae RFC
     extraeRaSo(separaDatos)//extrae razon social
     extraeCodPos(separaDatos)//extrae codigo postal
