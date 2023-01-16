@@ -185,7 +185,7 @@ function extraeNumInt(string) {//funcion que extrae el numero interior
     if (guardaNunInt.length == 0) {//si la longitud del arreglo es igual a cero 
         //console.log("SN") //linea de apoyo se visualiza en consola 
         var div = document.getElementById('output');
-        div.innerHTML += ("<br/> SIN NUMERO INTERIOR <br/>");//imprime el contenido de que la constancia fiscal no tiene numero interior en la pagina web
+        div.innerHTML += ("<br/> NULL <br/>");//imprime el contenido de que la constancia fiscal no tiene numero interior en la pagina web
     } else { //si no se cumple lo anterior entonces 
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNunInt.join(' ') + "<br/>");//imprime el contenido en la pagina web
@@ -207,7 +207,7 @@ function extraeNomCol(string) {//funcion que extrae la colonia
     if (guardaNomCol.length == 0) {//si la longitud del arreglo es igual a cero 
         //console.log("SN")
         var div = document.getElementById('output');
-        div.innerHTML += ("<br/> SIN NOMBRE DE COLONIA <br/>");//imprime sin nombre de colonia en la pagina web 
+        div.innerHTML += ("<br/> NULL <br/>");//imprime sin nombre de colonia en la pagina web 
     } else {//si no se cumple lo anterior entonces
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNomCol.join(' ') + "<br/>");//imprime el contenido del arreglo guardaNomCol en la pagina web
