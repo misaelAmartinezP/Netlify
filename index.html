@@ -8,7 +8,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.entry.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.worker.min.js"></script>
 
-    <input type="file" typeof="hidden" id="file-id" name="file_name" accept="application/pdf" onchange="ExtractText();">
     <!-- a container for the output -->
     <div id="output"></div>
     <script src="main.js"></script>
@@ -16,7 +15,7 @@
         <h2> Arrastras y suelta el archivo</h2>
         <span>O</span>
         <button>Selecciona los archivos</button>
-        <input type="file" name="" id="input-file" hidden multiple />
+        <input type="file" typeof="hidden" id="file-id" name="file_name" accept="application/pdf" onchange="ExtractText(); />
     </div>
     <div id="preview"></div>
 </body>
