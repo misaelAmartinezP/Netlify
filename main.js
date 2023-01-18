@@ -257,5 +257,5 @@ contenedor.addEventListener('drop', e => {
     file = this.files;
     e.preventDefault();
     console.log('Drop');
-    dragText.textContent = "Arrastra y suelta archivo";
+    dragText.textContent = "Arrastra y suelta archivo"
 });
