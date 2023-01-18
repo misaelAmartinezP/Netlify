@@ -13,11 +13,9 @@ file-id {
     padding: 5px;
 }
 
-#contenedor{
-    width: 200px;
-    height: 200px;
-    border: 5px solid #000000;
-    border-radius: 20px;
-    padding: 20px;
-    margin-top: 20px;
+#contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10 px;
 }
