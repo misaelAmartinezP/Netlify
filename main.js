@@ -245,16 +245,11 @@ const dragText = dropArea.querySelector('h2');
 const input = dropArea.querySelector('#file-id');
 
 
-input.addEventListener("change", (e) => {
-    file = this.files;
-    dropArea.classList.add("active");
-    showFile(files);
-    dropArea.classList.remove("active");
-})
+
 dropArea.addEventListener("dragover", (e) => {
     e.preventDefault();
     dropArea.classList.add("active");
-    dragText.textContent = "Suelta para subir los archivos";
+    dragText.textContent = "Suelta para subir el archivo";
 });
 dropArea.addEventListener("dragleave", (e) => {
     e.preventDefault();
@@ -276,4 +271,6 @@ function showFiles(files) {
         }
     }
 }
-function processFile(file) { }
+function processFile(file) {
+    parceoDatos(file)
+}
