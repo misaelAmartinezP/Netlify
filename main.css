@@ -24,3 +24,42 @@ file-id {
     justify-content: center;
     flex-direction: column;
 }
+
+
+    .drop-area.active {
+        background-color: #b8d4fe;
+        color: black;
+        border: 2px dashed #618ac9;
+    }
+
+    .drop-area h2 {
+        font-size: 30px;
+        font-weight: 500;
+        color: #000;
+    }
+
+    .drop-area span {
+        font-size: 25px;
+        font-weight: 500;
+        color: #000;
+    }
+
+.file-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10 px;
+    border: solid 1px #ddd;
+}
+
+
+.status-text {
+    padding: 0 10px;
+}
+
+.sucess {
+    color #52ad5a;
+}
+
+.failure {
+    color: #ff0000;
