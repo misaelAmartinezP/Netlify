@@ -254,7 +254,8 @@ contenedor.addEventListener('dragover', e => {
 
 
 contenedor.addEventListener('drop', e => {
+    file = this.files;
     e.preventDefault();
     console.log('Drop');
-    pdfAsArray(pdfAsArray);
+    dragText.textContent = "Arrastra y suelta archivo";
 });
