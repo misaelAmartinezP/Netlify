@@ -21,3 +21,25 @@ file-id {
     padding: 20px;
     margin-top: 20px;
 }
+.drop-area {
+    border: 5px dashed #ddd;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drop-area.active {
+        background-color: #b8d4fe;
+        color: black;
+        border: 2px dashed #618ac9;
+    }
+
+.drop-area h1 {
+        font-size: 30px;
+        font-weight: 500;
+        color: #000;
+    }
