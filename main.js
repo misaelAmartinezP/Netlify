@@ -239,38 +239,3 @@ window.document.title = 'CSF-Query-ALHEL';//nombre de la pestaña
 
 
 //pruebas del drag and drop
-
-const dropArea = document.querySelector(".drop-area");
-const dragText = dropArea.querySelector('h2');
-const input = dropArea.querySelector('#file-id');
-
-
-
-dropArea.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    dropArea.classList.add("active");
-    dragText.textContent = "Suelta para subir el archivo";
-});
-dropArea.addEventListener("dragleave", (e) => {
-    e.preventDefault();
-    dropArea.classList.remove("active");
-    dragText.textContent = "Arrastra y suelta archivo"
-});
-dropArea.addEventListener("drop", (e) => {
-    e.preventDefault();
-    dropArea.classList.remove("active");
-    dragText.textContent = "Arrastra y suelta archivo"
-});
-function showFiles(files) {
-    if (files.length == undefined) {
-        processFile(files);
-    }
-    else {
-        for (const file of files) {
-            processFile(file)
-        }
-    }
-}
-function processFile(file) {
-    parceoDatos(file)
-}

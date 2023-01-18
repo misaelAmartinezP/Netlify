@@ -7,15 +7,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.entry.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.worker.min.js"></script>
-
-    <div class="drop-area">
-        <h2> Arrastras y suelta el archivo</h2>
-        <span>O</span>
-        <input type="file" typeof="hidden" id="file-id" name="file_name" accept="application/pdf" onchange=ExtractText(); />
-    </div>
+    <input type="file" typeof="hidden" id="file-id" name="file_name" accept="application/pdf" onchange=ExtractText(); />
     <div id="preview"></div>
     <!-- a container for the output -->
     <div id="output"></div>
     <script src="main.js"></script>
+
+
 </body>
 </html>
