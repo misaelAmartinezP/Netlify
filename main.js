@@ -242,7 +242,7 @@ window.document.title = 'CSF-Query-ALHEL';//nombre de la pestaña
 
 const dropArea = document.querySelector(".drop-area");
 const dragText = dropArea.querySelector('h2');
-const input = dropArea.querySelector('#input-file');
+const input = dropArea.querySelector('#file-id');
 
 
 input.addEventListener("change", (e) => {
