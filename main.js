@@ -248,11 +248,12 @@ contenedor.addEventListener('dragenter', e => {
 });
 contenedor.addEventListener('dragleave', e => {
     console.log('Drag Leave');
+    dragText.textContent = "Arrastra y suelta archivo"
 });
 contenedor.addEventListener('dragover', e => {
     e.preventDefault();
     console.log('Drag Over');
-    dragText.textContent = "Arrastra y suelta archivo"
+
 });
 
 contenedor.addEventListener('drop', e => {
