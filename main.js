@@ -255,4 +255,5 @@ contenedor.addEventListener('dragover', e => {
 
 contenedor.addEventListener('drop', e => {
     console.log('Drop');
+    pdfAsArray(pdfAsArray);
 });
