@@ -26,19 +26,19 @@ file-id {
 }
 
 
-    .drop-area.active {
+ .drop-area.active {
         background-color: #b8d4fe;
         color: black;
         border: 2px dashed #618ac9;
     }
 
-    .drop-area h2 {
+ .drop-area h2 {
         font-size: 30px;
         font-weight: 500;
         color: #000;
     }
 
-    .drop-area span {
+ .drop-area span {
         font-size: 25px;
         font-weight: 500;
         color: #000;

@@ -244,6 +244,7 @@ const dropArea = document.querySelector(".drop-area");
 const dragText = dropArea.querySelector('h2');
 const input = dropArea.querySelector('#input-file');
 
+
 input.addEventListener("change", (e) => {
     file = this.files;
     dropArea.classList.add("active");
@@ -262,8 +263,17 @@ dropArea.addEventListener("dragleave", (e) => {
 });
 dropArea.addEventListener("drop", (e) => {
     e.preventDefault();
-    files = e.dataTransfer.files;
-    showFiles(files)
     dropArea.classList.remove("active");
     dragText.textContent = "Arrastra y suelta archivo"
 });
+function showFiles(files) {
+    if (files.length == undefined) {
+        processFile(files);
+    }
+    else {
+        for (const file of files) {
+            processFile(file)
+        }
+    }
+}
+function processFile(file) { }
