@@ -270,29 +270,3 @@ dropArea.addEventListener("drop", (e) => {
     dropArea.classList.remove("active");
     dragText.textContent = "Arrastra y suelta archivo"
 });
-function showFiles(files) {
-    if (files.length == undefined) {
-        processFile(files);
-    }
-    else {
-        for (const file of files) {
-            processFile(file)
-        }
-    }
-}
-function processFile(file) {
-    const docType = file.type;
-    const validExtensions = ('application/pdf');
-    if (validExtensions.includes(docType)) {
-        //archivo valido
-    } else {
-        alert('El archivo tiene que ser un pdf');
-    }
-}
-function readImage(file) {
-    const reader = new FileReader();
-    reader.addEventListener('load', (event) => {
-        img.src = event.target.result;
-    });
-    reader.readAsDataURL(file);
-}
