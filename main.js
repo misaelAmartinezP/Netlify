@@ -241,7 +241,7 @@ window.document.title = 'CSF-Query-ALHEL';//nombre de la pestaña
 //pruebas del drag and drop
 const contenedor = document.querySelector('#contenedor');
 const input = contenedor.querySelector('#file-id');
-const dragText = contenedor.querySelector('h2');
+const dragText = contenedor.querySelector('h1');
 
 contenedor.addEventListener('dragenter', e => {
     console.log('Drag Enter');
