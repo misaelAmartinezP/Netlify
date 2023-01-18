@@ -254,7 +254,6 @@ contenedor.addEventListener('dragover', e => {
     e.preventDefault();
     console.log('Drag Over');
     dragText.textContent = "Suelta para subir los archivos";
-    dropArea.classList.add("active");
 });
 
 contenedor.addEventListener('drop', e => {
