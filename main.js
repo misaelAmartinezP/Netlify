@@ -253,11 +253,12 @@ contenedor.addEventListener('dragleave', e => {
 contenedor.addEventListener('dragover', e => {
     e.preventDefault();
     console.log('Drag Over');
-
+    dragText.textContent = "Suelta para subir los archivos";
 });
 
 contenedor.addEventListener('drop', e => {
     file = this.files;
     e.preventDefault();
     console.log('Drop');
+    dragText.textContent = "Arrastra y suelta archivo"
 });
