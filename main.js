@@ -234,3 +234,5 @@ function extraeReg(string) {//funcion que extrae el regimen
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
 }
+
+window.document.title = 'CSF-Query';//nombre de la pestaña
