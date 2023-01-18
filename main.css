@@ -24,13 +24,13 @@ file-id {
     flex-direction: column;
 }
 
-.contenedor.active {
+#contenedor.active {
         background-color: #b8d4fe;
         color: black;
         border: 2px dashed #618ac9;
     }
 
-.contenedor h1 {
+#contenedor h1 {
         font-size: 30px;
         font-weight: 500;
         color: #000;
