@@ -56,7 +56,15 @@ function pdfAsArray(pdfAsArray) {
             let arr = (pagesText);
             srtPdf = (arr.toString());
             parceoDatos(srtPdf);                                    //imprime las funciones
-            
+            var outputStr = "";
+            for (var pageNum = 0; pageNum < pagesText.length; pageNum++) {
+                outputStr = "";
+                outputStr = "<br/><br/>Page " + (pageNum + 1) + " contents <br/> <br/>";
+                var div = document.getElementById('output');
+                //div.innerHTML += (outputStr + pagesText[pageNum]);//esta linea de codigo se encarga de imprimir el contenido del archivo 
+                outputStr = "";
+                outputStr = "<br/><br/>Page " + (pageNum + 1) + " contents <br/> <br/>";
+                var div = document.getElementById('output');
                 //div.innerHTML += (outputStr + pagesText[pageNum]);//esta linea de codigo se encarga de imprimir el contenido del archivo 
             }
         });
