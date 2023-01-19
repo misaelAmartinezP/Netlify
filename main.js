@@ -248,7 +248,7 @@ function extraeDemTer(string) {//funcion que extrae la demarcacion terriotorial 
     console.log(arrInfo.indexOf("Federativa:"));//busqueda el indice de la palabra
     if (arrInfo.includes("Territorial:") == true) {//si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion
         //console.log("estoy en el if y soy true")//verificar que si se cumplio la condicion linea de apoyo 
-        for (i = arrInfo.indexOf("Territorial:") + 8; i <= arrInfo.indexOf("Federativa:") - 4; i++) {
+        for (i = arrInfo.indexOf("Territorial:") + 1; i <= arrInfo.indexOf("Federativa:") - 4; i++) {
             //console.log(arrInfo[i]);//ver en consola si el contenido es el esperado
             guardaReg.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
         }
