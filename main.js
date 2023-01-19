@@ -45,7 +45,6 @@ function getPageText(pageNum, PDFDocumentInstance) {
 
 function pdfAsArray(pdfAsArray) {
     PDFJS.getDocument(pdfAsArray).then(function (pdf) {
-        output.empty();
         var pdfDocument = pdf;
         var pagesPromises = [];
         for (var i = 0; i < pdf.pdfInfo.numPages; i++) {
@@ -54,6 +53,7 @@ function pdfAsArray(pdfAsArray) {
             })(i + 1);
         }
         Promise.all(pagesPromises).then(function (pagesText) {
+            output.empty();
             let arr = (pagesText);
             srtPdf = (arr.toString());
             parceoDatos(srtPdf);                                    //imprime las funciones
