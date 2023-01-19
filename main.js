@@ -1,5 +1,15 @@
 ﻿var datass = '';
 var DataArr = [];
+var guardaRFC = ""; //guarda RFC
+var guardaRaSo = "";//guarda razon social
+var guardaCodPos = "";//guarda codigo postal
+var guardaNomVia = "";//guarda nombre de vialidad
+var guardaNumExt = "";//guarda numero exterior
+var guardaNumInt = "";//guarda numero interior
+var guardaNomCol = "";//guarda nombre de la colonia
+var guardaDemTer = "";//guarda demarcacion territorial o municipio
+var guardaReg = "";//guarda regimen
+var query = ""; //guarda query 
 PDFJS.workerSrc = '';
 
 
@@ -79,38 +89,17 @@ function pdfAsArray(pdfAsArray) {
 //terimina extraccion del pdf
 
 function parceoDatos(string) {
-    var guardaRFC = ""; //guarda RFC
-    var guardaRaSo = "";//guarda razon social
-    var guardaCodPos = "";//guarda codigo postal
-    var guardaNomVia = "";//guarda nombre de vialidad
-    var guardaNumExt = "";//guarda numero exterior
-    var guardaNumInt = "";//guarda numero interior
-    var guardaNomCol = "";//guarda nombre de la colonia
-    var guardaDemTer = "";//guarda demarcacion territorial o municipio
-    var guardaReg = "";//guarda regimen
-    var query = ""; //guarda query 
     separaDatos = string.split(" ");
     //console.log(separaDatos);
-    guardaRFC = extraeRFC(separaDatos); //guarda RFC
-    guardaRaSo = extraeRaSo(separaDatos);//guarda razon social
-    guardaCodPos = extraeCodPos(separaDatos);//guarda codigo postal
-    guardaNomVia = extraeNomVia(separaDatos);//guarda nombre de vialidad
-    guardaNumExt = extraeNumExt(separaDatos);//guarda numero exterior
-    guardaNumInt = extraeNumInt(separaDatos);//guarda numero interior
-    guardaNomCol = extraeNomCol(separaDatos);//guarda nombre de la colonia
-    guardaDemTer = extraeDemTer(separaDatos);//guarda demarcacion territorial o municipio
-    guardaReg = extraeReg(separaDatos);//guarda regimen
-
-
-    console.log(guardaRFC);
-    console.log(guardaRaSo);
-    console.log(guardaCodPos);
-    console.log(guardaNomVia);
-    console.log(guardaNumExt);
-    console.log(guardaNumInt);
-    console.log(guardaNomCol);
-    console.log(guardaDemTer);
-    console.log(guardaReg);
+    extraeRFC(separaDatos); //guarda RFC
+    extraeRaSo(separaDatos);//guarda razon social
+    extraeCodPos(separaDatos);//guarda codigo postal
+    extraeNomVia(separaDatos);//guarda nombre de vialidad
+    extraeNumExt(separaDatos);//guarda numero exterior
+    extraeNumInt(separaDatos);//guarda numero interior
+    extraeNomCol(separaDatos);//guarda nombre de la colonia
+    extraeDemTer(separaDatos);//guarda demarcacion territorial o municipio
+    extraeReg(separaDatos);//guarda regimen
 
     //generando el query
     query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) values(9999,' hacer codigo ','"  +guardaRaSo + "', NULL,2,'" + guardaRFC + "','" + guardaNomVia + " " + guardaNumExt + " " + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores off";
