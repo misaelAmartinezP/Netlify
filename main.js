@@ -2,6 +2,16 @@
 var DataArr = [];
 PDFJS.workerSrc = '';
 
+var guardaRFC = ""; //guarda RFC
+var guardaRaSo = "";//guarda razon social
+var guardaCodPos = "";//guarda codigo postal
+var guardaNomVia = "";//guarda nombre de vialidad
+var guardaNumExt = "";//guarda numero exterior
+var guardaNumInt = "";//guarda numero interior
+var guardaNomCol = "";//guarda nombre de la colonia
+var guardaDemTer = "";//guarda demarcacion territorial o municipio
+var guardaReg = "";//guarda regimen
+
 //extraccion del pdf
 function ExtractText() {
     var input = document.getElementById("file-id");
@@ -88,6 +98,16 @@ function parceoDatos(string) {
     extraeNomCol(separaDatos) //extrae nombre de la colonia
     extraeDemTer(separaDatos)//extrae demarcacion territorial o municipio
     extraeReg(separaDatos)//extrae regimen
+
+    guardaRFC = extraeRFC(separaDatos); //guarda RFC
+    //guardaRaSo = "";//guarda razon social
+    //guardaCodPos = "";//guarda codigo postal
+    //guardaNomVia = "";//guarda nombre de vialidad
+    //guardaNumExt = "";//guarda numero exterior
+    //guardaNumInt = "";//guarda numero interior
+    //guardaNomCol = "";//guarda nombre de la colonia
+    //guardaDemTer = "";//guarda demarcacion territorial o municipio
+    //guardaReg = "";//guarda regimen
 }
 
 function extraeRFC(string) { //funcion que extrae el pdf 
@@ -269,10 +289,9 @@ window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña
 
 query = "set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores on insert into InmobiliariaCaboBallena.dbo.AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) values(9999, 'CISMEDMIGUMXN', 'extraeRaSo', NULL, 2, 'CIMM6909298U9', idCiudad, '5 DE FEBRERO, MANZANA 129, LOTE 13', 'RICARDO FLORES MAGON', '39700', 'ACAPULCO DE JUAREZ', Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores off";
 
-console.log(extraeRFC(string));
 
 
-console.log(query);
+console.log(guardaRFC);
 //descarga 
 function download(filename, query) {
     var element = document.createElement('a');
