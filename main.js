@@ -53,6 +53,7 @@ function pdfAsArray(pdfAsArray) {
             })(i + 1);
         }
         Promise.all(pagesPromises).then(function (pagesText) {
+            document.getElementById("output").innerHTML = "";
             let arr = (pagesText);
             srtPdf = (arr.toString());
             parceoDatos(srtPdf);                                    //imprime las funciones
@@ -65,7 +66,7 @@ function pdfAsArray(pdfAsArray) {
                 outputStr = "";
                 outputStr = "<br/><br/>Page " + (pageNum + 1) + " contents <br/> <br/>";
                 var div = document.getElementById('output');
-                div.innerHTML += ("");//esta linea de codigo se encarga de imprimir el contenido del archivo 
+                //div.innerHTML += ("");//esta linea de codigo se encarga de imprimir el contenido del archivo 
             }
         });
     }, function (reason) {
