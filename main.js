@@ -95,19 +95,19 @@ function parceoDatos(string) {
     extraeNomVia(separaDatos)//extrae nombre de vialidad
     extraeNumExt(separaDatos)//extrae numero exterior 
     extraeNumInt(separaDatos)//extrae numero interior
-    extraeNomCol(separaDatos) //extrae nombre de la colonia
+    extraeNomCol(separaDatos)//extrae nombre de la colonia
     extraeDemTer(separaDatos)//extrae demarcacion territorial o municipio
     extraeReg(separaDatos)//extrae regimen
 
     guardaRFC = extraeRFC(separaDatos); //guarda RFC
-    //guardaRaSo = "";//guarda razon social
-    //guardaCodPos = "";//guarda codigo postal
-    //guardaNomVia = "";//guarda nombre de vialidad
-    //guardaNumExt = "";//guarda numero exterior
-    //guardaNumInt = "";//guarda numero interior
-    //guardaNomCol = "";//guarda nombre de la colonia
-    //guardaDemTer = "";//guarda demarcacion territorial o municipio
-    //guardaReg = "";//guarda regimen
+    guardaRaSo = extraeRaSo(separaDatos);//guarda razon social
+    guardaCodPos = extraeCodPos(separaDatos);//guarda codigo postal
+    guardaNomVia = extraeNomVia(separaDatos);//guarda nombre de vialidad
+    guardaNumExt = extraeNumExt(separaDatos);//guarda numero exterior
+    guardaNumInt = extraeNumInt(separaDatos);//guarda numero interior
+    guardaNomCol = extraeNomCol(separaDatos);//guarda nombre de la colonia
+    guardaDemTer = extraeDemTer(separaDatos);//guarda demarcacion territorial o municipio
+    guardaReg = extraeReg(separaDatos);//guarda regimen
 }
 
 function extraeRFC(string) { //funcion que extrae el pdf 
@@ -292,6 +292,17 @@ query = "set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores on insert
 
 
 console.log(guardaRFC);
+console.log(guardaRaSo);
+console.log(guardaCodPos);
+console.log(guardaNomVia);
+console.log(guardaNumExt);
+console.log(guardaNumInt);
+console.log(guardaNomCol);
+console.log(guardaDemTer);
+console.log(guardaReg);
+
+ 
+
 //descarga 
 function download(filename, query) {
     var element = document.createElement('a');
