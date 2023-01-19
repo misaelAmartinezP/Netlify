@@ -283,7 +283,7 @@ function download(filename, text) {
 document.getElementById("dwn-btn").addEventListener("click", function () {
     // Generate download of hello.txt file with some content
     var text = document.getElementById("text-val").value;
-    var filename = "hello.txt";
+    var filename = "query.sql";
 
     download(filename, text);
 }, false);
