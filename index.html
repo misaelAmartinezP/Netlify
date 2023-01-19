@@ -11,10 +11,8 @@
     <input type="file" typeof="hidden" id="file-id" name="file_name" accept="application/pdf" onchange="ExtractText();" />
     <div id="output">
     </div>
-
-    <a href="ExtractText();" >
-        <button type="button">Download</button>
-    </a>
+    <textarea id="text-val" rows="4">This is the content of my file</textarea><br />
+    <input type="button" id="dwn-btn" value="Download dinamically generated text file" />
 
     <script src="main.js"></script>
 </body>
