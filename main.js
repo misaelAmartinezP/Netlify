@@ -153,7 +153,7 @@ function extraeNomVia(string) { //funcion que extrae nombre de vialidad
             //console.log(arrInfo[i]);//ver en consola si el contenido es el esperado
         }
     }
-    guardaNomViaAux=guardaNomVia.reverse());//invierte el contenido del arreglo guardaNomVia
+    guardaNomViaAux=(guardaNomVia.reverse());//invierte el contenido del arreglo guardaNomVia
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNomViaAux.join(' ') + "<br/>");//imprime el contenido en la pagina web
 }
