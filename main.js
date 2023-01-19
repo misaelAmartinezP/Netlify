@@ -116,6 +116,7 @@ function extraeRFC(string) { //funcion que extrae el pdf
             break //salimos del bucle
         }
     }
+    return arrInfo[i + 1];
 }
 
 function extraeRaSo(string) { //funcion que extrae la razon social 
@@ -133,7 +134,8 @@ function extraeRaSo(string) { //funcion que extrae la razon social
     } else {
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> 'EL PDF NO ES UNA CONSTANCIA FISCAL'");//valida que el pdf sea una constancia fiscal y lo imprime en la pagina web 
-    }    
+    }
+    return= guardaRaSo;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");//imprime el contenido en la pagina web
 }
@@ -151,6 +153,7 @@ function extraeCodPos(string) { //funcion que extrae el codigo postal
             guardaCodPos.push(arrInfo[i]);//guarda en el arreglo guardaCodPos el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
+    return guardaCodPos;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaCodPos.join(' ') + "<br/>"); //imprime el contenido en la pagina web
 }
@@ -173,6 +176,7 @@ function extraeNomVia(string) { //funcion que extrae nombre de vialidad
     guardaNomViaAux=(guardaNomVia.reverse());//invierte el contenido del arreglo guardaNomVia
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNomViaAux.join(' ') + "<br/>");//imprime el contenido en la pagina web
+    return guardaNomViaAux;
 }
 
 function extraeNumExt(string) { //funcion que extrae el numero exterior
@@ -191,6 +195,7 @@ function extraeNumExt(string) { //funcion que extrae el numero exterior
             guardaNunExt.push(arrInfo[i]);//guarda el numero exterior
         }
     }
+    return guardaNumExt;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNunExt.join(' ') + "<br/>");//imprime el contenido en la pagina web
 }
@@ -211,7 +216,9 @@ function extraeNumInt(string) {//funcion que extrae el numero interior
         //console.log("SN") //linea de apoyo se visualiza en consola 
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> NULL <br/>");//imprime el contenido de que la constancia fiscal no tiene numero interior en la pagina web
+        return 'NULL';
     } else { //si no se cumple lo anterior entonces 
+        return guardaNumInt;
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNunInt.join(' ') + "<br/>");//imprime el contenido en la pagina web
     }
@@ -233,7 +240,9 @@ function extraeNomCol(string) {//funcion que extrae la colonia
         //console.log("SN")
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> NULL <br/>");//imprime sin nombre de colonia en la pagina web 
+        return 'NULL';
     } else {//si no se cumple lo anterior entonces
+        return guardaNomCol;
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNomCol.join(' ') + "<br/>");//imprime el contenido del arreglo guardaNomCol en la pagina web
     }
@@ -252,6 +261,7 @@ function extraeDemTer(string) {//funcion que extrae la demarcacion terriotorial 
             guardaReg.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
+    return guardaDemTer;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
 }
@@ -269,6 +279,7 @@ function extraeReg(string) {//funcion que extrae el regimen
             guardaReg.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
+    return guardaReg;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
 }
