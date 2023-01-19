@@ -78,7 +78,7 @@ function pdfAsArray(pdfAsArray) {
 
 function parceoDatos(string) {
     separaDatos = string.split(" ");
-    //console.log(separaDatos);
+    console.log(separaDatos);
     extraeRFC(separaDatos)//extrae RFC
     extraeRaSo(separaDatos)//extrae razon social
     extraeCodPos(separaDatos)//extrae codigo postal
@@ -91,7 +91,6 @@ function parceoDatos(string) {
 
 function extraeRFC(string) { //funcion que extrae el pdf 
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
-    console.log(arrInfo);
     for (i = 0; i < arrInfo.length; i++) { //recorrido del arreglo
         if (arrInfo[i]=="RFC:") { //cuando el indice i del arreglo seo igual a rfc
             //console.log(arrInfo[i + 1]);  //imprime el contenido del indice+1 para obtener el rfc en consola
