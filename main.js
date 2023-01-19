@@ -53,6 +53,7 @@ function pdfAsArray(pdfAsArray) {
             })(i + 1);
         }
         Promise.all(pagesPromises).then(function (pagesText) {
+            output.remove();
             let arr = (pagesText);
             srtPdf = (arr.toString());
             parceoDatos(srtPdf);                                    //imprime las funciones
