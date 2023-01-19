@@ -42,8 +42,8 @@ file-id {
 
 #output {
     border: 5px dashed #ddd;
-    height: 500px;
-    width: 700px;
+    height: 200px;
+    width: 200px;
     border-radius: 5px;
     display: flex;
     align-items: center;
