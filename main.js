@@ -154,7 +154,8 @@ function extraeCodPos(string) { //funcion que extrae el codigo postal
             guardaCodPos.push(arrInfo[i]);//guarda en el arreglo guardaCodPos el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
-    return guardaCodPos.join(' ');
+    guardaCodPosAux = guardaCodPos.join('');
+    return guardaCodPosAux;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaCodPos.join(' ') + "<br/>"); //imprime el contenido en la pagina web
 }
@@ -177,7 +178,8 @@ function extraeNomVia(string) { //funcion que extrae nombre de vialidad
     guardaNomViaAux=(guardaNomVia.reverse());//invierte el contenido del arreglo guardaNomVia
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNomViaAux.join(' ') + "<br/>");//imprime el contenido en la pagina web
-    return guardaNomViaAux.join(' ');
+    guardaNomViaGua = guardaNomViaAux.join(' ');
+    return guardaNomViaGua;
 }
 
 function extraeNumExt(string) { //funcion que extrae el numero exterior
@@ -196,7 +198,8 @@ function extraeNumExt(string) { //funcion que extrae el numero exterior
             guardaNunExt.push(arrInfo[i]);//guarda el numero exterior
         }
     }
-    return guardaNumExt.join(' ');
+    guardaNumExtAux = guardaNumExt.join(' ');
+    return guardaNumExtAux;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNunExt.join(' ') + "<br/>");//imprime el contenido en la pagina web
 }
@@ -219,7 +222,8 @@ function extraeNumInt(string) {//funcion que extrae el numero interior
         div.innerHTML += ("<br/> NULL <br/>");//imprime el contenido de que la constancia fiscal no tiene numero interior en la pagina web
         return 'NULL';
     } else { //si no se cumple lo anterior entonces 
-        return guardaNumInt.joion(' ');
+        guardaNumIntAux= guardaNumInt.joion(' ');
+        return guardaNumIntAux;
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNunInt.join(' ') + "<br/>");//imprime el contenido en la pagina web
     }
@@ -243,7 +247,8 @@ function extraeNomCol(string) {//funcion que extrae la colonia
         div.innerHTML += ("<br/> NULL <br/>");//imprime sin nombre de colonia en la pagina web 
         return 'NULL';
     } else {//si no se cumple lo anterior entonces
-        return guardaNomCol.join(' ');
+        guardaNomColAux= guardaNomCol.join(' ');
+        return guardaNomColAux;
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNomCol.join(' ') + "<br/>");//imprime el contenido del arreglo guardaNomCol en la pagina web
     }
@@ -262,7 +267,8 @@ function extraeDemTer(string) {//funcion que extrae la demarcacion terriotorial 
             guardaReg.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
-    return guardaDemTer.join(' ');
+    guardaDemTerAux = guardaDemTer.join(' ');
+    return guardaDemTerAux;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
 }
@@ -280,7 +286,8 @@ function extraeReg(string) {//funcion que extrae el regimen
             guardaReg.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
-    return guardaReg.join(' ');
+    guardaRegAux = guardaReg.join(' ');
+    return guardaRegAux;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
 }
