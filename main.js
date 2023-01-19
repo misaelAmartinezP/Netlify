@@ -276,7 +276,7 @@ function extraeDemTer(string) {//funcion que extrae la demarcacion terriotorial 
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
 }
-
+ 
 function extraeReg(string) {//funcion que extrae el regimen 
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
     //console.log("estoy en la funcion extrae codigo postal ")//imprime el nombre de la funcion en consola 
