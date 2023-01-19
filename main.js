@@ -242,7 +242,7 @@ function extraeReg(string) {//funcion que extrae el regimen
 
 function extraeDemTer(string) {//funcion que extrae la demarcacion terriotorial o el municipio 
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
-    console.log("estoy en la funcion extrae codigo postal ")//imprime el nombre de la funcion en consola 
+    console.log("estoy en la funcion extrae demarcacion o delegacion")//imprime el nombre de la funcion en consola 
     var guardaReg = [];//declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
     console.log(arrInfo.indexOf("Territorial:"));//busqueda el indice de la palabra
     console.log(arrInfo.indexOf("Federativa:"));//busqueda el indice de la palabra
