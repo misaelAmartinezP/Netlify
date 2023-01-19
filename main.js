@@ -171,6 +171,7 @@ function extraeNumExt(string) { //funcion que extrae el numero exterior
             if (arrInfo[i] == "Exterior:"){//guarda en el arreglo guardaNumExt el contenido del indice del arreglo arrInfo en la posicion i
                 break
             }
+            guardaNunExt.push(arrInfo[i]);//guarda el numero exterior
         }
     }
     var div = document.getElementById('output');
