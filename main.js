@@ -53,7 +53,7 @@ function pdfAsArray(pdfAsArray) {
             })(i + 1);
         }
         Promise.all(pagesPromises).then(function (pagesText) {
-            document.getElementById("output").innerHTML = ("QUERY<br/>");
+            document.getElementById("output").innerHTML = ("DATOS PARA EL QUERY<br/>");
             let arr = (pagesText);
             srtPdf = (arr.toString());
             parceoDatos(srtPdf);                                    //imprime las funciones
@@ -260,6 +260,6 @@ function extraeReg(string) {//funcion que extrae el regimen
 
 
 
-window.document.title = 'CSF-Query-ALHEL';//nombre de la pestaña
+window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña
 
 
