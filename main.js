@@ -101,7 +101,7 @@ function parceoDatos(string) {
     guardaDemTer = extraeDemTer(separaDatos);//guarda demarcacion territorial o municipio
     guardaReg = extraeReg(separaDatos);//guarda regimen
     //generando el query
-    query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) values(9999,'+ hacer codigo ','"  +guardaRaSo + "', NULL,2,'" + guardaRFC + "','" + guardaNomVia + "," + guardaNumExt + "," + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores off";
+    query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) values(9999,'+ hacer codigo ','"  +guardaRaSo + "', NULL,2,'" + guardaRFC + "','" + guardaNomVia + " " + guardaNumExt + " " + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores off";
     console.log(guardaRFC);
     console.log(query);
 }
@@ -135,8 +135,7 @@ function extraeRaSo(string) { //funcion que extrae la razon social
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> 'EL PDF NO ES UNA CONSTANCIA FISCAL'");//valida que el pdf sea una constancia fiscal y lo imprime en la pagina web 
     }
-    guardaRaSoAux = guardaRaSo.join(' ');
-    return guardaRaSoAux;
+    return guardaRaSo;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");//imprime el contenido en la pagina web
 }
@@ -154,8 +153,7 @@ function extraeCodPos(string) { //funcion que extrae el codigo postal
             guardaCodPos.push(arrInfo[i]);//guarda en el arreglo guardaCodPos el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
-    guardaCodPosAux = guardaCodPos.join('');
-    return guardaCodPosAux;
+    return guardaCodPos;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaCodPos.join(' ') + "<br/>"); //imprime el contenido en la pagina web
 }
@@ -178,8 +176,7 @@ function extraeNomVia(string) { //funcion que extrae nombre de vialidad
     guardaNomViaAux=(guardaNomVia.reverse());//invierte el contenido del arreglo guardaNomVia
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNomViaAux.join(' ') + "<br/>");//imprime el contenido en la pagina web
-    guardaNomViaGua = guardaNomViaAux.join(' ');
-    return guardaNomViaGua;
+    return guardaNomViaAux;
 }
 
 function extraeNumExt(string) { //funcion que extrae el numero exterior
@@ -198,8 +195,7 @@ function extraeNumExt(string) { //funcion que extrae el numero exterior
             guardaNunExt.push(arrInfo[i]);//guarda el numero exterior
         }
     }
-    guardaNumExtAux = guardaNumExt.join(' ');
-    return guardaNumExtAux;
+    return guardaNumExt;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNunExt.join(' ') + "<br/>");//imprime el contenido en la pagina web
 }
@@ -222,8 +218,7 @@ function extraeNumInt(string) {//funcion que extrae el numero interior
         div.innerHTML += ("<br/> NULL <br/>");//imprime el contenido de que la constancia fiscal no tiene numero interior en la pagina web
         return 'NULL';
     } else { //si no se cumple lo anterior entonces 
-        guardaNumIntAux= guardaNumInt.joion(' ');
-        return guardaNumIntAux;
+        return guardaNumInt;
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNunInt.join(' ') + "<br/>");//imprime el contenido en la pagina web
     }
@@ -247,8 +242,7 @@ function extraeNomCol(string) {//funcion que extrae la colonia
         div.innerHTML += ("<br/> NULL <br/>");//imprime sin nombre de colonia en la pagina web 
         return 'NULL';
     } else {//si no se cumple lo anterior entonces
-        guardaNomColAux= guardaNomCol.join(' ');
-        return guardaNomColAux;
+        return guardaNomCol;
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNomCol.join(' ') + "<br/>");//imprime el contenido del arreglo guardaNomCol en la pagina web
     }
@@ -267,8 +261,7 @@ function extraeDemTer(string) {//funcion que extrae la demarcacion terriotorial 
             guardaReg.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
-    guardaDemTerAux = guardaDemTer.join(' ');
-    return guardaDemTerAux;
+    return guardaDemTer;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
 }
@@ -286,8 +279,7 @@ function extraeReg(string) {//funcion que extrae el regimen
             guardaReg.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
-    guardaRegAux = guardaReg.join(' ');
-    return guardaRegAux;
+    return guardaReg;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
 }
