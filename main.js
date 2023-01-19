@@ -153,9 +153,9 @@ function extraeNomVia(string) { //funcion que extrae nombre de vialidad
             //console.log(arrInfo[i]);//ver en consola si el contenido es el esperado
         }
     }
-    //console.log(guardaNomVia.reverse());//invierte el contenido del arreglo guardaNomVia
+    guardaNomViaAux=guardaNomVia.reverse());//invierte el contenido del arreglo guardaNomVia
     var div = document.getElementById('output');
-    div.innerHTML += ("<br/>" + guardaNomVia.join(' ') + "<br/>");//imprime el contenido en la pagina web
+    div.innerHTML += ("<br/>" + guardaNomViaAux.join(' ') + "<br/>");//imprime el contenido en la pagina web
 }
 
 function extraeNumExt(string) { //funcion que extrae el numero exterior
@@ -240,28 +240,4 @@ window.document.title = 'CSF-Query-ALHEL';//nombre de la pestaña
 
 
 //pruebas del drag and drop
-const contenedor = document.querySelector('#contenedor');
-const input = contenedor.querySelector('#file-id');
-const dragText = contenedor.querySelector('h1');
 
-
-contenedor.addEventListener('dragenter', e => {
-    console.log('Drag Enter');
-});
-contenedor.addEventListener('dragleave', e => {
-    console.log('Drag Leave');
-    dragText.textContent = "Arrastra y suelta archivo"
-});
-contenedor.addEventListener('dragover', e => {
-    e.preventDefault();
-    console.log('Drag Over');
-    dragText.textContent = "Suelta para subir el archivo";
-});
-
-contenedor.addEventListener('drop', e => {
-    file = this.files;
-    e.preventDefault();
-    console.log('Drop');
-    dragText.textContent = "Arrastra y suelta archivo"
-    ExtractText();
-});
