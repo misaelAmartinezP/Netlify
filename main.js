@@ -1,5 +1,6 @@
 ﻿var datass = '';
 var DataArr = [];
+
 var guardaRFC = ""; //guarda RFC
 var guardaRaSo = "";//guarda razon social
 var guardaCodPos = "";//guarda codigo postal
@@ -92,6 +93,7 @@ function parceoDatos(string) {
     separaDatos = string.split(" ");
     //console.log(separaDatos);
     extraeRFC(separaDatos); //guarda RFC
+    guardaRFC = extraeRFC;
     extraeRaSo(separaDatos);//guarda razon social
     extraeCodPos(separaDatos);//guarda codigo postal
     extraeNomVia(separaDatos);//guarda nombre de vialidad
@@ -116,7 +118,7 @@ function extraeRFC(string) { //funcion que extrae el pdf
             break //salimos del bucle
         }
     }
-    //return arrInfo[i + 1];
+    return arrInfo[i + 1];
 }
 
 function extraeRaSo(string) { //funcion que extrae la razon social 
