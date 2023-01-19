@@ -263,5 +263,5 @@ contenedor.addEventListener('drop', e => {
     e.preventDefault();
     console.log('Drop');
     dragText.textContent = "Arrastra y suelta archivo"
-    ExtractText(file);
+    ExtractText();
 });
