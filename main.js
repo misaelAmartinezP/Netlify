@@ -78,7 +78,7 @@ function pdfAsArray(pdfAsArray) {
 
 function parceoDatos(string) {
     separaDatos = string.split(" ");
-    console.log(separaDatos);
+    //console.log(separaDatos);
     extraeRFC(separaDatos)//extrae RFC
     extraeRaSo(separaDatos)//extrae razon social
     extraeCodPos(separaDatos)//extrae codigo postal
@@ -225,10 +225,10 @@ function extraeNomCol(string) {//funcion que extrae la colonia
 
 function extraeDemTer(string) {//funcion que extrae la demarcacion terriotorial o el municipio 
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
-    console.log("estoy en la funcion extrae codigo postal ")//imprime el nombre de la funcion en consola 
+    //console.log("estoy en la funcion extrae codigo postal ")//imprime el nombre de la funcion en consola 
     var guardaReg = [];//declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
-    console.log(arrInfo.indexOf("Territorial:"));//busqueda el indice de la palabra
-    console.log(arrInfo.indexOf("Federativa:"));//busqueda el indice de la palabra
+    //console.log(arrInfo.indexOf("Territorial:"));//busqueda el indice de la palabra
+    //console.log(arrInfo.indexOf("Federativa:"));//busqueda el indice de la palabra
     if (arrInfo.includes("Territorial:") == true) {//si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion
         //console.log("estoy en el if y soy true")//verificar que si se cumplio la condicion linea de apoyo 
         for (i = arrInfo.indexOf("Territorial:") + 1; i <= arrInfo.indexOf("Federativa:") - 5; i++) {
