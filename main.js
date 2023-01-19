@@ -268,9 +268,9 @@ query = "set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores on insert
 
 console.log(query);
 //descarga 
-function download(filename, text) {
+function download(filename, query) {
     var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(query));
     element.setAttribute('download', filename);
     element.style.display = 'none';
     document.body.appendChild(element);
@@ -279,7 +279,6 @@ function download(filename, text) {
 }
 // Start file download.
 document.getElementById("dwn-btn").addEventListener("click", function () {
-    var text = document.getElementById("text-val").value;
     var filename = "query.sql";
-    download(filename, text);
+    download(filename, query);
 }, false);
