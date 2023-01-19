@@ -243,6 +243,10 @@ const contenedor = document.querySelector('#contenedor');
 const input = contenedor.querySelector('#file-id');
 const dragText = contenedor.querySelector('h1');
 
+contenedor.addEventListener("change", (e) => {
+    file = this.files;
+})
+
 contenedor.addEventListener('dragenter', e => {
     console.log('Drag Enter');
 });
