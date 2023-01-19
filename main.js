@@ -107,9 +107,6 @@ function extraeRFC(string) { //funcion que extrae el pdf
             //console.log(arrInfo[i + 1]);  //imprime el contenido del indice+1 para obtener el rfc en consola
             var div = document.getElementById('output'); //variable para despues mandar el contenido que obtuvimos
             div.innerHTML += ("<br/>" + arrInfo[i + 1] + "<br/>"); //imprime el contenido del arreglo el que se encuentra en la posicion i+1
-            val = arrInfo[i + 1];
-            console.log(val);
-            return val;
             break //salimos del bucle
         }
     }
