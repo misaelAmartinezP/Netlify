@@ -1,6 +1,4 @@
-﻿const { query } = require("express");
-
-var datass = '';
+﻿var datass = '';
 var DataArr = [];
 PDFJS.workerSrc = '';
 
