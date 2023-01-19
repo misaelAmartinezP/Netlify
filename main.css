@@ -39,3 +39,14 @@ file-id {
         font-weight: 500;
         color: #000;
     }
+
+#output {
+    border: 5px dashed #ddd;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
