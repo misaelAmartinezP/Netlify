@@ -8,9 +8,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.entry.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.worker.min.js"></script>
     <div id="preview"></div>
-        <input type="file" typeof="hidden" id="file-id" name="file_name" accept="application/pdf" onchange="ExtractText();" />
+    <input type="file" typeof="hidden" id="file-id" name="file_name" accept="application/pdf" onchange="ExtractText();" />
     <div id="output">
     </div>
+
+    <a href="apple.png" download="apple">
+        <button type="button">Download</button>
+    </a>
+
     <script src="main.js"></script>
 </body>
 </html>
