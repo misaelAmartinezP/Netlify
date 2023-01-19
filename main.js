@@ -53,7 +53,7 @@ function pdfAsArray(pdfAsArray) {
             })(i + 1);
         }
         Promise.all(pagesPromises).then(function (pagesText) {
-            document.getElementById("output").innerHTML = "QUERY";
+            document.getElementById("output").innerHTML = " < br /> QUERY  < br />";
             let arr = (pagesText);
             srtPdf = (arr.toString());
             parceoDatos(srtPdf);                                    //imprime las funciones
