@@ -93,7 +93,7 @@ function parceoDatos(string) {
     separaDatos = string.split(" ");
     //console.log(separaDatos);
     extraeRFC(separaDatos); //guarda RFC
-    guardaRFC = extraeRFC;
+    guardaRFC = extraeRFC(separaDatos);
     extraeRaSo(separaDatos);//guarda razon social
     extraeCodPos(separaDatos);//guarda codigo postal
     extraeNomVia(separaDatos);//guarda nombre de vialidad
