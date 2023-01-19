@@ -1,15 +1,5 @@
 ﻿var datass = '';
 var DataArr = [];
-var guardaRFC = ""; //guarda RFC
-var guardaRaSo = "";//guarda razon social
-var guardaCodPos = "";//guarda codigo postal
-var guardaNomVia = "";//guarda nombre de vialidad
-var guardaNumExt = "";//guarda numero exterior
-var guardaNumInt = "";//guarda numero interior
-var guardaNomCol = "";//guarda nombre de la colonia
-var guardaDemTer = "";//guarda demarcacion territorial o municipio
-var guardaReg = "";//guarda regimen
-var query = ""; //guarda query 
 PDFJS.workerSrc = '';
 
 
@@ -89,6 +79,16 @@ function pdfAsArray(pdfAsArray) {
 //terimina extraccion del pdf
 
 function parceoDatos(string) {
+    var guardaRFC = ""; //guarda RFC
+    var guardaRaSo = "";//guarda razon social
+    var guardaCodPos = "";//guarda codigo postal
+    var guardaNomVia = "";//guarda nombre de vialidad
+    var guardaNumExt = "";//guarda numero exterior
+    var guardaNumInt = "";//guarda numero interior
+    var guardaNomCol = "";//guarda nombre de la colonia
+    var guardaDemTer = "";//guarda demarcacion territorial o municipio
+    var guardaReg = "";//guarda regimen
+    var query = ""; //guarda query 
     separaDatos = string.split(" ");
     //console.log(separaDatos);
     guardaRFC = extraeRFC(separaDatos); //guarda RFC
