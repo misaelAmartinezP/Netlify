@@ -162,11 +162,11 @@ function extraeNumExt(string) { //funcion que extrae el numero exterior
     arrInfo = Object.values(string)  //convertimos el contenido de la extracion en un arreglo 
     //console.log("estoy en la funcion extrae numero exterior")//imprime el nombre de la funcion en consola 
     var guardaNunExt = [];//declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
-    //console.log(arrInfo.indexOf("Exterior:"));//busqueda el indice de la palabra
+    console.log(arrInfo.indexOf("Exterior:"));//busqueda el indice de la palabra
     if (arrInfo.includes("Exterior:") == true) {//si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion
-        //console.log("estoy en el if y soy true")//verificar que si se cumplio la condicion linea de apoyo 
+        console.log("estoy en el if y soy true")//verificar que si se cumplio la condicion linea de apoyo 
         for (i = arrInfo.indexOf("Exterior:") + 1; i <= arrInfo.length; i++) {//recorrido de indices para obtener la informacion necesaria
-            //console.log(arrInfo[i]);//ver en consola si el contenido es el esperado
+            console.log(arrInfo[i]);//ver en consola si el contenido es el esperado
             guardaNunExt.push(arrInfo[i]);//guarda en el arreglo guardaNumExt el contenido del indice del arreglo arrInfo en la posicion i
             break
         }
