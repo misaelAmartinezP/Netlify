@@ -116,7 +116,7 @@ function extraeRFC(string) { //funcion que extrae el pdf
             break //salimos del bucle
         }
     }
-    return arrInfo[i + 1].join(' ');
+    return arrInfo[i + 1];
 }
 
 function extraeRaSo(string) { //funcion que extrae la razon social 
