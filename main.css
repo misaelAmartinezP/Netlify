@@ -17,28 +17,6 @@ file-id {
     padding: 5px;
 }
 
-#contenedor {
-    border: 5px dashed #ddd;
-    height: 500px;
-    width: 700px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#contenedor.active {
-        background-color: #b8d4fe;
-        color: black;
-        border: 2px dashed #618ac9;
-    }
-
-#contenedor h1 {
-        font-size: 30px;
-        font-weight: 500;
-        color: #000;
-    }
 
 #output {
     border: 20px;
