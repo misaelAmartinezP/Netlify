@@ -44,9 +44,4 @@ file-id {
     border: 5px dashed #ddd;
     height: 200px;
     width: 200px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
