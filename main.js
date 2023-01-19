@@ -168,8 +168,9 @@ function extraeNumExt(string) { //funcion que extrae el numero exterior
         console.log("estoy en el if y soy true")//verificar que si se cumplio la condicion linea de apoyo 
         for (i = arrInfo.indexOf("Exterior:") + 1; i <= arrInfo.indexOf("Interior:") - 1; i--) {//recorrido de indices para obtener la informacion necesaria
             console.log(arrInfo[i]);//ver en consola si el contenido es el esperado
-            if (guardaNunExt.push(arrInfo[i] == "Exterior:");//guarda en el arreglo guardaNumExt el contenido del indice del arreglo arrInfo en la posicion i
+            if (guardaNunExt.push(arrInfo[i] == "Exterior:"){//guarda en el arreglo guardaNumExt el contenido del indice del arreglo arrInfo en la posicion i
                 break
+            }
         }
     }
     var div = document.getElementById('output');
