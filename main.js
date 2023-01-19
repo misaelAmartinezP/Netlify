@@ -89,16 +89,6 @@ function pdfAsArray(pdfAsArray) {
 function parceoDatos(string) {
     separaDatos = string.split(" ");
     //console.log(separaDatos);
-    extraeRFC(separaDatos)//extrae RFC
-    extraeRaSo(separaDatos)//extrae razon social
-    extraeCodPos(separaDatos)//extrae codigo postal
-    extraeNomVia(separaDatos)//extrae nombre de vialidad
-    extraeNumExt(separaDatos)//extrae numero exterior 
-    extraeNumInt(separaDatos)//extrae numero interior
-    extraeNomCol(separaDatos)//extrae nombre de la colonia
-    extraeDemTer(separaDatos)//extrae demarcacion territorial o municipio
-    extraeReg(separaDatos)//extrae regimen
-
     guardaRFC = extraeRFC(separaDatos); //guarda RFC
     guardaRaSo = extraeRaSo(separaDatos);//guarda razon social
     guardaCodPos = extraeCodPos(separaDatos);//guarda codigo postal
