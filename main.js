@@ -208,7 +208,7 @@ function extraeNumExt(string) { //funcion que extrae el numero exterior
     }
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNunExt.join(' ') + "<br/>");//imprime el contenido en la pagina web
-    return guardaNumExt.join(' ');
+    return guardaNumExt;
 }
 
 function extraeNumInt(string) {//funcion que extrae el numero interior
