@@ -187,7 +187,7 @@ function extraeNomVia(string) { //funcion que extrae nombre de vialidad
     guardaNomViaAux=(guardaNomVia.reverse());//invierte el contenido del arreglo guardaNomVia
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNomViaAux.join(' ') + "<br/>");//imprime el contenido en la pagina web
-    return guardaNomViaAux;
+    return guardaNomViaAux.join(' ');
 }
 
 function extraeNumExt(string) { //funcion que extrae el numero exterior
@@ -206,9 +206,9 @@ function extraeNumExt(string) { //funcion que extrae el numero exterior
             guardaNunExt.push(arrInfo[i]);//guarda el numero exterior
         }
     }
-    //return guardaNumExt;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNunExt.join(' ') + "<br/>");//imprime el contenido en la pagina web
+    return guardaNumExt.join(' ');
 }
 
 function extraeNumInt(string) {//funcion que extrae el numero interior
