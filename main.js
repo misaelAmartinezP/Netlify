@@ -209,7 +209,7 @@ function extraeNumExt(string) { //funcion que extrae el numero exterior
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNunExt.join(' ') + "<br/>");//imprime el contenido en la pagina web
     if ((guardaNumExt.length) == 2) {
-        retunr guardaNumExt.join(' ');
+        return guardaNumExt.join(' ');
     }
     else {
         return guardaNumExt;
