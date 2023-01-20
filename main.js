@@ -235,6 +235,7 @@ function extraeNumInt(string) {//funcion que extrae el numero interior
         div.innerHTML += ("<br/> NULL <br/>");//imprime el contenido de que la constancia fiscal no tiene numero interior en la pagina web
         return 'NULL';
     } else { //si no se cumple lo anterior entonces 
+        console.log(guardaNumInt.length);
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNunInt.join(' ') + "<br/>");//imprime el contenido en la pagina web
         if ((guardaNunInt.length) >= 2) {
