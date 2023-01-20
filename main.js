@@ -118,6 +118,13 @@ function parceoDatos(string) {
     console.log(query);
 }
 
+function creaGenCod(string) {
+    arrGenCod = string.split(' ');
+    console.log(arrGenCod);
+
+}
+
+
 function extraeRFC(string) { //funcion que extrae el pdf 
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
     for (i = 0; i < arrInfo.length; i++) { //recorrido del arreglo
@@ -236,7 +243,6 @@ function extraeNumInt(string) {//funcion que extrae el numero interior
         div.innerHTML += ("<br/> NULL <br/>");//imprime el contenido de que la constancia fiscal no tiene numero interior en la pagina web
         return 'NULL';
     } else { //si no se cumple lo anterior entonces 
-        console.log(guardaNumInt.length);
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNunInt.join(' ') + "<br/>");//imprime el contenido en la pagina web
         if ((guardaNunInt.length) >= 2) {
@@ -305,9 +311,9 @@ function extraeReg(string) {//funcion que extrae el regimen
             guardaReg.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
-    //return guardaReg;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
+    //return guardaReg;
 }
 
 
