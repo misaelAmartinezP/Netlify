@@ -238,6 +238,7 @@ function extraeNumInt(string) {//funcion que extrae el numero interior
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNunInt.join(' ') + "<br/>");//imprime el contenido en la pagina web
         if ((guardaNunInt.length) >= 2) {
+            console.log(guardaNumInt.join(' '));
             return guardaNunInt.join(' ');
 
         }
