@@ -138,7 +138,7 @@ function creaGenCod(string, string1) {
                     console.log(cadMaInf[i]);
                 }
             }
-            console.log(cadMaInf);//ver la separacion de la razon social
+            console.log(cadMaInf.trim);//ver la separacion de la razon social
         }
     }
 
