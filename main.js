@@ -208,11 +208,12 @@ function extraeNumExt(string) { //funcion que extrae el numero exterior
     }
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNunExt.join(' ') + "<br/>");//imprime el contenido en la pagina web
-    if ((guardaNumExt.length) == 2) {
-        return guardaNumExt.join(' ');
+    if ((guardaNunExt.length) == 2) {
+        return guardaNunExt.join(' ');
+
     }
     else {
-        return guardaNumExt;
+        return guardaNunExt;
     }
 }
 
