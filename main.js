@@ -267,7 +267,6 @@ function extraeNomCol(string) {//funcion que extrae la colonia
         div.innerHTML += ("<br/> NULL <br/>");//imprime sin nombre de colonia en la pagina web 
         return 'NULL';
     } else {//si no se cumple lo anterior entonces
-        //return guardaNomCol;
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNomCol.join(' ') + "<br/>");//imprime el contenido del arreglo guardaNomCol en la pagina web
         return guardaNomCol.join(' ');
@@ -277,18 +276,18 @@ function extraeNomCol(string) {//funcion que extrae la colonia
 function extraeDemTer(string) {//funcion que extrae la demarcacion terriotorial o el municipio 
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
     //console.log("estoy en la funcion extrae codigo postal ")//imprime el nombre de la funcion en consola 
-    var guardaReg = [];//declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
+    var guardaDemTer = [];//declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
     //console.log(arrInfo.indexOf("Territorial:"));//busqueda el indice de la palabra
     //console.log(arrInfo.indexOf("Federativa:"));//busqueda el indice de la palabra
     if (arrInfo.includes("Territorial:") == true) {//si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion
         //console.log("estoy en el if y soy true")//verificar que si se cumplio la condicion linea de apoyo 
         for (i = arrInfo.indexOf("Territorial:") + 1; i <= arrInfo.indexOf("Federativa:") - 5; i++) {
             //console.log(arrInfo[i]);//ver en consola si el contenido es el esperado
-            guardaReg.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
+            guardaDemTer.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
     var div = document.getElementById('output');
-    div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
+    div.innerHTML += ("<br/>" + guardaDemTer.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
     return guardaDemTer.join(' ');
 }
  
