@@ -265,7 +265,7 @@ function extraeNomCol(string) {//funcion que extrae la colonia
         //console.log("SN")
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> NULL <br/>");//imprime sin nombre de colonia en la pagina web 
-        //return 'NULL';
+        return 'NULL';
     } else {//si no se cumple lo anterior entonces
         //return guardaNomCol;
         var div = document.getElementById('output');
