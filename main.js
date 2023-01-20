@@ -270,6 +270,7 @@ function extraeNomCol(string) {//funcion que extrae la colonia
         //return guardaNomCol;
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaNomCol.join(' ') + "<br/>");//imprime el contenido del arreglo guardaNomCol en la pagina web
+        return guardaNomCol.join(' ');
     }
 }
 
