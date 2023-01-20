@@ -127,14 +127,14 @@ function creaGenCod(string, string1) {
         if ((difPer) == 12) {//si es persona moral
             console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
             for (i = 0; i <= cadMaInf.length; i++) {
-                if (arrAux[i] != ' ') {
+                if (cadMaInf[i] != ' ') {
                     console.log(arrAux[i]);
                 }
             }
         } else if ((difPer) == 13) {//si es persona fisica
             console.log("soy persona fisica");
             for (i = 0; i <= cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
-                if (arrAux[i] != ' ') {
+                if (cadMaInf[i] != ' ') {
                     console.log(arrAux[i]);
                 }
             }
