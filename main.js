@@ -119,7 +119,6 @@ function parceoDatos(string) {
 }
 
 function creaGenCod(string, string1) {
-    function creaGenCod(string, string1) {
         arrGenCod = " ";
         difPer = string1.length;
         console.log(difPer);// ver si es persona fisica o moral
@@ -142,7 +141,7 @@ function creaGenCod(string, string1) {
             console.log(cadMaCodAux);//ver la separacion de la razon social 
         }
     }
-}
+
 
 
 function extraeRFC(string) { //funcion que extrae el pdf 
