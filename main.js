@@ -94,7 +94,7 @@ function parceoDatos(string) {
     //console.log(separaDatos);
     //extraeRFC(separaDatos); //guarda RFC
     guardaRFC = extraeRFC(separaDatos);
-    extraeRaSo(separaDatos);//guarda razon social
+    //extraeRaSo(separaDatos);//guarda razon social
     guardaRaSo = extraeRaSo(separaDatos);
     extraeCodPos(separaDatos);//guarda codigo postal
     extraeNomVia(separaDatos);//guarda nombre de vialidad
@@ -138,9 +138,9 @@ function extraeRaSo(string) { //funcion que extrae la razon social
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> 'EL PDF NO ES UNA CONSTANCIA FISCAL'");//valida que el pdf sea una constancia fiscal y lo imprime en la pagina web 
     }
-    return guardaRaSo.join(' ');
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");//imprime el contenido en la pagina web
+    return guardaRaSo.join(' ');
 }
 
 function extraeCodPos(string) { //funcion que extrae el codigo postal 
