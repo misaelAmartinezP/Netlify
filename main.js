@@ -179,7 +179,7 @@ function extraeNomVia(string) { //funcion que extrae nombre de vialidad
     guardaNomViaAux=(guardaNomVia.reverse());//invierte el contenido del arreglo guardaNomVia
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNomViaAux.join(' ') + "<br/>");//imprime el contenido en la pagina web
-    return guardaNomViaAux.join(' ');
+    return guardaNomViaAux;
 }
 
 function extraeNumExt(string) { //funcion que extrae el numero exterior
