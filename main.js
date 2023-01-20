@@ -120,25 +120,10 @@ function parceoDatos(string) {
 
 function creaGenCod(string,string1) {
     arrGenCod = " ";
-    difPer = string1.length;
-    console.log(difPer);// ver si es persona fisica o moral
-    cadMaInf = string.split(' ');
-    arrAux = [];
-    if ((difPer) == 12) {//si es persona moral
-        console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
-        for (i = 0; i <= cadMaInf.length; i++) {
-            if (arrAux(i) != ' ') {
-                console.log(arrAux[i]);
-            }
-        }
-    } else if ((difPer) == 13) {//si es persona fisica
-        console.log("soy persona fisica");
-        for (i = 0; i <= cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
-            if (arrAux(i) != ' ') {
-                console.log(arrAux[i]);
-            }
-        }
-    console.log(cadMaCodAux);//ver la separacion de la razon social 
+    console.log(string1.length);
+    cadMaCodAux = string.split(' ');  
+
+    console.log(cadMaCodAux);
 }
 
 
