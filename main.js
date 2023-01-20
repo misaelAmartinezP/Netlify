@@ -158,7 +158,7 @@ function extraeCodPos(string) { //funcion que extrae el codigo postal
     }
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaCodPos.join(' ') + "<br/>"); //imprime el contenido en la pagina web
-    console.log(guardaCodPos.length);
+    console.log(guardaCodPos);
     return guardaCodPos;
 }
 
