@@ -94,7 +94,7 @@ function parceoDatos(string) {
     //console.log(separaDatos);
     //extraeRFC(separaDatos); //guarda RFC
     guardaRFC = extraeRFC(separaDatos);
-    //extraeRaSo(separaDatos);//guarda razon social
+    extraeRaSo(separaDatos);//guarda razon social
     guardaRaSo = extraeRaSo(separaDatos);
     extraeCodPos(separaDatos);//guarda codigo postal
     extraeNomVia(separaDatos);//guarda nombre de vialidad
