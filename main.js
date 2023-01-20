@@ -97,12 +97,20 @@ function parceoDatos(string) {
     //extraeRaSo(separaDatos);//guarda razon social
     guardaRaSo = extraeRaSo(separaDatos);
     extraeCodPos(separaDatos);//guarda codigo postal
+    guardaCodPos = extraeCodPos(separaDatos);
     extraeNomVia(separaDatos);//guarda nombre de vialidad
+    guardaNomVia = extraeNomVia(separaDatos);
     extraeNumExt(separaDatos);//guarda numero exterior
+    guardaNumExt = extraeNumExt(separaDatos);
     extraeNumInt(separaDatos);//guarda numero interior
+    guardaNumInt = extraeNumInt(separaDatos);
     extraeNomCol(separaDatos);//guarda nombre de la colonia
+    guardaNomCol = extraeNomCol(separaDatos);
     extraeDemTer(separaDatos);//guarda demarcacion territorial o municipio
+    guardaDemTer = extraeDemTer(separaDatos);
     extraeReg(separaDatos);//guarda regimen
+    guardaReg = extraeReg(separaDatos);
+
 
     //generando el query
     query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) values(9999,' hacer codigo ','" + guardaRaSo + "', NULL,2,'" + guardaRFC + "','" + guardaNomVia + " " + guardaNumExt + " " + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores off";
@@ -158,7 +166,7 @@ function extraeCodPos(string) { //funcion que extrae el codigo postal
     }
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaCodPos.join(' ') + "<br/>"); //imprime el contenido en la pagina web
-    //falta cp 
+    return guardaCodPos;
 }
 
 function extraeNomVia(string) { //funcion que extrae nombre de vialidad
