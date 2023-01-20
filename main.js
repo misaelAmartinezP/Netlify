@@ -158,8 +158,7 @@ function extraeCodPos(string) { //funcion que extrae el codigo postal
     }
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaCodPos.join(' ') + "<br/>"); //imprime el contenido en la pagina web
-    console.log(guardaCodPos);
-    return guardaCodPos;
+    //falta cp 
 }
 
 function extraeNomVia(string) { //funcion que extrae nombre de vialidad
@@ -180,7 +179,7 @@ function extraeNomVia(string) { //funcion que extrae nombre de vialidad
     guardaNomViaAux=(guardaNomVia.reverse());//invierte el contenido del arreglo guardaNomVia
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaNomViaAux.join(' ') + "<br/>");//imprime el contenido en la pagina web
-    //return guardaNomViaAux;
+    return guardaNomViaAux.join(' ');
 }
 
 function extraeNumExt(string) { //funcion que extrae el numero exterior
