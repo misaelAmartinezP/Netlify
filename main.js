@@ -156,9 +156,9 @@ function extraeCodPos(string) { //funcion que extrae el codigo postal
             guardaCodPos.push(arrInfo[i]);//guarda en el arreglo guardaCodPos el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
-    //return guardaCodPos;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaCodPos.join(' ') + "<br/>"); //imprime el contenido en la pagina web
+    return guardaCodPos;
 }
 
 function extraeNomVia(string) { //funcion que extrae nombre de vialidad
