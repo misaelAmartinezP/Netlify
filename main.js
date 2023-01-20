@@ -118,7 +118,7 @@ function parceoDatos(string) {
     //console.log(query);
 }
 
-function creaGenCod(string,string1) {
+function creaGenCod(string, string1) {
     function creaGenCod(string, string1) {
         arrGenCod = " ";
         difPer = string1.length;
@@ -142,6 +142,7 @@ function creaGenCod(string,string1) {
             console.log(cadMaCodAux);//ver la separacion de la razon social 
         }
     }
+}
 
 
 function extraeRFC(string) { //funcion que extrae el pdf 
