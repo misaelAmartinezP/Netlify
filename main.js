@@ -119,11 +119,12 @@ function parceoDatos(string) {
 }
 
 function creaGenCod(string,string1) {
-    arrGenCod = string.split(' ');
-    sinEspacios = (arrGenCod.trim());
+    arrGenCod = " ";
+    cadManCod = string.join(' ');
+    cadMaCodAux = cadManCod.split('');  
     console.log(string1.length);
-    console.log(arrGenCod);
-    console.log(sinEspacios);
+    console.log(cadManCod);
+    console.log(cadMaCodAux);
 }
 
 
