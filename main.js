@@ -128,14 +128,14 @@ function creaGenCod(string, string1) {
             console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
             for (i = 0; i <= cadMaInf.length; i++) {
                 if (cadMaInf[i] != ' ') {
-                    console.log(arrAux[i]);
+                    console.log(cadMaInf[i]);
                 }
             }
         } else if ((difPer) == 13) {//si es persona fisica
             console.log("soy persona fisica");
             for (i = 0; i <= cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
                 if (cadMaInf[i] != ' ') {
-                    console.log(arrAux[i]);
+                    console.log(cadMaInf[i]);
                 }
             }
             console.log(cadMaInf);//ver la separacion de la razon social
