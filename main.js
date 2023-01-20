@@ -287,9 +287,9 @@ function extraeDemTer(string) {//funcion que extrae la demarcacion terriotorial 
             guardaReg.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
         }
     }
-    //return guardaDemTer;
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
+    return guardaDemTer.join(' ');
 }
  
 function extraeReg(string) {//funcion que extrae el regimen 
