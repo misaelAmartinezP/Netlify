@@ -96,19 +96,19 @@ function parceoDatos(string) {
     guardaRFC = extraeRFC(separaDatos);
     //extraeRaSo(separaDatos);//guarda razon social
     guardaRaSo = extraeRaSo(separaDatos);
-    extraeCodPos(separaDatos);//guarda codigo postal
+    //extraeCodPos(separaDatos);//guarda codigo postal
     guardaCodPos = extraeCodPos(separaDatos);
-    extraeNomVia(separaDatos);//guarda nombre de vialidad
+    //extraeNomVia(separaDatos);//guarda nombre de vialidad
     guardaNomVia = extraeNomVia(separaDatos);
-    extraeNumExt(separaDatos);//guarda numero exterior
+    //extraeNumExt(separaDatos);//guarda numero exterior
     guardaNumExt = extraeNumExt(separaDatos);
-    extraeNumInt(separaDatos);//guarda numero interior
+    //extraeNumInt(separaDatos);//guarda numero interior
     guardaNumInt = extraeNumInt(separaDatos);
-    extraeNomCol(separaDatos);//guarda nombre de la colonia
+    //extraeNomCol(separaDatos);//guarda nombre de la colonia
     guardaNomCol = extraeNomCol(separaDatos);
-    extraeDemTer(separaDatos);//guarda demarcacion territorial o municipio
+    //extraeDemTer(separaDatos);//guarda demarcacion territorial o municipio
     guardaDemTer = extraeDemTer(separaDatos);
-    extraeReg(separaDatos);//guarda regimen
+    //extraeReg(separaDatos);//guarda regimen
     guardaReg = extraeReg(separaDatos);
 
 
