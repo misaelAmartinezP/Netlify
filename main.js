@@ -120,9 +120,15 @@ function parceoDatos(string) {
 
 function creaGenCod(string,string1) {
     arrGenCod = " ";
-    cadMaCodAux = string.split(' ');  
-    console.log(string1.length);
-    console.log(cadMaCodAux);
+    difPer = string1.length;
+    console.log(difPer);// ver si es persona fisica o moral
+    cadMaCodAux = string.split(' ');
+    if ((difPer.length) == 12) {//si es persona moral
+        console.log("persona moral");
+    } else if ((difPer.length) == 13) {//si es persona fisica
+        console.log("soy persona fisica");
+    }
+    console.log(cadMaCodAux);//ver la separacion de la razon social 
 }
 
 
