@@ -120,7 +120,8 @@ function parceoDatos(string) {
 
 function creaGenCod(string,string1) {
     arrGenCod = " ";
-    cadMaCodAux = cadManCod.split('');  
+    cadManCod = string.join('');
+    cadMaCodAux = string.split('');  
     console.log(string1.length);
     console.log(cadManCod);
     console.log(cadMaCodAux);
