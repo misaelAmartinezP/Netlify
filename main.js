@@ -120,8 +120,9 @@ function parceoDatos(string) {
 
 function creaGenCod(string) {
     arrGenCod = string.split(' ');
+    sinEspacios = arrGenCod.trim();
     console.log(arrGenCod);
-
+    console.log(sinEspacios);
 }
 
 
