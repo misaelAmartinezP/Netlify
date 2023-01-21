@@ -129,8 +129,11 @@ function creaGenCod(string, string1) {
             for (i = 0; i <= cadMaInf.length; i++) {
                 if (cadMaInf[i] != '') {
                     console.log(cadMaInf[i]);
-                    arrAux.push(cadMaInf[i]); 
-                }
+                    arrAux.push(cadMaInf[i]);
+                    if (arrAux[i] == 'undefined') {
+                        break
+                    }
+                } 
             }
         } else if ((difPer) == 13) {//si es persona fisica
             console.log("soy persona fisica");
@@ -138,6 +141,9 @@ function creaGenCod(string, string1) {
                 if (cadMaInf[i] != '') {
                     console.log(cadMaInf[i]);
                     arrAux.push(cadMaInf[i]);
+                    if (arrAux[i] == 'undefined') {
+                        break
+                    }
                 }
             }
     }
