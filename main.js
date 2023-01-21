@@ -130,7 +130,7 @@ function creaGenCod(string, string1) {
                 if (cadMaInf[i] != '') {
                     console.log(cadMaInf[i]);
                     arrAux.push(cadMaInf[i]);
-                    if (arrAux[i] == 'undefined') {
+                    if (arrAux[i] == undefined) {
                         break
                     }
                 } 
@@ -141,7 +141,7 @@ function creaGenCod(string, string1) {
                 if (cadMaInf[i] != '') {
                     console.log(cadMaInf[i]);
                     arrAux.push(cadMaInf[i]);
-                    if (arrAux[i] == 'undefined') {
+                    if (arrAux[i] == undefined) {
                         break
                     }
                 }
