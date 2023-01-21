@@ -127,7 +127,7 @@ function creaGenCod(string, string1) {
         if ((difPer) == 12) {//si es persona moral
             console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
             for (i = 0; i <= cadMaInf.length; i++) {
-                if (cadMaInf[i] != ' ') {
+                if (cadMaInf[i] != '') {
                     console.log(cadMaInf[i]);
                     arrAux.push(cadMaInf[i]); 
                 }
@@ -135,7 +135,7 @@ function creaGenCod(string, string1) {
         } else if ((difPer) == 13) {//si es persona fisica
             console.log("soy persona fisica");
             for (i = 0; i <= cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
-                if (cadMaInf[i] != ' ') {
+                if (cadMaInf[i] != '') {
                     console.log(cadMaInf[i]);
                     arrAux.push(cadMaInf[i]);
                 }
