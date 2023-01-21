@@ -140,9 +140,10 @@ function creaGenCod(string, string1) {
                     arrAux.push(cadMaInf[i]);
                 }
             }
-            console.log(arrAux);//ver la separacion de la razon social
-        }
     }
+    console.log(arrAux);//ver la separacion de la razon social
+
+}
 
 
 
