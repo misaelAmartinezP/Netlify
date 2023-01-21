@@ -129,6 +129,7 @@ function creaGenCod(string, string1) {
             for (i = 0; i <= cadMaInf.length; i++) {
                 if (cadMaInf[i] != ' ') {
                     console.log(cadMaInf[i]);
+                    arrAux.push(cadMaInf[i]);
                 }
             }
         } else if ((difPer) == 13) {//si es persona fisica
@@ -136,9 +137,10 @@ function creaGenCod(string, string1) {
             for (i = 0; i <= cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
                 if (cadMaInf[i] != ' ') {
                     console.log(cadMaInf[i]);
+                    arrAux.push(cadMaInf[i]);
                 }
             }
-            console.log(cadMaInf.trim);//ver la separacion de la razon social
+            console.log(arrAux);//ver la separacion de la razon social
         }
     }
 
