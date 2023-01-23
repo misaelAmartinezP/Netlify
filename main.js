@@ -147,10 +147,6 @@ function creaGenCod(string, string1) {
                 }
             }
     }
-    var cadena = 'Hola Mundo”;
-    cadena.substring(0, 2); // Resulta “Ho”
-
-    console.log(arrPa);
 }
 
 
