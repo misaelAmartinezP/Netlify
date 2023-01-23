@@ -147,12 +147,15 @@ function creaGenCod(string, string1) {
                 }
             }
     }
+    arrPa = [];
     for (i in arrAux) {
         console.log(arrAux[i]);
         for (j in arrAux[i]) {
-            console.log(arrAux[j]);
+            console.log(j);
+            arrPa.push(j);
         }
     }
+    console.log(arrPa);
 }
 
 
