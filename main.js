@@ -149,7 +149,8 @@ function creaGenCod(string, string1) {
         }
 
 
-    for (j = 0; j <= arrAux; j++) {
+    for (j = 0; j <= arrAux.length; j++) {
+        console.log(j);
         for (k = 0; k <= j; k++) {
             console.log(k);
         }
