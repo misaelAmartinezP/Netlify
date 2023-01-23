@@ -174,7 +174,7 @@ function extraeRaSo(string) { //funcion que extrae la razon social
     if (arrInfo.includes("Contribuyentes") == true) { //si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion 
         //console.log("estoy en el if y soy true") //verificar que si se cumplio la condicion linea de apoyo 
         for (i = arrInfo.indexOf("Contribuyentes") + 1; i <= arrInfo.indexOf("Nombre,") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
-            //console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
+            console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
             guardaRaSo.push(arrInfo[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i 
         } 
     } else {
