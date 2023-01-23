@@ -127,15 +127,17 @@ function creaGenCod(string, string1) {
         arrGenCod = " ";
         difPer = string1.length;
         //console.log(difPer);// ver si es persona fisica o moral
-        cadMaInf = string.split(' ');
+    cadMaInf = string.split(' ');
+    console.log(cadMaInf);
         arrAux = [];
         if ((difPer) == 12) {//si es persona moral
             console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
             for (i = 0; i < cadMaInf.length; i++) {
                 if (cadMaInf[i] != '') {
-                   // console.log(cadMaInf[i]);
+                    // console.log(cadMaInf[i]);
+                    if ((cadMaInf.length)) { }
                     arrCodigo.push(cadMaInf[i].substring(0, 3));
-                    console.log(cadMaInf[i].substring(0, 3));
+                    //console.log(cadMaInf[i].substring(0, 3));
                     arrAux.push(cadMaInf[i]);
                     if (arrAux[i] == undefined) {
                         break
@@ -147,7 +149,7 @@ function creaGenCod(string, string1) {
             for (i = 0; i < cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
                 if (cadMaInf[i] != '') {
                     arrCodigo.push(cadMaInf[i].substring(0, 3));
-                    console.log(cadMaInf[i].substring(0, 3));
+                    //console.log(cadMaInf[i].substring(0, 3));
                     //console.log(cadMaInf[i]);
                     arrAux.push(cadMaInf[i]);
                     if (arrAux[i] == undefined) {
@@ -156,7 +158,15 @@ function creaGenCod(string, string1) {
                 }
             }
     }
-    console.log(arrCodigo);
+    console.log(arrCodigo);//solo tres letras de cada palabra 
+    if ((difPer) == 12) {//si es persona moral
+        if ((arrCodigo.length) == 4) {
+            console.log(arrCodigo[0] + arrCodigo[2] + arrCodigo[3])
+        }
+    }
+    else if ((difPer) == 13) {
+
+    }
 }
 
 
