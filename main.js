@@ -158,27 +158,27 @@ function creaGenCod(string, string1) {
     console.log(arrAux);
     //arrCodigo.push(cadMaInf[i].substring(0, 3));//con esta extraemos las tres primeras letras de cada palabra
     if ((difPer) == 12) {//si es persona moral
-        if ((arrCodigo.length) <= 4) {
-            //arrCodigo[0].substring(0, 3);
-            console.log(arrCodigo[0]);
-            //arrCodigo[1].substring(0, 3);
-            console.log(arrCodigo[1]);
-            //arrCodigo[2].substring(0, 3);
-            console.log(arrCodigo[2]);
-            //arrCodigo[3].substring(0, 4);
-            console.log(arrCodigo[3]);
+        if ((arrAux.length) <= 4) {
+            arrAux[0].substring(0, 3);
+            console.log(arrAux[0]);
+            //arrAux[1].substring(0, 3);
+            console.log(arrAux[1]);
+            //arrAux[2].substring(0, 3);
+            console.log(arrAux[2]);
+            //arrAux[3].substring(0, 4);
+            console.log(arrAux[3]);
         }
     }
     else if ((difPer) == 13) {//si es persona fisica 
-        if ((arrCodigo.length) == 4) {
-            //arrCodigo[0].substring(0, 3);
-            console.log(arrCodigo[0]);
-            //arrCodigo[1].substring(0, 3);
-            console.log(arrCodigo[1]);
-            //arrCodigo[2].substring(0, 3);
-            console.log(arrCodigo[2]);
-            //arrCodigo[3].substring(0, 4);
-            console.log(arrCodigo[3]);
+        if ((arrAux.length) == 4) {
+            arrAux[0].substring(0, 3);
+            console.log(arrAux[0]);
+            //arrAux[1].substring(0, 3);
+            console.log(arrAux[1]);
+            //arrAux[2].substring(0, 3);
+            console.log(arrAux[2]);
+            //arrAux[3].substring(0, 4);
+            console.log(arrAux[3]);
         }
         console.log(arrCodigo);//codigo listo 
     }
