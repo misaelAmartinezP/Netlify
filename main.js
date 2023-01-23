@@ -123,7 +123,6 @@ function parceoDatos(string) {
 }
 
 function creaGenCod(string, string1) {
-    arrCodigo = [];
     arrGenCod = " ";
     difPer = string1.length;
     //console.log(difPer);// ver si es persona fisica o moral
@@ -170,14 +169,15 @@ function creaGenCod(string, string1) {
     }
     else if ((difPer) == 13) {//si es persona fisica 
         if ((arrAux.length) == 4) {
-            console.log(arrAux[2].substring(0, 3));
-            arrAux[3].substring(0, 3);
-            console.log(arrAux[3].substring(0, 3));
-            arrAux[3].substring(0, 3);
-            console.log(arrAux[0].substring(0, 4));
-            arrAux[3].substring(0, 4);
+            console.log(arrAux[2].substring(0, 3));//apellido paterno 3 primeros caracteres 
+            car3p=arrAux[3].substring(0, 3);
+            console.log(arrAux[3].substring(0, 3));//apellido materno 3 primeros caracteres 
+            car3s =arrAux[3].substring(0, 3);
+            console.log(arrAux[0].substring(0, 4));//nombre 4 primeros caracteres 
+            car4p = arrAux[3].substring(0, 4);
+            codGen4p = (car3p + car3s + car4p + "MXN");
         }
-        console.log(arrCodigo);//codigo listo 
+        console.log(codGen4p);//codigo listo
     }
 }
 
