@@ -3,6 +3,7 @@ var DataArr = [];
 var apellidoPa = '';
 var apellidoMa = '';
 var nombres = '';
+var arrCodigo = [];
 
 var guardaRFC = ""; //guarda RFC
 var guardaRaSo = "";//guarda razon social
@@ -132,6 +133,7 @@ function creaGenCod(string, string1) {
             for (i = 0; i < cadMaInf.length; i++) {
                 if (cadMaInf[i] != '') {
                    // console.log(cadMaInf[i]);
+                    arrCodigo.push(cadMaInf[i].substring(0, 3));
                     console.log(cadMaInf[i].substring(0, 3));
                     arrAux.push(cadMaInf[i]);
                     if (arrAux[i] == undefined) {
@@ -143,6 +145,7 @@ function creaGenCod(string, string1) {
             console.log("soy persona fisica");
             for (i = 0; i < cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
                 if (cadMaInf[i] != '') {
+                    arrCodigo.push(cadMaInf[i].substring(0, 3));
                     console.log(cadMaInf[i].substring(0, 3));
                     //console.log(cadMaInf[i]);
                     arrAux.push(cadMaInf[i]);
