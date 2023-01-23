@@ -158,7 +158,7 @@ function creaGenCod(string, string1) {
     console.log(arrAux);
     //arrCodigo.push(cadMaInf[i].substring(0, 3));//con esta extraemos las tres primeras letras de cada palabra
     if ((difPer) == 12) {//si es persona moral
-        if ((arrAux.length) <= 4) {
+        if ((arrAux.length) >= 4) {
             arrAux[0].substring(0, 3);
             console.log(arrAux[0]);
             //arrAux[1].substring(0, 3);
