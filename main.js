@@ -126,7 +126,7 @@ function creaGenCod(string, string1) {
         arrAux = [];
         if ((difPer) == 12) {//si es persona moral
             console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
-            for (i = 0; i <= cadMaInf.length; i++) {
+            for (i = 0; i < cadMaInf.length; i++) {
                 if (cadMaInf[i] != '') {
                    // console.log(cadMaInf[i]);
                     arrAux.push(cadMaInf[i]);
@@ -137,7 +137,7 @@ function creaGenCod(string, string1) {
             }
         } else if ((difPer) == 13) {//si es persona fisica
             console.log("soy persona fisica");
-            for (i = 0; i <= cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
+            for (i = 0; i < cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
                 if (cadMaInf[i] != '') {
                     //console.log(cadMaInf[i]);
                     arrAux.push(cadMaInf[i]);
@@ -147,18 +147,23 @@ function creaGenCod(string, string1) {
                 }
             }
     }
-    for (j = 0; j <= arrAux.length; j++) {
+    for (j = 0; j < arrAux.length; j++) {
         console.log("dentro del for");
         console.log(arrAux[j]);
+        var resultado=""
         if (arrAux[j] == undefined) {
             break
         } else {
             for (k = 0; k <= arrAux[j]; k++)
-                console.log("evita los undefined")
-                console.log(k);
+                console.log("evita los undefined");
+                resultado += arrAux(j).charCodeAt(k);                
         }
     }
+    console.log(resultado
+    )
 }
+
+func
 
 
 
