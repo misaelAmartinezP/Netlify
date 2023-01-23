@@ -142,9 +142,6 @@ function creaGenCod(string, string1) {
                                     // console.log(cadMaInf[i]);
                                     //console.log(cadMaInf[i].substring(0, 3));
                                     arrAux.push(cadMaInf[i]);
-                                    if (arrAux[i] == undefined) {
-                                        break
-                                    }
                                 }
                             }
                         }
