@@ -163,7 +163,6 @@ function creaGenCod(string, string1) {
     )
 }
 
-func
 
 
 
