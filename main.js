@@ -3,7 +3,7 @@ var DataArr = [];
 var apellidoPa = '';
 var apellidoMa = '';
 var nombres = '';
-var arrCodigo = [];
+
 
 var guardaRFC = ""; //guarda RFC
 var guardaRaSo = "";//guarda razon social
@@ -123,6 +123,7 @@ function parceoDatos(string) {
 }
 
 function creaGenCod(string, string1) {
+        arrCodigo = [];
         arrGenCod = " ";
         difPer = string1.length;
         //console.log(difPer);// ver si es persona fisica o moral
