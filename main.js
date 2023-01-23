@@ -146,9 +146,17 @@ function creaGenCod(string, string1) {
                     }
                 }
             }
-    }
-    console.log(arrAux);//ver la separacion de la razon social
+        }
 
+
+    for (j = 0; j <= arrAux.length; j++) {
+        console.log(arrAux[i]);
+        for (k = 0; k <= j; k++) {
+            console.log(k);
+        }
+    }
+
+    console.log(arrAux);//ver la separacion de la razon social
 }
 
 
