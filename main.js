@@ -94,7 +94,7 @@ function pdfAsArray(pdfAsArray) {
 
 function parceoDatos(string) {
     separaDatos = string.split(" ");
-    //console.log(separaDatos);
+    console.log(separaDatos);
     //extraeRFC(separaDatos); //guarda RFC
     guardaRFC = extraeRFC(separaDatos);
     //extraeRaSo(separaDatos);//guarda razon social
@@ -385,8 +385,8 @@ function extraeRaSoAux(string) { //funcion que extrae la razon social
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
     //console.log("estoy en la funcion extrae razon social ") //imprime el nombre de la funcion en consola 
     var guardaRaSo = []; //declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
-    //console.log(arrInfo.indexOf("Contribuyentes"));//busqueda el indice de la palabra
-    //console.log(arrInfo.indexOf("Nombre,"));//busqueda el indice de la palabra
+    console.log(arrInfo.indexOf("Contribuyentes"));//busqueda el indice de la palabra
+    console.log(arrInfo.indexOf("Nombre,"));//busqueda el indice de la palabra
     if (arrInfo.includes("Contribuyentes") == true) { //si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion 
         //console.log("estoy en el if y soy true") //verificar que si se cumplio la condicion linea de apoyo 
         for (i = arrInfo.indexOf("Contribuyentes") + 1; i <= arrInfo.indexOf("Nombre,") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
