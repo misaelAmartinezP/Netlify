@@ -124,7 +124,7 @@ function parceoDatos(string) {
 function creaGenCod(string, string1) {
         arrGenCod = " ";
         difPer = string1.length;
-        console.log(difPer);// ver si es persona fisica o moral
+        //console.log(difPer);// ver si es persona fisica o moral
         cadMaInf = string.split(' ');
         arrAux = [];
         if ((difPer) == 12) {//si es persona moral
@@ -143,7 +143,7 @@ function creaGenCod(string, string1) {
             console.log("soy persona fisica");
             for (i = 0; i < cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
                 if (cadMaInf[i] != '') {
-                    console.log(arrInfo[i].substring(0, 3));
+                    console.log(cadMaInf[i].substring(0, 3));
                     //console.log(cadMaInf[i]);
                     arrAux.push(cadMaInf[i]);
                     if (arrAux[i] == undefined) {
