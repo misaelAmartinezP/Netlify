@@ -133,11 +133,22 @@ function creaGenCod(string, string1) {
         console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
         for (i = 0; i < cadMaInf.length; i++) {//recorrido para evitar los espacios en blanco 
             if (cadMaInf[i] != '') {//mientras que sea diferente a espacio en blanco lo imprimimos 
-                // console.log(cadMaInf[i]);
-                //console.log(cadMaInf[i].substring(0, 3));
-                arrAux.push(cadMaInf[i]);
-                if (arrAux[i] == undefined) {
-                    break
+                if (cadMaInf[i] != 'DE') {
+                    if (cadMaInf[i] != 'EL') {
+                        if (cadMaInf[i] != 'LA') {
+                            if (cadMaInf[i] != 'LOS') {
+                                if (cadMaInf[i] != 'LAS') {
+                                    console.log("estamos en los if anidados");
+                                    // console.log(cadMaInf[i]);
+                                    //console.log(cadMaInf[i].substring(0, 3));
+                                    arrAux.push(cadMaInf[i]);
+                                    if (arrAux[i] == undefined) {
+                                        break
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
