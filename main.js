@@ -148,7 +148,7 @@ function creaGenCod(string, string1) {
             }
     }
     for (i in arrAux) {
-        console.log(i);
+        console.log(arrAux[i]);
     }
 }
 
