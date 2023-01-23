@@ -148,6 +148,7 @@ function creaGenCod(string, string1) {
             }
     }
     for (j = 0; j <= arrAux.length; j++) {
+        console.log("dentro del for");
         console.log(arrAux[i]);
     }
 }
