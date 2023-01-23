@@ -123,20 +123,18 @@ function parceoDatos(string) {
 }
 
 function creaGenCod(string, string1) {
-        arrCodigo = [];
-        arrGenCod = " ";
-        difPer = string1.length;
-        //console.log(difPer);// ver si es persona fisica o moral
+    arrCodigo = [];
+    arrGenCod = " ";
+    difPer = string1.length;
+    //console.log(difPer);// ver si es persona fisica o moral
     cadMaInf = string.split(' ');
     console.log(cadMaInf);
-        arrAux = [];
+    arrAux = [];
         if ((difPer) == 12) {//si es persona moral
             console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
-            for (i = 0; i < cadMaInf.length; i++) {
-                if (cadMaInf[i] != '') {
+            for (i = 0; i < cadMaInf.length; i++) {//recorrido para evitar los espacios en blanco 
+                if (cadMaInf[i] != '') {//mientras que sea diferente a espacio en blanco lo imprimimos 
                     // console.log(cadMaInf[i]);
-                    if ((cadMaInf.length)) { }
-                    arrCodigo.push(cadMaInf[i].substring(0, 3));
                     //console.log(cadMaInf[i].substring(0, 3));
                     arrAux.push(cadMaInf[i]);
                     if (arrAux[i] == undefined) {
@@ -148,8 +146,7 @@ function creaGenCod(string, string1) {
             console.log("soy persona fisica");
             for (i = 0; i < cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
                 if (cadMaInf[i] != '') {
-                    arrCodigo.push(cadMaInf[i].substring(0, 3));
-                    //console.log(cadMaInf[i].substring(0, 3));
+                    //arrCodigo.push(cadMaInf[i].substring(0, 3));
                     //console.log(cadMaInf[i]);
                     arrAux.push(cadMaInf[i]);
                     if (arrAux[i] == undefined) {
@@ -158,6 +155,8 @@ function creaGenCod(string, string1) {
                 }
             }
     }
+    console.log(arrAux);
+    //arrCodigo.push(cadMaInf[i].substring(0, 3));//con esta extraemos las tres primeras letras de cada palabra
     console.log(arrCodigo);//solo tres letras de cada palabra 
     if ((difPer) == 12) {//si es persona moral
         if ((arrCodigo.length) == 4) {
