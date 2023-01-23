@@ -156,11 +156,8 @@ function creaGenCod(string, string1) {
         } else {
             for (k = 0; k <= arrAux[j]; k++)
                 console.log("evita los undefined");
-                resultado += arrAux(j).charCodeAt(k);                
         }
     }
-    console.log(resultado
-    )
 }
 
 
