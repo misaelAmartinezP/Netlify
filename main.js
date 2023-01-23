@@ -150,7 +150,7 @@ function creaGenCod(string, string1) {
     for (i in arrAux) {
         console.log(arrAux[i]);
         for (j in arrAux[i]) {
-            console.log(j);
+            console.log(arrAux[j]);
         }
     }
 }
