@@ -146,16 +146,8 @@ function creaGenCod(string, string1) {
                     }
                 }
             }
-        }
-
-
-    for (j = 0; j <= arrAux.length; j++) {
-        console.log(j);
-        for (k = 0; k <= j; k++) {
-            console.log(k);
-        }
     }
-
+    arrAux.forEach(function (arrAux) { console.log(arrAux); })
     //console.log(arrAux);//ver la separacion de la razon social
 }
 
