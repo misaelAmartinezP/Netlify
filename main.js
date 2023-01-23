@@ -164,7 +164,7 @@ function creaGenCod(string, string1) {
             //arrAux[1].substring(0, 3);
             console.log(arrAux[1].substring(0, 3));
             //arrAux[2].substring(0, 3);
-            console.log(arrAux[2].substring(0, 3));
+            console.log(arrAux[2].substring(0, 4));
             //arrAux[3].substring(0, 4);
             console.log(arrAux[3].substring(0, 3));
         }
