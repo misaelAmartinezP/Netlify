@@ -130,30 +130,30 @@ function creaGenCod(string, string1) {
     cadMaInf = string.split(' ');
     //console.log(cadMaInf);//ver contenido de cadMaInf
     arrAux = [];
-        if ((difPer) == 12) {//si es persona moral
-            console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
-            for (i = 0; i < cadMaInf.length; i++) {//recorrido para evitar los espacios en blanco 
-                if (cadMaInf[i] != '') {//mientras que sea diferente a espacio en blanco lo imprimimos 
-                    // console.log(cadMaInf[i]);
-                    //console.log(cadMaInf[i].substring(0, 3));
-                    arrAux.push(cadMaInf[i]);
-                    if (arrAux[i] == undefined) {
-                        break
-                    }
-                } 
-            }
-        } else if ((difPer) == 13) {//si es persona fisica
-            console.log("soy persona fisica");
-            for (i = 0; i < cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
-                if (cadMaInf[i] != '') {
-                    //arrCodigo.push(cadMaInf[i].substring(0, 3));
-                    //console.log(cadMaInf[i]);
-                    arrAux.push(cadMaInf[i]);
-                    if (arrAux[i] == undefined) {
-                        break
-                    }
+    if ((difPer) == 12) {//si es persona moral
+        console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
+        for (i = 0; i < cadMaInf.length; i++) {//recorrido para evitar los espacios en blanco 
+            if (cadMaInf[i] != '') {//mientras que sea diferente a espacio en blanco lo imprimimos 
+                // console.log(cadMaInf[i]);
+                //console.log(cadMaInf[i].substring(0, 3));
+                arrAux.push(cadMaInf[i]);
+                if (arrAux[i] == undefined) {
+                    break
                 }
             }
+        }
+    } else if ((difPer) == 13) {//si es persona fisica
+        console.log("soy persona fisica");
+        for (i = 0; i < cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
+            if (cadMaInf[i] != '') {
+                //arrCodigo.push(cadMaInf[i].substring(0, 3));
+                //console.log(cadMaInf[i]);
+                arrAux.push(cadMaInf[i]);
+                if (arrAux[i] == undefined) {
+                    break
+                }
+            }
+        }
     }
     console.log(arrAux);
     //arrCodigo.push(cadMaInf[i].substring(0, 3));//con esta extraemos las tres primeras letras de cada palabra
@@ -179,8 +179,9 @@ function creaGenCod(string, string1) {
             console.log(arrCodigo[2]);
             arrCodigo[3].substring(0, 4);
             console.log(arrCodigo[3]);
+        }
+        console.log(arrCodigo);//codigo listo 
     }
-    console.log(arrCodigo);//codigo listo 
 }
 
 
