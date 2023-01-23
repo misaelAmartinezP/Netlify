@@ -172,7 +172,7 @@ function creaGenCod(string, string1) {
         if ((arrAux.length) == 4) {
             console.log(arrAux[2].substring(0, 3));
             arrAux[3].substring(0, 3);
-            console.log(arrAux[4].substring(0, 3));
+            console.log(arrAux[3].substring(0, 3));
             arrAux[3].substring(0, 3);
             console.log(arrAux[0].substring(0, 4));
             arrAux[3].substring(0, 4);
