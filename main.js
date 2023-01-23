@@ -157,14 +157,35 @@ function creaGenCod(string, string1) {
     console.log(arrAux);
     //arrCodigo.push(cadMaInf[i].substring(0, 3));//con esta extraemos las tres primeras letras de cada palabra
     if ((difPer) == 12) {//si es persona moral
-        if ((arrAux.length) >= 4) {
+        if ((arrAux.length) == 4) {
             arrAux[0].substring(0, 3);
-            console.log(arrAux[0].substring(0, 3));
-            arrAux[1].substring(0, 3);
-            console.log(arrAux[1].substring(0, 3));
-            arrAux[2].substring(0, 3);
-            console.log(arrAux[2].substring(0, 4));
-            arrAux[3].substring(0, 4);
+            console.log(arrAux[0].substring(0, 3)); //tres primeras letras de la primer palabra
+            if (arrAux[1] == 'DE') { // si el contenido del indice en la posicion 1 es igual a 'DE' entonces toma el siguiente indice
+                console.log(arrAux[2].substring(0, 3));//tres primeras letras de la segunda palabra
+                arrAux[2].substring(0, 3);
+            } else {//si no es igual el indice entonces se toma el valor que haya en el indice uno 
+                console.log(arrAux[1].substring(0, 3));//tres primeras letras de la segunda palabra
+                arrAux[1].substring(0, 3);
+            }
+            if (arrAux[2] == 'DE') { // si el contenido del indice en la posicion 2 es igual a 'DE' entonces toma el siguiente indice
+                console.log(arrAux[3].substring(0, 3));//tres primeras letras de la segunda palabra
+                arrAux[3].substring(0, 3);
+            } else {//si no es igual el indice entonces se toma el valor que haya en el indice uno 
+                console.log(arrAux[2].substring(0, 3));//tres primeras letras de la segunda palabra
+                arrAux[2].substring(0, 3);
+            }
+            if (arrAux[3] == 'DE') { // si el contenido del indice en la posicion 1 es igual a 'DE' entonces toma el siguiente indice
+                console.log(arrAux[4].substring(0, 3));//tres primeras letras de la segunda palabra
+                arrAux[4].substring(0, 3);
+            } else {//si no es igual el indice entonces se toma el valor que haya en el indice uno 
+                console.log(arrAux[3].substring(0, 3));//tres primeras letras de la segunda palabra
+                arrAux[3].substring(0, 3);
+            }
+
+
+
+            console.log(arrAux[2].substring(0, 4));// cuatro ultimas leras de la palabra
+            arrAux[3].substring(0, 4); 
         }
     }
     else if ((difPer) == 13) {//si es persona fisica 
@@ -176,6 +197,22 @@ function creaGenCod(string, string1) {
             console.log(arrAux[0].substring(0, 4));//nombre 4 primeros caracteres 
             car4p = arrAux[0].substring(0, 4);
             codGen4p = (car3p + car3s + car4p + "MXN");
+        }
+        if ((arrAux.length) == 3) {
+            console.log(arrAux[1].substring(0, 3));//apellido paterno 3 primeros caracteres 
+            car3p = arrAux[1].substring(0, 3);
+            console.log(arrAux[2].substring(0, 3));//apellido materno 3 primeros caracteres 
+            car3s = arrAux[2].substring(0, 3);
+            console.log(arrAux[0].substring(0, 4));//nombre 4 primeros caracteres 
+            car4p = arrAux[0].substring(0, 4);
+            codGen4p = (car3p + car3s + car4p + "MXN");
+        }
+        if ((arrAux.length) == 2) {
+            console.log(arrAux[1].substring(0, 3));//apellido paterno 3 primeros caracteres 
+            car3p = arrAux[1].substring(0, 3);
+            console.log(arrAux[0].substring(0, 3));//nombre 3 primeros caracteres
+            car3s = arrAux[0].substring(0, 3);
+            codGen4p = (car3p + car3s  + "????MXN");
         }
         console.log(codGen4p);//codigo listo
     }
