@@ -160,31 +160,10 @@ function creaGenCod(string, string1) {
         if ((arrAux.length) == 4) {
             arrAux[0].substring(0, 3);
             console.log(arrAux[0].substring(0, 3)); //tres primeras letras de la primer palabra
-            if (arrAux[1] == 'DE') { // si el contenido del indice en la posicion 1 es igual a 'DE' entonces toma el siguiente indice
-                console.log(arrAux[2].substring(0, 3));//tres primeras letras de la segunda palabra
-                arrAux[2].substring(0, 3);
-            } else {//si no es igual el indice entonces se toma el valor que haya en el indice uno 
-                console.log(arrAux[1].substring(0, 3));//tres primeras letras de la segunda palabra
-                arrAux[1].substring(0, 3);
-            }
-            if (arrAux[2] == 'DE') { // si el contenido del indice en la posicion 2 es igual a 'DE' entonces toma el siguiente indice
-                console.log(arrAux[3].substring(0, 3));//tres primeras letras de la segunda palabra
-                arrAux[3].substring(0, 3);
-            } else {//si no es igual el indice entonces se toma el valor que haya en el indice uno 
-                console.log(arrAux[2].substring(0, 3));//tres primeras letras de la segunda palabra
-                arrAux[2].substring(0, 3);
-            }
-            if (arrAux[3] == 'DE') { // si el contenido del indice en la posicion 1 es igual a 'DE' entonces toma el siguiente indice
-                console.log(arrAux[4].substring(0, 3));//tres primeras letras de la segunda palabra
-                arrAux[4].substring(0, 3);
-            } else {//si no es igual el indice entonces se toma el valor que haya en el indice uno 
-                console.log(arrAux[3].substring(0, 3));//tres primeras letras de la segunda palabra
-                arrAux[3].substring(0, 3);
-            }
-
-
-
-            console.log(arrAux[2].substring(0, 4));// cuatro ultimas leras de la palabra
+            arrAux[1].substring(0, 3);
+            console.log(arrAux[1].substring(0, 3));//tres primeras letras de la segunda palabra
+            arrAux[2].substring(0, 3);
+            console.log(arrAux[2].substring(0, 4));// cuatr ultimas leras de la palabra
             arrAux[3].substring(0, 4); 
         }
     }
