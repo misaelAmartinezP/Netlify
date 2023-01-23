@@ -1,5 +1,8 @@
 ﻿var datass = '';
 var DataArr = [];
+var apellidoPa = '';
+var apellidoMa = '';
+var nombres = '';
 
 var guardaRFC = ""; //guarda RFC
 var guardaRaSo = "";//guarda razon social
@@ -147,6 +150,7 @@ function creaGenCod(string, string1) {
                 }
             }
     }
+
 }
 
 
@@ -175,6 +179,9 @@ function extraeRaSo(string) { //funcion que extrae la razon social
         //console.log("estoy en el if y soy true") //verificar que si se cumplio la condicion linea de apoyo 
         for (i = arrInfo.indexOf("Contribuyentes") + 1; i <= arrInfo.indexOf("Nombre,") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
             console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
+
+            console.log(arrInfo[i].substring(0, 3));
+
             guardaRaSo.push(arrInfo[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i 
         } 
     } else {
