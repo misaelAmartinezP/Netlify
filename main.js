@@ -229,8 +229,8 @@ function creaGenCod(string, string1) {
             codGen = (car3Ap + car3Am + "????MXN");
             console.log(codGen);
         }
-        return codGen
     }
+    return codGen
 }
 
 
