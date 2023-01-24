@@ -78,11 +78,11 @@ function pdfAsArray(pdfAsArray) {
             for (var pageNum = 0; pageNum < pagesText.length; pageNum++) {
                 outputStr = "";
                 outputStr = "<br/><br/>Page " + (pageNum + 1) + " contents <br/> <br/>";
-                var div = document.getElementById('output');
+                //var div = document.getElementById('output');
                 //div.innerHTML += (outputStr + pagesText[pageNum]);//esta linea de codigo se encarga de imprimir el contenido del archivo 
                 outputStr = "";
                 outputStr = "<br/><br/>Page " + (pageNum + 1) + " contents <br/> <br/>";
-                var div = document.getElementById('output');
+                //var div = document.getElementById('output');
                 //div.innerHTML += ("");//esta linea de codigo se encarga de imprimir el contenido del archivo 
             }
         });
@@ -258,9 +258,11 @@ function extraeRaSo(string) { //funcion que extrae la razon social
     if (arrInfo.includes("Contribuyentes") == true) { //si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion 
         //console.log("estoy en el if y soy true") //verificar que si se cumplio la condicion linea de apoyo 
         for (i = arrInfo.indexOf("Contribuyentes") + 1; i <= arrInfo.indexOf("Nombre,") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
-            //console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
-            //console.log(arrInfo[i].substring(0, 3)); //prueba para extraer los 3 primeros caracteres de cada palabra
-            guardaRaSo.push(arrInfo[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i 
+            if (arrInfo[i] != '') {
+                //console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
+                //console.log(arrInfo[i].substring(0, 3)); //prueba para extraer los 3 primeros caracteres de cada palabra
+                guardaRaSo.push(arrInfo[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i 
+            }
         } 
     } else {
         var div = document.getElementById('output');
@@ -268,7 +270,7 @@ function extraeRaSo(string) { //funcion que extrae la razon social
     }
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");//imprime el contenido en la pagina web
-    return guardaRaSo.join(' ').split(' ').join(' ');
+    return guardaRaSo.join(' ');
 }
 
 function extraeCodPos(string) { //funcion que extrae el codigo postal 
@@ -441,7 +443,7 @@ function download(filename, query) {
     element.click();
     document.body.removeChild(element);
 }
-// Start file download.
+// comineza la descarga
 document.getElementById("dwn-btn").addEventListener("click", function () {
     var filename = "query.sql";
     download(filename, query);
