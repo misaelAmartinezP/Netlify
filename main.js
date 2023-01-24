@@ -176,7 +176,7 @@ function creaGenCod(string, string1) {
             console.log(car4t);
             //codigo listo
             codGen = (car3p + car3s + car4t + "MXN");
-
+            console.log(codGen);
         }
         if ((arrAux.length) == 2) {
             //tres primeras letras de la primer palabra
@@ -187,6 +187,7 @@ function creaGenCod(string, string1) {
             console.log(car3s);
             //codigo lsito
             codGen = (car3p + car3s + "????MXN");
+            console.log(codGen);
         }
     }
     else if ((difPer) == 13) {//si es persona fisica 
@@ -201,6 +202,7 @@ function creaGenCod(string, string1) {
             car4N = arrAux[0].substring(0, 4);
             console.log(car4N);
             codGen = (car3Ap + car3Am + car4N + "MXN");
+            console.log(codGen);
         }
         if ((arrAux.length) == 3) {
             //apellido paterno 3 primeros caracteres 
@@ -212,7 +214,9 @@ function creaGenCod(string, string1) {
             //nombre 4 primeros caracteres 
             car4N = arrAux[0].substring(0, 4);
             console.log(car4N);
+            //codigo lsito 
             codGen = (car3Ap + car3Am + car4N + "MXN");
+            console.log(codGen);
         }
         if ((arrAux.length) == 2) {
             //apellido paterno 3 primeros caracteres 
@@ -221,9 +225,10 @@ function creaGenCod(string, string1) {
             //nombre 3 primeros caracteres
             car3Am = arrAux[0].substring(0, 3);
             console.log(car3Am)
-            codGen = (car3Ap + car3Am  + "????MXN");
+            //codigo listo 
+            codGen = (car3Ap + car3Am + "????MXN");
+            console.log(codGen);
         }
-        console.log(codGen);//codigo listo
         return codGen
     }
 }
