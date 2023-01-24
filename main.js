@@ -268,7 +268,7 @@ function extraeRaSo(string) { //funcion que extrae la razon social
     }
     var div = document.getElementById('output');
     div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");//imprime el contenido en la pagina web
-    return guardaRaSo.split(' ').join(' ');
+    return guardaRaSo.join(' ').split(' ');
 }
 
 function extraeCodPos(string) { //funcion que extrae el codigo postal 
