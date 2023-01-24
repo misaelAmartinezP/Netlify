@@ -230,7 +230,29 @@ function creaGenCod(string, string1) {
             console.log(codGen);
         }
     }
-    return codGen
+    if ((codGen.length) == 13) {
+        return codGen
+    } else {
+        if ((arrAux.length) >= 3) {
+            //tres primeras letras de la primer palabra
+            car3p = arrAux[0].substring(0, 3);
+            console.log(car3p);
+            //tres primeras letras de la segunda palabra
+            car1s = arrAux[1].substring(0, 1);
+            console.log(car3s);
+            // cuatro ultimas leras de la palabra
+            car1t = arrAux[2].substring(0, 1);
+            console.log(car4t);
+            // cuatro ultimas leras de la palabra
+            car1c = arrAux[2].substring(0, 1);
+            console.log(car4t);
+            //codigo listo
+            codGen = (car3p + car3s + car4t + car1c + "????MXN");
+            console.log(codGen);
+            return codGen
+        }
+
+    
 }
 
 
