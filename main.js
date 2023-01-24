@@ -244,7 +244,7 @@ function creaGenCod(string, string1) {
             car1t = arrAux[2].substring(0, 1);
             console.log(car4t);
             // cuatro ultimas leras de la palabra
-            car1c = arrAux[2].substring(0, 1);
+            car1c = arrAux[3].substring(0, 1);
             console.log(car4t);
             //codigo listo
             codGen = (car3p + car3s + car4t + car1c + "????MXN");
