@@ -251,7 +251,7 @@ function creaGenCod(string, string1) {
             console.log(codGen);
             return codGen
         }
-
+    }
     
 }
 
