@@ -119,11 +119,10 @@ function parceoDatos(string) {
 
     //generando el query
     query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "',NULL,2,'" + guardaRFC + "',idCidad,'" + guardaNomVia + "," + guardaNumExt + " , " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores off";
-    //console.log(query);
+    console.log(query);
 }
 
 function creaGenCod(string, string1) {
-    arrGenCod = " ";
     difPer = string1.length;
     //console.log(difPer);// ver si es persona fisica o moral
     cadMaInf = string.split(' ');
@@ -165,44 +164,67 @@ function creaGenCod(string, string1) {
     console.log(arrAux);
     //arrCodigo.push(cadMaInf[i].substring(0, 3));//con esta extraemos las tres primeras letras de cada palabra
     if ((difPer) == 12) {//si es persona moral
-        if ((arrAux.length) == 4) {
-            arrAux[0].substring(0, 3);
-            console.log(arrAux[0].substring(0, 3)); //tres primeras letras de la primer palabra
-            arrAux[1].substring(0, 3);
-            console.log(arrAux[1].substring(0, 3));//tres primeras letras de la segunda palabra
-            arrAux[2].substring(0, 3);
-            console.log(arrAux[2].substring(0, 4));// cuatr ultimas leras de la palabra
-            arrAux[3].substring(0, 4); 
+        if ((arrAux.length) >= 3) {
+            //tres primeras letras de la primer palabra
+            car3p = arrAux[0].substring(0, 3);
+            console.log(car3p);
+            //tres primeras letras de la segunda palabra
+            car3s = arrAux[1].substring(0, 3);
+            console.log(car3s);
+            // cuatro ultimas leras de la palabra
+            car4t = arrAux[2].substring(0, 4);
+            console.log(car4t);
+            //codigo listo
+            codGen = (car3p + car3s + car4t + "MXN");
+
+        }
+        if ((arrAux.length) == 2) {
+            //tres primeras letras de la primer palabra
+            car3p = arrAux[0].substring(0, 3);
+            console.log(car3p);
+            //tres primeras letras de la segunda palabra
+            car3s = arrAux[1].substring(0, 3);
+            console.log(car3s);
+            //codigo lsito
+            codGen = (car3p + car3s + "????MXN");
         }
     }
     else if ((difPer) == 13) {//si es persona fisica 
         if ((arrAux.length) == 4) {
-            console.log(arrAux[2].substring(0, 3));//apellido paterno 3 primeros caracteres 
-            car3p=arrAux[2].substring(0, 3);
-            console.log(arrAux[3].substring(0, 3));//apellido materno 3 primeros caracteres 
-            car3s =arrAux[3].substring(0, 3);
-            console.log(arrAux[0].substring(0, 4));//nombre 4 primeros caracteres 
-            car4p = arrAux[0].substring(0, 4);
-            codGen4p = (car3p + car3s + car4p + "MXN");
+            //apellido paterno 3 primeros caracteres 
+            car3Ap = arrAux[2].substring(0, 3);
+            console.log(car3Ap);
+            //apellido materno 3 primeros caracteres 
+            car3Am = arrAux[3].substring(0, 3);
+            console.log(car3Am);
+            //nombre 4 primeros caracteres 
+            car4N = arrAux[0].substring(0, 4);
+            console.log(car4N);
+            codGen = (car3Ap + car3Am + car4N + "MXN");
         }
         if ((arrAux.length) == 3) {
-            console.log(arrAux[1].substring(0, 3));//apellido paterno 3 primeros caracteres 
-            car3p = arrAux[1].substring(0, 3);
-            console.log(arrAux[2].substring(0, 3));//apellido materno 3 primeros caracteres 
-            car3s = arrAux[2].substring(0, 3);
-            console.log(arrAux[0].substring(0, 4));//nombre 4 primeros caracteres 
-            car4p = arrAux[0].substring(0, 4);
-            codGen4p = (car3p + car3s + car4p + "MXN");
+            //apellido paterno 3 primeros caracteres 
+            car3Ap = arrAux[1].substring(0, 3);
+            console.log(car3Ap);
+            //apellido materno 3 primeros caracteres 
+            car3Am = arrAux[2].substring(0, 3);
+            console.log(car3Am);
+            //nombre 4 primeros caracteres 
+            car4N = arrAux[0].substring(0, 4);
+            console.log(car4N);
+            codGen = (car3Ap + car3Am + car4N + "MXN");
         }
         if ((arrAux.length) == 2) {
-            console.log(arrAux[1].substring(0, 3));//apellido paterno 3 primeros caracteres 
-            car3p = arrAux[1].substring(0, 3);
-            console.log(arrAux[0].substring(0, 3));//nombre 3 primeros caracteres
-            car3s = arrAux[0].substring(0, 3);
-            codGen4p = (car3p + car3s  + "????MXN");
+            //apellido paterno 3 primeros caracteres 
+            car3Ap = arrAux[1].substring(0, 3);
+            console.log(car3Ap);
+            //nombre 3 primeros caracteres
+            car3Am = arrAux[0].substring(0, 3);
+            console.log(car3Am)
+            codGen = (car3Ap + car3Am  + "????MXN");
         }
-        console.log(codGen4p);//codigo listo
-        return codGen4p
+        console.log(codGen);//codigo listo
+        return codGen
     }
 }
 
