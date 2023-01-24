@@ -119,28 +119,28 @@ function parceoDatos(string) {
 
     //generando el query
     query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "',NULL,2,'" + guardaRFC + "',idCidad,'" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores off";
-    console.log(query);
+    //console.log(query);
 }
 
-function creaGenCod(string, string1) {
-    difPer = string1.length;
+function creaGenCod(string, string1) {//funcion para generar el codigo 
+    difPer = string1.length;//variable para diferenciar entre persona fisica y moral 
     //console.log(difPer);// ver si es persona fisica o moral
-    cadMaInf = string.split(' ');
+    cadMaInf = string.split(' ');//recibe el contenido que devulve extraeRaSoAux
     //console.log(cadMaInf);//ver contenido de cadMaInf
-    arrAux = [];
+    arrAux = [];//arreglo auxiliar vacio para guardar las palabras de las razones sociales 
     if ((difPer) == 12) {//si es persona moral
-        console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
+        //console.log("persona moral");//recorrido de las palabras para discriminar los espacios vacios
         for (i = 0; i < cadMaInf.length; i++) {//recorrido para evitar los espacios en blanco 
             if (cadMaInf[i] != '') {//mientras que sea diferente a espacio en blanco lo imprimimos 
-                if (cadMaInf[i] != 'DE') {
-                    if (cadMaInf[i] != 'EL') {
-                        if (cadMaInf[i] != 'LA') {
-                            if (cadMaInf[i] != 'LOS') {
-                                if (cadMaInf[i] != 'LAS') {
-                                    console.log("estamos en los if anidados");
-                                    // console.log(cadMaInf[i]);
-                                    //console.log(cadMaInf[i].substring(0, 3));
-                                    arrAux.push(cadMaInf[i]);
+                if (cadMaInf[i] != 'DE') {//si la palabra es 'DE' se omite 
+                    if (cadMaInf[i] != 'EL') {//si la palabra es 'EL' se omite 
+                        if (cadMaInf[i] != 'LA') {//si la palabra es 'LA' se omite 
+                            if (cadMaInf[i] != 'LOS') {//si la palabra es 'LOS' se omite 
+                                if (cadMaInf[i] != 'LAS') {//si la palabra es 'LAS' se omite 
+                                    //console.log("estamos en los if anidados");//comprobacion de funcionamiento de los ifs
+                                    // console.log(cadMaInf[i]); //variable para ver el contenido de 
+                                    //console.log(cadMaInf[i].substring(0, 3));//prueba para extraer solo 3 caracteres de la palabra
+                                    arrAux.push(cadMaInf[i]);//manda todos los valores que hayan sido diferentes a los antes omitidos por los if y los guarda en arrAux
                                 }
                             }
                         }
@@ -149,106 +149,89 @@ function creaGenCod(string, string1) {
             }
         }
     } else if ((difPer) == 13) {//si es persona fisica
-        console.log("soy persona fisica");
+        //console.log("soy persona fisica");
         for (i = 0; i < cadMaInf.length; i++) {//recorrido de las palabras para discriminar los espacios vacios
-            if (cadMaInf[i] != '') {
-                //arrCodigo.push(cadMaInf[i].substring(0, 3));
-                //console.log(cadMaInf[i]);
-                arrAux.push(cadMaInf[i]);
-                if (arrAux[i] == undefined) {
+            if (cadMaInf[i] != '') { //omite los espacios en blanco 
+                // console.log(cadMaInf[i]); //variable para ver el contenido de 
+                //console.log(cadMaInf[i].substring(0, 3));//prueba para extraer solo 3 caracteres de la palabra
+                arrAux.push(cadMaInf[i]);//enviar los datos para guardarlos en el arrAux
+                if (arrAux[i] == undefined) {//si hay un valor undefined termina el for 
                     break
                 }
             }
         }
     }
-    console.log(arrAux);
+    //console.log(arrAux);//ver el contenido de arrAux
     //arrCodigo.push(cadMaInf[i].substring(0, 3));//con esta extraemos las tres primeras letras de cada palabra
     if ((difPer) == 12) {//si es persona moral
-        if ((arrAux.length) >= 3) {
-            //tres primeras letras de la primer palabra
-            car3p = arrAux[0].substring(0, 3);
-            console.log(car3p);
-            //tres primeras letras de la segunda palabra
-            car3s = arrAux[1].substring(0, 3);
-            console.log(car3s);
-            // cuatro ultimas leras de la palabra
-            car4t = arrAux[2].substring(0, 4);
-            console.log(car4t);
-            //codigo listo
-            codGen = (car3p + car3s + car4t + "MXN");
-            console.log(codGen);
+        if ((arrAux.length) >= 3) {//contamos las paralabras que tiene arrAux y si este es 3 o mayor a tres se hara 
+            car3p = arrAux[0].substring(0, 3);//variable que guarda y extrae las 3 primeras letras de la primer palabra
+            //console.log(car3p);//ver el contenido de la variable car3p
+            car3s = arrAux[1].substring(0, 3);//variable que guarda y extrae las 3 primeras letras de la segunda palabra
+            //console.log(car3s);//ver el contenido de la variable car3p
+            car4t = arrAux[2].substring(0, 4);//variable que guarda y extrae las 4 primeras letras de la tercer palabra
+            //console.log(car4t);//ver el contenido de la variable car3p
+            codGen = (car3p + car3s + car4t + "MXN");//codigo listo, generacion del codigo 
+            //console.log(codGen);//imprime el codigo
         }
         if ((arrAux.length) == 2) {
-            //tres primeras letras de la primer palabra
-            car3p = arrAux[0].substring(0, 3);
-            console.log(car3p);
-            //tres primeras letras de la segunda palabra
-            car3s = arrAux[1].substring(0, 3);
-            console.log(car3s);
-            //codigo lsito
-            codGen = (car3p + car3s + "????MXN");
-            console.log(codGen);
+            car3p = arrAux[0].substring(0, 3);//variable que guarda y extrae las 3 primeras letras de la primer palabra
+            //console.log(car3p);//ver el contenido de la variable car3p
+            car3s = arrAux[1].substring(0, 3);//variable que guarda y extrae las 3 primeras letras de la segunda palabra
+            //console.log(car3s);//ver el contenido de la variable car3p
+            codGen = (car3p + car3s + "????MXN");//codigo listo, generacion del codigo 
+            //console.log(codGen);//imprime el codigo
         }
     }
     else if ((difPer) == 13) {//si es persona fisica 
-        if ((arrAux.length) == 4) {
-            //apellido paterno 3 primeros caracteres 
-            car3Ap = arrAux[2].substring(0, 3);
-            console.log(car3Ap);
-            //apellido materno 3 primeros caracteres 
-            car3Am = arrAux[3].substring(0, 3);
-            console.log(car3Am);
-            //nombre 4 primeros caracteres 
-            car4N = arrAux[0].substring(0, 4);
-            console.log(car4N);
+        if ((arrAux.length) == 4) {//si la longitud de la palabra es igual a 4 
+            car3Ap = arrAux[2].substring(0, 3);//apellido paterno 3 primeros caracteres 
+            //console.log(car3Ap);//ver el contenido de la variable
+            car3Am = arrAux[3].substring(0, 3); //apellido materno 3 primeros caracteres
+            //console.log(car3Am);//ver el contenido de la variable
+            car4N = arrAux[0].substring(0, 4);//nombre 4 primeros caracteres 
+            //console.log(car4N);//ver el contenido de la variable
             codGen = (car3Ap + car3Am + car4N + "MXN");
-            console.log(codGen);
+            //console.log(codGen);//imprime el codigo
         }
-        if ((arrAux.length) == 3) {
-            //apellido paterno 3 primeros caracteres 
-            car3Ap = arrAux[1].substring(0, 3);
-            console.log(car3Ap);
-            //apellido materno 3 primeros caracteres 
-            car3Am = arrAux[2].substring(0, 3);
-            console.log(car3Am);
-            //nombre 4 primeros caracteres 
-            car4N = arrAux[0].substring(0, 4);
-            console.log(car4N);
-            //codigo lsito 
-            codGen = (car3Ap + car3Am + car4N + "MXN");
-            console.log(codGen);
+        if ((arrAux.length) == 3) {//si la longitud de la palabra es igual a 3
+            car3Ap = arrAux[1].substring(0, 3); //apellido paterno 3 primeros caracteres
+            //console.log(car3Ap);//ver el contenido de la variable
+            car3Am = arrAux[2].substring(0, 3);//apellido materno 3 primeros caracteres
+            //console.log(car3Am);//ver el contenido de la variable
+            car4N = arrAux[0].substring(0, 4);//nombre 4 primeros caracteres
+            //console.log(car4N);//ver el contenido de la variable
+            codGen = (car3Ap + car3Am + car4N + "MXN");//codigo lsito
+            //console.log(codGen);//imprime el codigo
         }
-        if ((arrAux.length) == 2) {
-            //apellido paterno 3 primeros caracteres 
-            car3Ap = arrAux[1].substring(0, 3);
-            console.log(car3Ap);
-            //nombre 3 primeros caracteres
-            car3Am = arrAux[0].substring(0, 3);
-            console.log(car3Am)
-            //codigo listo 
-            codGen = (car3Ap + car3Am + "????MXN");
-            console.log(codGen);
+        if ((arrAux.length) == 2) {//si la longitud de la palabra es igual a 2
+            car3Ap = arrAux[1].substring(0, 3);//apellido paterno 3 primeros caracteres 
+            //console.log(car3Ap);//ver el contenido de la variable
+            car3Am = arrAux[0].substring(0, 3);//nombre 3 primeros caracteres
+            //console.log(car3Am);//ver el contenido de la variable
+            codGen = (car3Ap + car3Am + "????MXN");//codigo listo 
+            //console.log(codGen);//imprime el codigo
         }
     }
-    if ((codGen.length) == 13) {
-        return codGen
-    } else {
+    if ((codGen.length) == 13) {//verifica que el codigo sea de la longitud necesaria 
+        return codGen //si es la longitud deseada regresa el codigo 
+    } else {//si no 
         if ((arrAux.length) >= 3) {
             //tres primeras letras de la primer palabra
             car3p = arrAux[0].substring(0, 3);
-            console.log(car3p);
-            //tres primeras letras de la segunda palabra
+            //console.log(car3p);
+            //primera letras de la segunda palabra
             car1s = arrAux[1].substring(0, 1);
-            console.log(car3s);
-            // cuatro ultimas leras de la palabra
+            //console.log(car3s);
+            //primera letra de la tercer palabra
             car1t = arrAux[2].substring(0, 1);
-            console.log(car4t);
-            // cuatro ultimas leras de la palabra
+            //console.log(car4t);
+            //ultima lera de la cuarta palabra
             car1c = arrAux[3].substring(0, 1);
-            console.log(car4t);
+            //console.log(car4t);
             //codigo listo
             codGen = (car3p + car3s + car4t + car1c + "????MXN");
-            console.log(codGen);
+            //console.log(codGen);
             return codGen
         }
     }
