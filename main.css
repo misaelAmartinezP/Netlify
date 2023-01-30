@@ -1,9 +1,11 @@
 body {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
-    background: url(alhel.png);
+    text-align: center;
     background-size: cover;
-    background-position: center;
-    background-position: center ;
 }
 
 file-id {
@@ -13,3 +15,8 @@ file-id {
     padding: 5px;
 }
 
+#output {
+    border: 20px;
+    height: 300px;
+    width: 700px;
+}
