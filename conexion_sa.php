@@ -7,5 +7,5 @@
 		echo "conexion exitosa";
 	}else{  
 		echo "fallo en la conexion";
-	}
+	} 
 ?>
