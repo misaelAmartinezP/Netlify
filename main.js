@@ -491,34 +491,6 @@ function guardar() {
     } if (ctaBancaria == "") {//verifica que el campo cuenta bancaria no este vacio
         alert("SE REQUIERE CUENTA BANCARIA");
         document.getElementById("ctaBancaria").focus();
-    } if (bancoSat == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        //document.getElementById("ctaBancaria").focus();
-        bancoSat='NULL'
-    } if (monedaSat == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-        monedaSat = 'NULL'
-    } if (tipoCuenta == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-        tipoCuenta = 'NULL'
-    } if (conceptoCie == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-        conceptoCie = 'NULL'
-    } if (convenioCie == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-        convenioCie = 'NULL'
-    } if (referencia == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-        referencia = 'NULL'
-    } if (claveTransferencia == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-        claveTransferencia = 'NULL'
     }
 
     guardaBanco = banco;//pasa nombre del banco
