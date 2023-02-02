@@ -512,7 +512,7 @@ function guardar() {
     console.log(guardaBancoSat);
     console.log(guardaMonedaSat);
     console.log(guardaTipoCuenta);
-    console.log(guardaConceptoCie);
+    console.log(guardaConceptoCie); 
     console.log(guardaConvenioCie);
     console.log(guardaReferencia);
     console.log(guardaClaveTransferencia);
