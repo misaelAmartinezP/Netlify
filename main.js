@@ -452,6 +452,25 @@ function extraeRaSoAux(string) { //funcion que extrae la razon social
 function guardar() {
     var banco = document.getElementById("banco").value;
     console.log(banco);
+    var clabe = document.getElementById("clabe").value;
+    console.log(clabe);
+    var ctaBancaria = document.getElementById("ctaBancaria").value;
+    console.log(ctaBancaria);
+    var bancoSat = document.getElementById("bancoSat").value;
+    console.log(bancoSat);
+    var monedaSat = document.getElementById("monedaSat").value;
+    console.log(monedaSat);
+    var tipoCuenta = document.getElementById("tipoCuenta").value;
+    console.log(tipoCuenta);
+    var conceptoCie = document.getElementById("conceptoCie").value;
+    console.log(conceptoCie);
+    var convenioCie = document.getElementById("convenioCie").value;
+    console.log(convenioCie);
+    var referencia = document.getElementById("referencia").value;
+    console.log(referencia);
+    var claveTransferencia = document.getElementById("claveTransferencia").value;
+    console.log(claveTransferencia);
+
 }
 
 
