@@ -471,9 +471,17 @@ function guardar() {
     var claveTransferencia = document.getElementById("claveTransferencia").value;//guarda clave de tranferencia
     console.log(claveTransferencia);
 
-    if (banco == "" && clabe == "" ) {
-        alert("Se requiere nombre del BANCO");
+    if (banco == "") {
+        alert("SE REQUIERE NOMBRE DEL BANCO");
         document.getElementById("banco").focus();
+    }if (clabe == "") {
+            alert("SE REQUIERE CLABE BANCARIA");
+            document.getElementById("clabe").focus();
+        }
+    }if (ctaBancaria == "") {
+            alert("SE REQUIERE CUENTA BANCARIA");
+            document.getElementById("ctaBancaria").focus();
+        }
     }
 }
 
