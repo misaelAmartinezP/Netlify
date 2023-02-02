@@ -450,27 +450,31 @@ function extraeRaSoAux(string) { //funcion que extrae la razon social
 
 
 function guardar() {
-    var banco = document.getElementById("banco").value;
+    var banco = document.getElementById("banco").value;//guarda banco
     console.log(banco);
-    var clabe = document.getElementById("clabe").value;
+    var clabe = document.getElementById("clabe").value;//guarda clabe
     console.log(clabe);
-    var ctaBancaria = document.getElementById("ctaBancaria").value;
+    var ctaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria 
     console.log(ctaBancaria);
-    var bancoSat = document.getElementById("bancoSat").value;
+    var bancoSat = document.getElementById("bancoSat").value;//guarda banco sat
     console.log(bancoSat);
-    var monedaSat = document.getElementById("monedaSat").value;
+    var monedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
     console.log(monedaSat);
-    var tipoCuenta = document.getElementById("tipoCuenta").value;
+    var tipoCuenta = document.getElementById("tipoCuenta").value;//guarda tipo de cuenta
     console.log(tipoCuenta);
-    var conceptoCie = document.getElementById("conceptoCie").value;
+    var conceptoCie = document.getElementById("conceptoCie").value;//guarda concepto CIE
     console.log(conceptoCie);
-    var convenioCie = document.getElementById("convenioCie").value;
+    var convenioCie = document.getElementById("convenioCie").value;//guarda convenio de CIE
     console.log(convenioCie);
-    var referencia = document.getElementById("referencia").value;
+    var referencia = document.getElementById("referencia").value;//guarda referencia 
     console.log(referencia);
-    var calveTransferencia = document.getElementById("calveTransferencia").value;
-    console.log(calveTransferencia);
+    var claveTransferencia = document.getElementById("claveTransferencia").value;//guarda clave de tranferencia
+    console.log(claveTransferencia);
 
+    if (banco == "" ) {
+        alert("Se requiere nombre del BANCO");
+        document.getElementById("banco").focus();
+    }
 }
 
 
