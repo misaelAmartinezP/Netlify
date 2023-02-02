@@ -477,12 +477,10 @@ function guardar() {
     }if (clabe == "") {
             alert("SE REQUIERE CLABE BANCARIA");
             document.getElementById("clabe").focus();
-        }
     }if (ctaBancaria == "") {
             alert("SE REQUIERE CUENTA BANCARIA");
             document.getElementById("ctaBancaria").focus();
-        }
-    }
+     }
 }
 
 
