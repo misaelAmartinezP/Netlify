@@ -13,6 +13,17 @@ var guardaNomCol = "";//guarda nombre de la colonia
 var guardaDemTer = "";//guarda demarcacion territorial o municipio
 var guardaReg = "";//guarda regimen
 var query = ""; //guarda query 
+var guardaBanco = "";//guarda nombre del banco
+var guardaClabe = "";//guardaClabe bancaria
+var guardaCtaBancaria = ""; //guarda cuenta bancaria
+var guardaBancoSat = "";//gurada banco sat
+var guardaMonedaSat = "";//guarda moneda sat
+var guardaTipoCuenta = "";//guarda tipo de cuenta sat
+var guardaConceptoCie = "";//guarda concepto de cie
+var guardaConvenioCie = "";//guarda convenio de cie
+var guardaReferencia = "";//guarda referenica
+var guardaClaveTransferencia = "";//guarda clave de tranferencia
+
 PDFJS.workerSrc = '';
 //extraccion del pdf
 function ExtractText() {
@@ -450,7 +461,7 @@ function extraeRaSoAux(string) { //funcion que extrae la razon social
 
 
 function guardar() {
-    var banco = document.getElementById("banco").value;//guarda banco
+    var banco = document.getElementById("banco").value;//guarda banco 
     console.log(banco);
     var clabe = document.getElementById("clabe").value;//guarda clabe
     console.log(clabe);
@@ -474,13 +485,35 @@ function guardar() {
     if (banco == "") {
         alert("SE REQUIERE NOMBRE DEL BANCO");
         document.getElementById("banco").focus();
-    }if (clabe == "") {
-            alert("SE REQUIERE CLABE BANCARIA");
-            document.getElementById("clabe").focus();
-    }if (ctaBancaria == "") {
-            alert("SE REQUIERE CUENTA BANCARIA");
-            document.getElementById("ctaBancaria").focus();
-     }
+    } if (clabe == "") {
+        alert("SE REQUIERE CLABE BANCARIA");
+        document.getElementById("clabe").focus();
+    } if (ctaBancaria == "") {
+        alert("SE REQUIERE CUENTA BANCARIA");
+        document.getElementById("ctaBancaria").focus();
+    }
+
+    guardaBanco = banco;//pasa nombre del banco
+    guardaClabe = clabe;//pasaClabe bancaria
+    guardaCtaBancaria = ctaBancaria; //pasa cuenta bancaria
+    guardaBancoSat = bancoSat;//gurada banco sat
+    guardaMonedaSat = monedaSat;//pasa moneda sat
+    guardaTipoCuenta = tipoCuenta;//pasa tipo de cuenta sat
+    guardaConceptoCie = conceptoCie;//pasa concepto de cie
+    guardaConvenioCie = convenioCie;//pasa convenio de cie
+    guardaReferencia = referencia;//pasa referenica
+    guardaClaveTransferencia = claveTransferencia;//pasa clave de tranferencia
+
+    console.log(guardaBanco);
+    console.log(guardaClabe);
+    console.log(guardaCtaBancaria);
+    console.log(guardaBancoSat);
+    console.log(guardaMonedaSat);
+    console.log(guardaTipoCuenta);
+    console.log(guardaConceptoCie);
+    console.log(guardaConvenioCie);
+    console.log(guardaReferencia);
+    console.log(guardaClaveTransferencia);
 }
 
 
