@@ -447,4 +447,6 @@ function extraeRaSoAux(string) { //funcion que extrae la razon social
     }
     return guardaRaSo.join(' ');
 }
+
+
 window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña
