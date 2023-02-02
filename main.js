@@ -504,6 +504,8 @@ function guardar() {
     guardaReferencia = referencia;//pasa referenica
     guardaClaveTransferencia = claveTransferencia;//pasa clave de tranferencia
 
+    console.log("datos de variable globales")
+
     console.log(guardaBanco);
     console.log(guardaClabe);
     console.log(guardaCtaBancaria);
