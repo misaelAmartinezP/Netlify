@@ -493,7 +493,7 @@ function guardar() {
         document.getElementById("ctaBancaria").focus();
     } if (bancoSat == "") {//verifica que el campo cuenta bancaria no este vacio
         //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
+        //document.getElementById("ctaBancaria").focus();
         bancoSat='NULL'
     } if (monedaSat == "") {//verifica que el campo cuenta bancaria no este vacio
         //alert("SE REQUIERE CUENTA BANCARIA");
