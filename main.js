@@ -491,6 +491,34 @@ function guardar() {
     } if (ctaBancaria == "") {//verifica que el campo cuenta bancaria no este vacio
         alert("SE REQUIERE CUENTA BANCARIA");
         document.getElementById("ctaBancaria").focus();
+    } if (bancoSat == "") {//verifica que el campo cuenta bancaria no este vacio
+        //alert("SE REQUIERE CUENTA BANCARIA");
+        //document.getElementById("ctaBancaria").focus();
+        bancoSat='NULL'
+    } if (monedaSat == "") {//verifica que el campo cuenta bancaria no este vacio
+        //alert("SE REQUIERE CUENTA BANCARIA");
+        document.getElementById("ctaBancaria").focus();
+        monedaSat = 'NULL'
+    } if (tipoCuenta == "") {//verifica que el campo cuenta bancaria no este vacio
+        //alert("SE REQUIERE CUENTA BANCARIA");
+        document.getElementById("ctaBancaria").focus();
+        tipoCuenta = 'NULL'
+    } if (conceptoCie == "") {//verifica que el campo cuenta bancaria no este vacio
+        //alert("SE REQUIERE CUENTA BANCARIA");
+        document.getElementById("ctaBancaria").focus();
+        conceptoCie = 'NULL'
+    } if (convenioCie == "") {//verifica que el campo cuenta bancaria no este vacio
+        //alert("SE REQUIERE CUENTA BANCARIA");
+        document.getElementById("ctaBancaria").focus();
+        convenioCie = 'NULL'
+    } if (referencia == "") {//verifica que el campo cuenta bancaria no este vacio
+        //alert("SE REQUIERE CUENTA BANCARIA");
+        document.getElementById("ctaBancaria").focus();
+        referencia = 'NULL'
+    } if (claveTransferencia == "") {//verifica que el campo cuenta bancaria no este vacio
+        //alert("SE REQUIERE CUENTA BANCARIA");
+        document.getElementById("ctaBancaria").focus();
+        claveTransferencia = 'NULL'
     }
 
     guardaBanco = banco;//pasa nombre del banco
@@ -503,17 +531,17 @@ function guardar() {
     guardaConvenioCie = convenioCie;//pasa convenio de cie
     guardaReferencia = referencia;//pasa referenica
     guardaClaveTransferencia = claveTransferencia;//pasa clave de tranferencia
-    //console.log("datos de variable globales")
-    //console.log(guardaBanco);
-    //console.log(guardaClabe);
-    //console.log(guardaCtaBancaria);
-    //console.log(guardaBancoSat);
-    //console.log(guardaMonedaSat);
-    //console.log(guardaTipoCuenta);
-    //console.log(guardaConceptoCie); 
-    //console.log(guardaConvenioCie);
-    //console.log(guardaReferencia);
-    //console.log(guardaClaveTransferencia);
+    console.log("datos de variable globales")
+    console.log(guardaBanco);
+    console.log(guardaClabe);
+    console.log(guardaCtaBancaria);
+    console.log(guardaBancoSat);
+    console.log(guardaMonedaSat);
+    console.log(guardaTipoCuenta);
+    console.log(guardaConceptoCie); 
+    console.log(guardaConvenioCie);
+    console.log(guardaReferencia);
+    console.log(guardaClaveTransferencia);
 }
 
 
