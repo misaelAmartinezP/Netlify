@@ -471,7 +471,7 @@ function guardar() {
     var claveTransferencia = document.getElementById("claveTransferencia").value;//guarda clave de tranferencia
     console.log(claveTransferencia);
 
-    if (banco == "" ) {
+    if (banco == "" && clabe == "" ) {
         alert("Se requiere nombre del BANCO");
         document.getElementById("banco").focus();
     }
