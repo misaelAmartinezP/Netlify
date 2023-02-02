@@ -468,8 +468,8 @@ function guardar() {
     console.log(convenioCie);
     var referencia = document.getElementById("referencia").value;
     console.log(referencia);
-    var claveTransferencia = document.getElementById("claveTransferencia").value;
-    console.log(claveTransferencia);
+    var calveTransferencia = document.getElementById("calveTransferencia").value;
+    console.log(calveTransferencia);
 
 }
 
