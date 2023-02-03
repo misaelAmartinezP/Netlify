@@ -7,12 +7,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.entry.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.worker.min.js"></script>
-    <div id="preview"></div>
-    <input type="file" typeof="hidden" id="file-id" name="file_name" accept="application/pdf" onchange="ExtractText();" />
-    <div id="output">
-    </div>
-    <input type="button" id="dwn-btn" value="Descargar Query" />
-    <script src="main.js"></script>
     <form>
         Nombre del Banco:<br>
         <input type="text" name="banco" id="banco" placeholder="Nombre del Banco" />
@@ -32,5 +26,12 @@
         <br /><br />
         <button type="button" onclick="guardar()">Guardar Datos</button>
     </form>
+    <div id="preview"></div>
+    <input type="file" typeof="hidden" id="file-id" name="file_name" accept="application/pdf" onchange="ExtractText();" />
+    <div id="output">
+    </div>
+    <input type="button" id="dwn-btn" value="Descargar Query" />
+    <script src="main.js"></script>
+
 </body>
 </html>
