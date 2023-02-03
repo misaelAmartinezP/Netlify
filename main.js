@@ -501,12 +501,9 @@ function guardar() {
     guardaCtaBancaria = ctaBancaria; //pasa cuenta bancaria
     guardaBancoSat = bancoSat;//gurada banco sat
     guardaMonedaSat = monedaSat;//pasa moneda sat
-    guardaTipoCuenta = tipoCuenta;//pasa tipo de cuenta sat
-    guardaConceptoCie = conceptoCie;//pasa concepto de cie
-    guardaConvenioCie = convenioCie;//pasa convenio de cie
-    guardaReferenciaCie = referenciaCie;//pasa referenica
-    guardaClaveTransferencia = claveTransferencia;//pasa clave de tranferencia
-    console.log("datos de variable globales")
+
+    //datos gobales de las variables
+    console.log("valores de las variables locales"); 
     console.log(guardaBanco);//banco
     console.log(guardaClabe);//clabe
     console.log(guardaCtaBancaria);//cuentaBancaria
