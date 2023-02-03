@@ -13,8 +13,6 @@ var guardaNomCol = "";//guarda nombre de la colonia
 var guardaDemTer = "";//guarda demarcacion territorial o municipio
 var guardaReg = "";//guarda regimen
 var query = ""; //guarda query 
-var pasaValBan = valores();
-console.log(pasaValBan);
 var guardaBanco = "";//guarda nombre del banco
 var guardaClabe = "";//guardaClabe bancaria
 var guardaCtaBancaria = ""; //guarda cuenta bancaria
@@ -492,9 +490,7 @@ function guardar() {
         document.getElementById("monedaSat").focus();
         monedaSat = 'NULL'
     }
-    function valores(guardaBanco, guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat) {
-        return [guardaBanco, guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat];
-    }
+    return [guardaBanco, guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat];
 }
 
 
