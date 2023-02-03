@@ -1,5 +1,5 @@
-const cnx = require('./cnx');
-const sql = require('mssql');
+const cnx = './cnx';
+const sql = 'mssql';
 async function getQuery() {
 	try {
 		let pool = await sql.connect(cnx);
