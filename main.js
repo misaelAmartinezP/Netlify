@@ -456,7 +456,6 @@ function extraeRaSoAux(string) { //funcion que extrae la razon social
 
 
 function guardar() {
-    alert("LLENAR PRIMERO LOS DATOS BANCARIOS")
     var banco = document.getElementById("banco").value;//guarda banco 
     //conso.log(banco);
     guardaBanco = banco;//pasa nombre del banco
