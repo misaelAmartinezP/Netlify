@@ -462,12 +462,20 @@ function guardar() {
     return guardaBanco
     var clabe = document.getElementById("clabe").value;//guarda clabe
     //conso.log(clabe);
+    guardaClabe = clabe;
+    return guardaClabe
     var ctaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria 
     //conso.log(ctaBancaria);
+    guardaCtaBancaria = ctaBancaria;
+    return guardaCtaBancaria
     var bancoSat = document.getElementById("bancoSat").value;//guarda banco sat
     //conso.log(bancoSat);
+    guardaBancoSat = bancoSat;
+    return guardaBancoSat
     var monedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
     //conso.log(monedaSat);
+    guardaMonedaSat = monedaSat; 
+    return guardaMonedaSat
 
     if (banco == "") {//verifica que el campo banco no este vacio
         alert("SE REQUIERE NOMBRE DEL BANCO");
@@ -479,16 +487,15 @@ function guardar() {
         alert("SE REQUIERE CUENTA BANCARIA");
         document.getElementById("ctaBancaria").focus();
     } if (bancoSat == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        //document.getElementById("bancoSat").focus();
+        alert("SE REQUIERE BANCO SAT");
+        document.getElementById("bancoSat").focus();
         bancoSat='NULL'
     } if (monedaSat == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
+        alert("SE REQUIERE MONEDA SAT");
         document.getElementById("monedaSat").focus();
         monedaSat = 'NULL'
     }
 }
 
-console.log(guardaBanco);
 
 window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña
