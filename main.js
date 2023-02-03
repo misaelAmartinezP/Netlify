@@ -484,13 +484,12 @@ function guardar() {
     } if (bancoSat == "") {//verifica que el campo cuenta bancaria no este vacio
         alert("SE REQUIERE BANCO SAT");
         document.getElementById("bancoSat").focus();
-        bancoSat='NULL'
+        bancoSat = 'NULL';
     } if (monedaSat == "") {//verifica que el campo cuenta bancaria no este vacio
         alert("SE REQUIERE MONEDA SAT");
         document.getElementById("monedaSat").focus();
-        monedaSat = 'NULL'
+        monedaSat = 'NULL';
     }
-    return [guardaBanco, guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat];
 }
 
 
