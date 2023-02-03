@@ -466,16 +466,6 @@ function guardar() {
     //conso.log(bancoSat);
     var monedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
     //conso.log(monedaSat);
-    var tipoCuenta = document.getElementById("tipoCuenta").value;//guarda tipo de cuenta
-    //conso.log(tipoCuenta);
-    var conceptoCie = document.getElementById("conceptoCie").value;//guarda concepto CIE
-    //conso.log(conceptoCie);
-    var convenioCie = document.getElementById("convenioCie").value;//guarda convenio de CIE
-    //conso.log(convenioCie);
-    var referenciaCie = document.getElementById("referenciaCie").value;//guarda referenciaCie 
-    //conso.log(referenciaCie);
-    var claveTransferencia = document.getElementById("claveTransferencia").value;//guarda clave de tranferencia
-    //conso.log(claveTransferencia);
 
     if (banco == "") {//verifica que el campo banco no este vacio
         alert("SE REQUIERE NOMBRE DEL BANCO");
