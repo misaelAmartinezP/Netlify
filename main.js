@@ -19,6 +19,14 @@ var guardaCtaBancaria = ""; //guarda cuenta bancaria
 var guardaBancoSat = "";//gurada banco sat
 var guardaMonedaSat = "";//guarda moneda sat
 
+
+    console.log("valores de las variables locales"); 
+    console.log(guardaBanco);//banco
+    console.log(guardaClabe);//clabe
+    console.log(guardaCtaBancaria);//cuentaBancaria
+    console.log(guardaBancoSat);//bancoSAT
+    console.log(guardaMonedaSat);//monedaSAT
+
 PDFJS.workerSrc = '';
 //extraccion del pdf
 function ExtractText() {
@@ -492,13 +500,6 @@ function guardar() {
     guardaBancoSat = bancoSat;//gurada banco sat
     guardaMonedaSat = monedaSat;//pasa moneda sat
 
-    //datos gobales de las variables
-    console.log("valores de las variables locales"); 
-    console.log(guardaBanco);//banco
-    console.log(guardaClabe);//clabe
-    console.log(guardaCtaBancaria);//cuentaBancaria
-    console.log(guardaBancoSat);//bancoSAT
-    console.log(guardaMonedaSat);//monedaSAT
 
     return guardaBanco, guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat
 }
