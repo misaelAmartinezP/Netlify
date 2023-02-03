@@ -456,15 +456,15 @@ function extraeRaSoAux(string) { //funcion que extrae la razon social
 
 
 function guardar() {
-    var banco = document.getElementById("banco").value;//guarda banco 
+    guardaBanco = document.getElementById("banco").value;//guarda banco
     //conso.log(banco);
-    var clabe = document.getElementById("clabe").value;//guarda clabe
+    guardaClabe = document.getElementById("clabe").value;//guarda clabe
     //conso.log(clabe);
-    var ctaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria 
+    guardaCtaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria
     //conso.log(ctaBancaria);
-    var bancoSat = document.getElementById("bancoSat").value;//guarda banco sat
+    guardaBancoSat = document.getElementById("bancoSat").value;//guarda banco sat
     //conso.log(bancoSat);
-    var monedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
+    guardaMonedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
     //conso.log(monedaSat);
 
     if (banco == "") {//verifica que el campo banco no este vacio
@@ -485,12 +485,23 @@ function guardar() {
         document.getElementById("monedaSat").focus();
         monedaSat = 'NULL'
     }
+}
+
+function pasaDataBan() {
 
     guardaBanco = banco;//pasa nombre del banco
     guardaClabe = clabe;//pasaClabe bancaria
     guardaCtaBancaria = ctaBancaria; //pasa cuenta bancaria
     guardaBancoSat = bancoSat;//gurada banco sat
     guardaMonedaSat = monedaSat;//pasa moneda sat
+
+
+    console.log("valores de las variables locales");
+    console.log(guardaBanco);//banco
+    console.log(guardaClabe);//clabe
+    console.log(guardaCtaBancaria);//cuentaBancaria
+    console.log(guardaBancoSat);//bancoSAT
+    console.log(guardaMonedaSat);//monedaSAT
 
     return guardaBanco, guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat
 }
