@@ -19,14 +19,6 @@ var guardaCtaBancaria = ""; //guarda cuenta bancaria
 var guardaBancoSat = "";//gurada banco sat
 var guardaMonedaSat = "";//guarda moneda sat
 
-
-    console.log("valores de las variables locales"); 
-    console.log(guardaBanco);//banco
-    console.log(guardaClabe);//clabe
-    console.log(guardaCtaBancaria);//cuentaBancaria
-    console.log(guardaBancoSat);//bancoSAT
-    console.log(guardaMonedaSat);//monedaSAT
-
 PDFJS.workerSrc = '';
 //extraccion del pdf
 function ExtractText() {
@@ -117,6 +109,7 @@ function parceoDatos(string) {
     guardaDemTer = extraeDemTer(separaDatos);
     //extraeReg(separaDatos);//guarda regimen
     guardaReg = extraeReg(separaDatos);
+    guardar();
     guradaGenCod = creaGenCod(extraeRaSoAux(separaDatos), extraeRFCAux(separaDatos));//generacion y guardado del codigo
     //generando el query
     query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "',NULL,2,'" + guardaRFC + "',idCidad,'" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico,'" + guardaClabe + "','" + guardaBanco + "', IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, '" + guardaCtaBancaria + "', IdBancoSAT,'" + guardaMonedaSat + "','" + guardaBancoSat + "') set identity_insert AcProveedores off";
@@ -500,9 +493,9 @@ function guardar() {
     guardaBancoSat = bancoSat;//gurada banco sat
     guardaMonedaSat = monedaSat;//pasa moneda sat
 
-
     return guardaBanco, guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat
 }
+
 
 
 window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña
