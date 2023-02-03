@@ -457,15 +457,15 @@ function extraeRaSoAux(string) { //funcion que extrae la razon social
 
 
 function guardar() {
-    guardaBanco = document.getElementById("banco").value;//guarda banco
+    var banco = document.getElementById("banco").value;//guarda banco 
     //conso.log(banco);
-    guardaClabe = document.getElementById("clabe").value;//guarda clabe
+    var clabe = document.getElementById("clabe").value;//guarda clabe
     //conso.log(clabe);
-    guardaCtaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria
+    var ctaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria 
     //conso.log(ctaBancaria);
-    guardaBancoSat = document.getElementById("bancoSat").value;//guarda banco sat
+    var bancoSat = document.getElementById("bancoSat").value;//guarda banco sat
     //conso.log(bancoSat);
-    guardaMonedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
+    var monedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
     //conso.log(monedaSat);
 
     if (banco == "") {//verifica que el campo banco no este vacio
@@ -488,7 +488,8 @@ function guardar() {
     }
 }
 
-function pasaDataBan() {
+
+function pasaDataBan(banco,clabe,ctaBancaria,bancoSat,monedaSat) {
 
     guardaBanco = banco;//pasa nombre del banco
     guardaClabe = clabe;//pasaClabe bancaria
