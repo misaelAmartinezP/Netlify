@@ -489,6 +489,13 @@ function guardar() {
         alert("SE REQUIERE MONEDA SAT");
         document.getElementById("monedaSat").focus();
         monedaSat = 'NULL';
+    } else {
+        document.getElementById("banco").value = "";
+        document.getElementById("clabe").value = "";
+        document.getElementById("ctaBancaria").value = "";
+        document.getElementById("bancoSat").value = "";
+        document.getElementById("monedaSat").value = "";
+        alert("DATOS GUARDADOS");
     }
 }
 
