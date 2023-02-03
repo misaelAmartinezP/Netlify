@@ -14,10 +14,15 @@ var guardaDemTer = "";//guarda demarcacion territorial o municipio
 var guardaReg = "";//guarda regimen
 var query = ""; //guarda query 
 var guardaBanco = "";//guarda nombre del banco
+var banco = "";
 var guardaClabe = "";//guardaClabe bancaria
+var clabe = "";
 var guardaCtaBancaria = ""; //guarda cuenta bancaria
+var ctaBancaria = "";
 var guardaBancoSat = "";//gurada banco sat
+var bancoSat = "";
 var guardaMonedaSat = "";//guarda moneda sat
+var monedaSat = "";
 
 PDFJS.workerSrc = '';
 //extraccion del pdf
@@ -458,17 +463,16 @@ function extraeRaSoAux(string) { //funcion que extrae la razon social
 
 
 function guardar() {
-    var banco = document.getElementById("banco").value;//guarda banco 
+    banco = document.getElementById("banco").value;//guarda banco 
     //conso.log(banco);
     guardaBanco = banco;//pasa nombre del banco
-    return guardaBanco
-    var clabe = document.getElementById("clabe").value;//guarda clabe
+    clabe = document.getElementById("clabe").value;//guarda clabe
     //conso.log(clabe);
-    var ctaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria 
+    ctaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria 
     //conso.log(ctaBancaria);
-    var bancoSat = document.getElementById("bancoSat").value;//guarda banco sat
+    bancoSat = document.getElementById("bancoSat").value;//guarda banco sat
     //conso.log(bancoSat);
-    var monedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
+    monedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
     //conso.log(monedaSat);
 
     if (banco == "") {//verifica que el campo banco no este vacio
@@ -492,9 +496,9 @@ function guardar() {
 }
 
 
-function pasaDataBan(clabe,ctaBancaria,bancoSat,monedaSat) {
+function pasaDataBan(banco,clabe,ctaBancaria,bancoSat,monedaSat) {
 
-
+    guardaBanco = banco;//pasa nombre del banco 
     guardaClabe = clabe;//pasaClabe bancaria
     guardaCtaBancaria = ctaBancaria; //pasa cuenta bancaria
     guardaBancoSat = bancoSat;//gurada banco sat
@@ -508,7 +512,7 @@ function pasaDataBan(clabe,ctaBancaria,bancoSat,monedaSat) {
     console.log(guardaBancoSat);//bancoSAT
     console.log(guardaMonedaSat);//monedaSAT
 
-    return  guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat
+    return  guardaBanco,guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat
 }
 
 
