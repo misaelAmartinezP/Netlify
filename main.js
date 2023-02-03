@@ -18,11 +18,6 @@ var guardaClabe = "";//guardaClabe bancaria
 var guardaCtaBancaria = ""; //guarda cuenta bancaria
 var guardaBancoSat = "";//gurada banco sat
 var guardaMonedaSat = "";//guarda moneda sat
-var guardaTipoCuenta = "";//guarda tipo de cuenta sat
-var guardaConceptoCie = "";//guarda concepto de cie
-var guardaConvenioCie = "";//guarda convenio de cie
-var guardaReferencia = "";//guarda referenica
-var guardaClaveTransferencia = "";//guarda clave de tranferencia
 
 PDFJS.workerSrc = '';
 //extraccion del pdf
@@ -116,7 +111,7 @@ function parceoDatos(string) {
     guardaReg = extraeReg(separaDatos);
     guradaGenCod = creaGenCod(extraeRaSoAux(separaDatos), extraeRFCAux(separaDatos));//generacion y guardado del codigo
     //generando el query
-    query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "',NULL,2,'" + guardaRFC + "',idCidad,'" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, '" + guardaCtaBancaria + "', IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert AcProveedores off";
+    query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "',NULL,2,'" + guardaRFC + "',idCidad,'" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico,'" + guardaClabe + "','" + guardaBanco + "', IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, '" + guardaCtaBancaria + "', IdBancoSAT,'" + guardaMonedaSat + "','" + guardaBancoSat + "') set identity_insert AcProveedores off";
     //console.log(query);
 }
 function creaGenCod(string, string1) {//funcion para generar el codigo 
@@ -477,8 +472,8 @@ function guardar() {
     //conso.log(conceptoCie);
     var convenioCie = document.getElementById("convenioCie").value;//guarda convenio de CIE
     //conso.log(convenioCie);
-    var referencia = document.getElementById("referencia").value;//guarda referencia 
-    //conso.log(referencia);
+    var referenciaCie = document.getElementById("referenciaCie").value;//guarda referenciaCie 
+    //conso.log(referenciaCie);
     var claveTransferencia = document.getElementById("claveTransferencia").value;//guarda clave de tranferencia
     //conso.log(claveTransferencia);
 
@@ -493,32 +488,12 @@ function guardar() {
         document.getElementById("ctaBancaria").focus();
     } if (bancoSat == "") {//verifica que el campo cuenta bancaria no este vacio
         //alert("SE REQUIERE CUENTA BANCARIA");
-        //document.getElementById("ctaBancaria").focus();
+        //document.getElementById("bancoSat").focus();
         bancoSat='NULL'
     } if (monedaSat == "") {//verifica que el campo cuenta bancaria no este vacio
         //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
+        document.getElementById("monedaSat").focus();
         monedaSat = 'NULL'
-    } if (tipoCuenta == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-        tipoCuenta = 'NULL'
-    } if (conceptoCie == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-        conceptoCie = 'NULL'
-    } if (convenioCie == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-        convenioCie = 'NULL'
-    } if (referencia == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-        referencia = 'NULL'
-    } if (claveTransferencia == "") {//verifica que el campo cuenta bancaria no este vacio
-        //alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-        claveTransferencia = 'NULL'
     }
 
     guardaBanco = banco;//pasa nombre del banco
@@ -529,19 +504,15 @@ function guardar() {
     guardaTipoCuenta = tipoCuenta;//pasa tipo de cuenta sat
     guardaConceptoCie = conceptoCie;//pasa concepto de cie
     guardaConvenioCie = convenioCie;//pasa convenio de cie
-    guardaReferencia = referencia;//pasa referenica
+    guardaReferenciaCie = referenciaCie;//pasa referenica
     guardaClaveTransferencia = claveTransferencia;//pasa clave de tranferencia
     console.log("datos de variable globales")
-    console.log(guardaBanco);
-    console.log(guardaClabe);
-    console.log(guardaCtaBancaria);
-    console.log(guardaBancoSat);
-    console.log(guardaMonedaSat);
-    console.log(guardaTipoCuenta);
-    console.log(guardaConceptoCie); 
-    console.log(guardaConvenioCie);
-    console.log(guardaReferencia);
-    console.log(guardaClaveTransferencia);
+    console.log(guardaBanco);//banco
+    console.log(guardaClabe);//clabe
+    console.log(guardaCtaBancaria);//cuentaBancaria
+    console.log(guardaBancoSat);//bancoSAT
+    console.log(guardaMonedaSat);//monedaSAT
+
 }
 
 
