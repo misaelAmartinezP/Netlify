@@ -18,7 +18,7 @@ var guardaClabe = "";//guardaClabe bancaria
 var guardaCtaBancaria = ""; //guarda cuenta bancaria
 var guardaBancoSat = "";//gurada banco sat
 var guardaMonedaSat = "";//guarda moneda sat
-
+alert("LLENAR PRIMERO LOS DATOS BANCARIOS")
 PDFJS.workerSrc = '';
 //extraccion del pdf
 function ExtractText() {
