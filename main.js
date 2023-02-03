@@ -13,6 +13,7 @@ var guardaNomCol = "";//guarda nombre de la colonia
 var guardaDemTer = "";//guarda demarcacion territorial o municipio
 var guardaReg = "";//guarda regimen
 var query = ""; //guarda query 
+var pasaValBan=valores();
 var guardaBanco = "";//guarda nombre del banco
 var guardaClabe = "";//guardaClabe bancaria
 var guardaCtaBancaria = ""; //guarda cuenta bancaria
@@ -459,23 +460,18 @@ function guardar() {
     var banco = document.getElementById("banco").value;//guarda banco 
     //conso.log(banco);
     guardaBanco = banco;//pasa nombre del banco
-    return guardaBanco
     var clabe = document.getElementById("clabe").value;//guarda clabe
     //conso.log(clabe);
     guardaClabe = clabe;
-    return guardaClabe
     var ctaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria 
     //conso.log(ctaBancaria);
     guardaCtaBancaria = ctaBancaria;
-    return guardaCtaBancaria
     var bancoSat = document.getElementById("bancoSat").value;//guarda banco sat
     //conso.log(bancoSat);
     guardaBancoSat = bancoSat;
-    return guardaBancoSat
     var monedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
     //conso.log(monedaSat);
     guardaMonedaSat = monedaSat; 
-    return guardaMonedaSat
 
     if (banco == "") {//verifica que el campo banco no este vacio
         alert("SE REQUIERE NOMBRE DEL BANCO");
@@ -494,6 +490,9 @@ function guardar() {
         alert("SE REQUIERE MONEDA SAT");
         document.getElementById("monedaSat").focus();
         monedaSat = 'NULL'
+    }
+    function valores(guardaBanco, guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat) {
+        return [guardaBanco, guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat];
     }
 }
 
