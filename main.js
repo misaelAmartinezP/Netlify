@@ -500,6 +500,7 @@ function guardar() {
     console.log(guardaBancoSat);//bancoSAT
     console.log(guardaMonedaSat);//monedaSAT
 
+    return guardaBanco, guardaClabe, guardaCtaBancaria, guardaBancoSat, guardaMonedaSat
 }
 
 
