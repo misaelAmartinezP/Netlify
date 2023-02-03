@@ -1,7 +1,7 @@
 const cnx = {
     user: 'sa',
     password: 'misaeL197520*',
-    server: 'localhost', 
+    server: '169.254.88.218',
     database: '2018',
     port: 49718
 }
