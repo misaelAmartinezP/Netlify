@@ -129,10 +129,12 @@ function creaGenCod(string, string1) {//funcion para generar el codigo
                         if (cadMaInf[i] != 'LA') {//si la palabra es 'LA' se omite 
                             if (cadMaInf[i] != 'LOS') {//si la palabra es 'LOS' se omite 
                                 if (cadMaInf[i] != 'LAS') {//si la palabra es 'LAS' se omite 
-                                    //console.log("estamos en los if anidados");//comprobacion de funcionamiento de los ifs
-                                    // console.log(cadMaInf[i]); //variable para ver el contenido de 
-                                    //console.log(cadMaInf[i].substring(0, 3));//prueba para extraer solo 3 caracteres de la palabra
-                                    arrAux.push(cadMaInf[i]);//manda todos los valores que hayan sido diferentes a los antes omitidos por los if y los guarda en arrAux
+                                    if (cadMaInf[i]1 = 'Y') {
+                                        //console.log("estamos en los if anidados");//comprobacion de funcionamiento de los ifs
+                                        // console.log(cadMaInf[i]); //variable para ver el contenido de 
+                                        //console.log(cadMaInf[i].substring(0, 3));//prueba para extraer solo 3 caracteres de la palabra
+                                        arrAux.push(cadMaInf[i]);//manda todos los valores que hayan sido diferentes a los antes omitidos por los if y los guarda en arrAux
+                                    }
                                 }
                             }
                         }
