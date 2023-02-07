@@ -238,10 +238,6 @@ function creaGenCod(string, string1) {//funcion para generar el codigo
             //console.log(car3s);
             //primera letra de la tercer palabra
             car1t = arrAux[2].substring(0, 1);
-            //console.log(car4t);
-            //ultima lera de la cuarta palabra
-            car1c = arrAux[3].substring(0, 1);
-            //console.log(car4t);
             //codigo listo
             codGen = (car3p + car3s + car4t + car1c + "????MXN");
             //console.log(codGen);
