@@ -129,7 +129,7 @@ function creaGenCod(string, string1) {//funcion para generar el codigo
                         if (cadMaInf[i] != 'LA') {//si la palabra es 'LA' se omite 
                             if (cadMaInf[i] != 'LOS') {//si la palabra es 'LOS' se omite 
                                 if (cadMaInf[i] != 'LAS') {//si la palabra es 'LAS' se omite 
-                                    if (cadMaInf[i]1 = 'Y') {
+                                    if (cadMaInf[i] != 'Y') {
                                         //console.log("estamos en los if anidados");//comprobacion de funcionamiento de los ifs
                                         // console.log(cadMaInf[i]); //variable para ver el contenido de 
                                         //console.log(cadMaInf[i].substring(0, 3));//prueba para extraer solo 3 caracteres de la palabra
