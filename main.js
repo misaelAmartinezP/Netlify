@@ -211,7 +211,25 @@ function creaGenCod(string, string1) {//funcion para generar el codigo
     if ((codGen.length) == 13) {//verifica que el codigo sea de la longitud necesaria 
         return codGen //si es la longitud deseada regresa el codigo 
     } else {//si no 
-        if ((arrAux.length) >= 3) {
+        if ((arrAux.length) >= 4) {
+            //tres primeras letras de la primer palabra
+            car3p = arrAux[0].substring(0, 3);
+            //console.log(car3p);
+            //primera letras de la segunda palabra
+            car1s = arrAux[1].substring(0, 1);
+            //console.log(car3s);
+            //primera letra de la tercer palabra
+            car1t = arrAux[2].substring(0, 1);
+            //console.log(car4t);
+            //ultima lera de la cuarta palabra
+            car1c = arrAux[3].substring(0, 1);
+            //console.log(car4t);
+            //codigo listo
+            codGen = (car3p + car3s + car4t + car1c + "????MXN");
+            //console.log(codGen);
+            return codGen
+        }
+        if ((arrAux.length) == 3) {
             //tres primeras letras de la primer palabra
             car3p = arrAux[0].substring(0, 3);
             //console.log(car3p);
