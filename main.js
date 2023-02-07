@@ -239,7 +239,7 @@ function creaGenCod(string, string1) {//funcion para generar el codigo
             //primera letra de la tercer palabra
             car1t = arrAux[2].substring(0, 1);
             //codigo listo
-            codGen = (car3p + car3s + car4t + car1c + "????MXN");
+            codGen = (car3p + car1s + car1t  + "????MXN");
             //console.log(codGen);
             return codGen
         }
