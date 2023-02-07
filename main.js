@@ -230,16 +230,20 @@ function creaGenCod(string, string1) {//funcion para generar el codigo
             return codGen
         }
         if ((arrAux.length) == 3) {
-            //tres primeras letras de la primer palabra
-            car3p = arrAux[0].substring(0, 3);
-            //console.log(car3p);
+            if ((arrAux[0].length) == 2) {
+                car3p = arrAux[0] + "?"
+            } else {
+                //tres primeras letras de la primer palabra
+                car3p = arrAux[0].substring(0, 3);
+                //console.log(car3p);
+            }
             //primera letras de la segunda palabra
             car1s = arrAux[1].substring(0, 3);
             //console.log(car3s);
             //primera letra de la tercer palabra
             car1t = arrAux[2].substring(0, 4);
             //codigo listo
-            codGen = (car3p + car1s + car1t  + "????MXN");
+            codGen = (car3p + car1s + car1t  + "MXN");
             //console.log(codGen);
             return codGen
         }
