@@ -522,12 +522,12 @@ function guardar() {
 }
 
 function personaMoral(string) {
-    rfc = string
+    rfc = string;
     pm = "";
-    if (rfc == 12) {//si es persona moral
-        pm == '1';
-    } if (rfc == 13) {//si es persona fisica
-        pm == '0';
+    if ((rfc.length) == 12) {//si es persona moral
+        pm = '1';
+    } if ((rfc.length) == 13) {//si es persona fisica
+        pm = '0';
     }
     console.log(pm); 
     return pm
