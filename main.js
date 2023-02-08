@@ -500,6 +500,10 @@ function guardar() {
     } if (clabe == "") { //verifica que el campo clabe no este vacio
         alert("SE REQUIERE CLABE BANCARIA");
         document.getElementById("clabe").focus();
+        if (clabe == 18) {
+            alert("LA CLABE INTERBANCARIA TIENE QUE TENER 18 DIGITOS")
+            document.getElementById("clabe");
+        }
     } if (ctaBancaria == "") {//verifica que el campo cuenta bancaria no este vacio
         alert("SE REQUIERE CUENTA BANCARIA");
         document.getElementById("ctaBancaria").focus();
