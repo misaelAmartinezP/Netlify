@@ -500,7 +500,7 @@ function guardar() {
     } if (clabe == "") { //verifica que el campo clabe no este vacio
         alert("SE REQUIERE CLABE BANCARIA");
         document.getElementById("clabe").focus();
-        if (clabe == 18) {
+        if (clabe != 18) {
             alert("LA CLABE INTERBANCARIA TIENE QUE TENER 18 DIGITOS")
             document.getElementById("clabe");
         }
