@@ -529,6 +529,7 @@ function personaMoral(string) {
     } if (rfc == 13) {//si es persona fisica
         pm = '0';
     }
+    console.log(pm); 
     return pm
 }
 
