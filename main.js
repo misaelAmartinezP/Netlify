@@ -479,19 +479,19 @@ function extraeRaSoAux(string) { //funcion que extrae la razon social
 
 function guardar() {
     var banco = document.getElementById("banco").value;//guarda banco 
-    console.log(banco);
+    //console.log(banco);
     guardaBanco = banco;//pasa nombre del banco
     var clabe = document.getElementById("clabe").value;//guarda clabe
-    console.log(clabe);
+    //console.log(clabe);
     guardaClabe = clabe;
     var ctaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria 
-    console.log(ctaBancaria);
+    //console.log(ctaBancaria);
     guardaCtaBancaria = ctaBancaria;
     var bancoSat = document.getElementById("bancoSat").value;//guarda banco sat
-    console.log(bancoSat);
+    //console.log(bancoSat);
     guardaBancoSat = bancoSat;
     var monedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
-    console.log(monedaSat);
+    //console.log(monedaSat);
     guardaMonedaSat = monedaSat; 
 
     if (banco == "") {//verifica que el campo banco no este vacio
