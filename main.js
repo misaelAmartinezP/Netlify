@@ -110,10 +110,10 @@ function parceoDatos(string) {
     guradaGenCod = creaGenCod(extraeRaSoAux(separaDatos), extraeRFCAux(separaDatos));//generacion y guardado del codigo
     guardaPersonaMoral = personaMoral(extraeRFCAux(separaDatos));//determina 1 o 0 para campo personaMoral
     guardaBancoSat = bancoSat(guardaBanco);//este es la Clave que da el SAT
-    guardaIdBancoSat = idBancoSat();//este es de nuestro catalogo
+    guardaIdBancoSat = idBancoSat(guardaBanco);//este es de nuestro catalogo
     //generando el query
                                                                           //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
-    query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "',NULL,2,'" + guardaRFC + "',idCidad,'" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago,'" + guardaPersonaMoral + "', CURP, PersonasAtiendenPedidos, Suspendido, 'IdCuentaProveedor', 'IdCuentaAnticipo', IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, '" + guardaCtaBancaria + "','" + guardaIdBancoSat + "','MXN','" + guardaBancoSat + "', TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, '6853', IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) set identity_insert AcProveedores off";
+    query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "','NULL',2,'" + guardaRFC + "',idCidad,'" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago,'" + guardaPersonaMoral + "', CURP, PersonasAtiendenPedidos, Suspendido, 'IdCuentaProveedor', 'IdCuentaAnticipo', IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, '" + guardaCtaBancaria + "','" + guardaIdBancoSat + "','MXN','" + guardaBancoSat + "', TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, '6853', IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) set identity_insert AcProveedores off";
     //console.log(query);
 }
 function creaGenCod(string, string1) {//funcion para generar el codigo 
@@ -601,7 +601,104 @@ function bancoSat(string) {//este es la Clave que da el SAT
     if (nomBanco == 'LIBERTAD') { return '670' }
     if (nomBanco == 'N/A') { return '999' }
 }
-function idBancoSat(string) { }
+function idBancoSat(string) {
+    nomIdBancoSat = string;
+    if (nomIdBancoSat = 'BANAMEX') { return 1 }
+    if (nomIdBancoSat = 'BANCOMEXT') { return 2 }
+    if (nomIdBancoSat = 'BANOBRAS') { return 3 }
+    if (nomIdBancoSat = 'BBVA BANCOMER') { return 4 }
+    if (nomIdBancoSat = 'SANTANDER') { return 5 }
+    if (nomIdBancoSat = 'BANJERCITO') { return 6 }
+    if (nomIdBancoSat = 'HSBC') { return 7 }
+    if (nomIdBancoSat = 'BAJIO') { return 8 }
+    if (nomIdBancoSat = 'IXE') { return 9 }
+    if (nomIdBancoSat = 'INBURSA') { return 10 }
+    if (nomIdBancoSat = 'INTERACCIONES') { return 11 }
+    if (nomIdBancoSat = 'MIFEL') { return 12 }
+    if (nomIdBancoSat = 'SCOTIABANK') { return 13 }
+    if (nomIdBancoSat = 'BANREGIO') { return 14 }
+    if (nomIdBancoSat = 'INVEX') { return 15 }
+    if (nomIdBancoSat = 'BANSI') { return 16 }
+    if (nomIdBancoSat = 'AFIRME') { return 17 }
+    if (nomIdBancoSat = 'BANORTE') { return 18 }
+    if (nomIdBancoSat = 'THE ROYAL BANK') { return 19 }
+    if (nomIdBancoSat = 'AMERICAN EXPRESS') { return 20 }
+    if (nomIdBancoSat = 'BAMSA') { return 21 }
+    if (nomIdBancoSat = 'TOKYO') { return 22 }
+    if (nomIdBancoSat = 'JP MORGAN') { return 23 }
+    if (nomIdBancoSat = 'BMONEX') { return 24 }
+    if (nomIdBancoSat = 'VE POR MAS') { return 25 }
+    if (nomIdBancoSat = 'ING') { return 26 }
+    if (nomIdBancoSat = 'DEUTSCHE') { return 27 }
+    if (nomIdBancoSat = 'CREDIT SUISSE') { return 28 }
+    if (nomIdBancoSat = 'AZTECA') { return 29 }
+    if (nomIdBancoSat = 'AUTOFIN') { return 30 }
+    if (nomIdBancoSat = 'BARCLAYS') { return 31 }
+    if (nomIdBancoSat = 'COMPARTAMOS') { return 32 }
+    if (nomIdBancoSat = 'BANCO FAMSA') { return 33 }
+    if (nomIdBancoSat = 'BMULTIVA') { return 34 }
+    if (nomIdBancoSat = 'ACTINVER') { return 35 }
+    if (nomIdBancoSat = 'WAL-MART') { return 36 }
+    if (nomIdBancoSat = 'NAFIN') { return 37 }
+    if (nomIdBancoSat = 'INTERBANCO') { return 38 }
+    if (nomIdBancoSat = 'BANCOPPEL') { return 39 }
+    if (nomIdBancoSat = 'ABC CAPITAL') { return 40 }
+    if (nomIdBancoSat = 'UBS BANK') { return 41 }
+    if (nomIdBancoSat = 'CONSUBANCO') { return 42 }
+    if (nomIdBancoSat = 'VOLKSWAGEN') { return 43 }
+    if (nomIdBancoSat = 'CIBANCO') { return 44 }
+    if (nomIdBancoSat = 'BANSEFI') { return 45 }
+    if (nomIdBancoSat = 'HIPOTECARIA FEDERAL') { return 46 }
+    if (nomIdBancoSat = 'MONEXCB') { return 47 }
+    if (nomIdBancoSat = 'GBM') { return 48 }
+    if (nomIdBancoSat = 'MASARI') { return 49 }
+    if (nomIdBancoSat = 'VALUE') { return 50 }
+    if (nomIdBancoSat = 'ESTRUCTURADORES') { return 51 }
+    if (nomIdBancoSat = 'TIBER') { return 52 }
+    if (nomIdBancoSat = 'VECTOR') { return 53 }
+    if (nomIdBancoSat = 'B&B') { return 54 }
+    if (nomIdBancoSat = 'ACCIVAL') { return 55 }
+    if (nomIdBancoSat = 'MERRILL LYNCH') { return 56 }
+    if (nomIdBancoSat = 'FINAMEX') { return 57 }
+    if (nomIdBancoSat = 'VALMEX') { return 58 }
+    if (nomIdBancoSat = 'UNICA') { return 59 }
+    if (nomIdBancoSat = 'MAPFRE') { return 60 }
+    if (nomIdBancoSat = 'PROFUTURO') { return 61 }
+    if (nomIdBancoSat = 'CB ACTINVER') { return 62 }
+    if (nomIdBancoSat = 'OACTIN') { return 63 }
+    if (nomIdBancoSat = 'SKANDIA') { return 64 }
+    if (nomIdBancoSat = 'CBDEUTSCHE') { return 65 }
+    if (nomIdBancoSat = 'ZURICH') { return 66 }
+    if (nomIdBancoSat = 'ZURICHVI') { return 67 }
+    if (nomIdBancoSat = 'SU CASITA') { return 68 }
+    if (nomIdBancoSat = 'CB INTERCAM') { return 69 }
+    if (nomIdBancoSat = 'CI BOLSA') { return 70 }
+    if (nomIdBancoSat = 'BULLTICK CB') { return 71 }
+    if (nomIdBancoSat = 'STERLING') { return 72 }
+    if (nomIdBancoSat = 'FINCOMUN') { return 73 }
+    if (nomIdBancoSat = 'HDI SEGUROS') { return 74 }
+    if (nomIdBancoSat = 'ORDER') { return 75 }
+    if (nomIdBancoSat = 'AKALA') { return 76 }
+    if (nomIdBancoSat = 'CB JPMORGAN') { return 77 }
+    if (nomIdBancoSat = 'REFORMA') { return 78 }
+    if (nomIdBancoSat = 'CB BANORTE') { return 79 }
+    if (nomIdBancoSat = 'STP') { return 80 }
+    if (nomIdBancoSat = 'TELECOMM') { return 81 }
+    if (nomIdBancoSat = 'EVERCORE') { return 82 }
+    if (nomIdBancoSat = 'SKANDIA') { return 83 }
+    if (nomIdBancoSat = 'SEGMTY') { return 84 }
+    if (nomIdBancoSat = 'ASEA') { return 85 }
+    if (nomIdBancoSat = 'SOFIEXPRESS') { return 86 }
+    if (nomIdBancoSat = 'CLS') { return 87 }
+    if (nomIdBancoSat = 'INDEVAL') { return 88 }
+    if (nomIdBancoSat = 'BBASE') { return 264 }
+    if (nomIdBancoSat = 'KUSPIT') { return 265 }
+    if (nomIdBancoSat = 'UNAGRA') { return 266 }
+    if (nomIdBancoSat = 'OPCIONES EMPRESARIALES DEL NOROESTE') { return 267 }
+    if (nomIdBancoSat = 'LIBERTAD') { return 268 }
+    if (nomIdBancoSat = 'N/A') { return 269 }
+    if (nomIdBancoSat = 'SABADELL') { return 2130 }
+}
 
 function personaMoral(string) {
     rfc = string;
