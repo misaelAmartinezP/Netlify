@@ -603,6 +603,7 @@ function bancoSat(string) {//este es la Clave que da el SAT
 }
 function idBancoSat(string) {
     nomIdBancoSat = string;
+    console.log(nomIdBancoSat);
     if (nomIdBancoSat = 'BANAMEX') { return 1 }
     if (nomIdBancoSat = 'BANCOMEXT') { return 2 }
     if (nomIdBancoSat = 'BANOBRAS') { return 3 }
@@ -708,7 +709,7 @@ function personaMoral(string) {
     } if ((rfc.length) == 13) {//si es persona fisica
         pm = '0';
     }
-    console.log(pm); 
+    //console.log(pm); 
     return pm
 }
 
