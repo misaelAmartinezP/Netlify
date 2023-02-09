@@ -780,7 +780,7 @@ function personaFisApMa(string, stringRfc) {
             return 'NULL'
         }
     }
-    console.log(guardaApMa.join(' '));
+    //console.log(guardaApMa.join(' '));
     return guardaApMa.join(' ');
 }
 
