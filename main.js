@@ -726,7 +726,7 @@ function personaFisNom(string,stringRfc) {
                 }
             }
         }
-        console.log(guardaNom);
+        console.log(guardaNom.join(' ');
     } else {
         return 'NULL'
     }
