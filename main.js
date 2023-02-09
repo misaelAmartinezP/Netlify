@@ -491,7 +491,7 @@ function guardar() {
 
     if (banco == "") {//verifica que el campo banco no este vacio
         alert("SE REQUIERE NOMBRE DEL BANCO");
-        document.getElementById("banco").focus();
+        document.getElementById("banco1").focus();
     } if (clabe == "") { //verifica que el campo clabe no este vacio
         alert("SE REQUIERE CLABE BANCARIA");
         document.getElementById("clabe").focus();
