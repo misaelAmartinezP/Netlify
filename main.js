@@ -106,6 +106,7 @@ function parceoDatos(string) {
     guardaBancoSat = bancoSat(guardaBanco);//este es la Clave que da el SAT
     guardaIdBancoSat = idBancoSat(guardaBanco);//este es de nuestro catalogo
     guardaPersonaFisNom = personaFisNom(separaDatos, extraeRFCAux(separaDatos));
+    gaurdaPersonaFisApPa = personaFisApPa(separaDatos, extraeRFCAux(separaDatos));
     //generando el query
                                                                           //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
     query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "','NULL',2,'" + guardaRFC + "',idCidad,'" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda,'" + guardaPersonaFisNom +"', ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago,'" + guardaPersonaMoral + "', CURP, PersonasAtiendenPedidos, Suspendido, 'IdCuentaProveedor', 'IdCuentaAnticipo', IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, '" + guardaCtaBancaria + "','" + guardaIdBancoSat + "','MXN','" + guardaBancoSat + "', TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, '6853', IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) set identity_insert AcProveedores off";
@@ -731,6 +732,31 @@ function personaFisNom(string,stringRfc) {
     //console.log(guardaNom.join(' '));
     return guardaNom.join(' ');
 }
+
+function personaFisApPa(string, stringRfc) {
+    if ((stringRfc.length) == 13) {//si es persona fisica
+        arrInfo = Object.values(string); //convertimos el contenido de la extracion en un arreglo
+        console.log("persona fisica nombre"); //imprime el nombre de la funcion en consola
+        console.log(string);
+        var guardaApPa = []; //declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
+        console.log(arrInfo.indexOf("Apellido:"));//busqueda el indice de la palabra
+        console.log(arrInfo.indexOf("Segundo"));//busqueda el indice de la palabra
+        if (arrInfo.includes("Apellido:") == true) { //si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion
+            console.log("estoy en el if y soy true") //verificar que si se cumplio la condicion linea de apoyo 
+            for (i = arrInfo.indexOf("(s):") + 1; i <= arrInfo.indexOf("Segundo") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
+                if (arrInfo[i] != '') {
+                    console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
+                    guardaApPa.push(arrInfo[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i
+                }
+            }
+        }
+    } else {
+        return 'NULL'
+    }
+    console.log(guardaApPa.join(' '));
+    return guardaApPa.join(' ');
+}
+
 
 
 
