@@ -487,12 +487,7 @@ function guardar() {
     var ctaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria 
     //console.log(ctaBancaria);
     guardaCtaBancaria = ctaBancaria;
-    var bancoSat = document.getElementById("bancoSat").value;//guarda banco sat
-    //console.log(bancoSat);
-    guardaBancoSat = bancoSat;
-    var monedaSat = document.getElementById("monedaSat").value;//guarda moneda SAT
-    //console.log(monedaSat);
-    guardaMonedaSat = monedaSat; 
+
 
     if (banco == "") {//verifica que el campo banco no este vacio
         alert("SE REQUIERE NOMBRE DEL BANCO");
@@ -509,6 +504,10 @@ function guardar() {
         document.getElementById("ctaBancaria").value = "";
         alert("DATOS GUARDADOS");
     }
+}
+
+function idBancoSat() {
+
 }
 
 function personaMoral(string) {
