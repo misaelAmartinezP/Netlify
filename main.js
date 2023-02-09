@@ -708,9 +708,9 @@ function personaMoral(string) {
     return pm
 }
 
-function personaFisNom(string,string) {
-    if ((rfc.length) == 13) {//si es persona fisica
-        arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
+function personaFisNom(string,string1) {
+    if ((string.length) == 13) {//si es persona fisica
+        arrInfo = Object.values(string1) //convertimos el contenido de la extracion en un arreglo 
         console.log("persona fisica nombre") //imprime el nombre de la funcion en consola 
         var guardaRaSo = []; //declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
         console.log(arrInfo.indexOf("(s):"));//busqueda el indice de la palabra
