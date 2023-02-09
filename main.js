@@ -743,7 +743,7 @@ function personaFisApPa(string, stringRfc) {
         console.log(arrInfo.indexOf("Segundo"));//busqueda el indice de la palabra
         if (arrInfo.includes("Apellido:") == true) { //si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion
             console.log("estoy en el if y soy true") //verificar que si se cumplio la condicion linea de apoyo 
-            for (i = arrInfo.indexOf("(s):") + 1; i <= arrInfo.indexOf("Segundo") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
+            for (i = arrInfo.indexOf("Apellido:") + 1; i <= arrInfo.indexOf("Segundo") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
                 if (arrInfo[i] != '') {
                     console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
                     guardaApPa.push(arrInfo[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i
