@@ -501,7 +501,7 @@ function guardar() {
 function bancoSat(string) {//este es la Clave que da el SAT
     nomBanco = string;
     if (nomBanco == 'BANAMEX') { return '002' }
-    if (nomBanco == 'BANCOMET') { return '006' }
+    if (nomBanco == 'BANCOMEXT') { return '006' }
     if (nomBanco == 'BANOBRAS') { return '009' }
     if (nomBanco == 'BBVA BANCOMER') { return '012' }
     if (nomBanco == 'SANTANDER') { return '014' }
@@ -594,13 +594,13 @@ function bancoSat(string) {//este es la Clave que da el SAT
     if (nomBanco == 'LIBERTAD') { return '670' }
     if (nomBanco == 'N/A') { return '999' }
 }
-function idBancoSat(string) {
+function idBancoSat(string) {//este es nuestro id de la base de datos
     nomIdBancoSat = string;
     console.log(nomIdBancoSat);
-    if (nomIdBancoSat = 'BANAMEX') { return '1' }
-    if (nomIdBancoSat = 'BANCOMEXT') { return '2' }
-    if (nomIdBancoSat = 'BANOBRAS') { return '3' }
-    if (nomIdBancoSat = 'BBVA BANCOMER') { return '4' }
+    if (nomIdBancoSat == 'BANAMEX') { return '1' }
+    if (nomIdBancoSat == 'BANCOMEXT') { return '2' }
+    if (nomIdBancoSat == 'BANOBRAS') { return '3' }
+    if (nomIdBancoSat == 'BBVA BANCOMER') { return '4' }
     if (nomIdBancoSat = 'SANTANDER') { return '5' }
     if (nomIdBancoSat = 'BANJERCITO') { return '6' }
     if (nomIdBancoSat = 'HSBC') { return '7' }
