@@ -714,7 +714,7 @@ function personaFisNom(string,stringRfc) {
         arrInfo = Object.values(string); //convertimos el contenido de la extracion en un arreglo
         console.log("persona fisica nombre"); //imprime el nombre de la funcion en consola
         console.log(string);
-        var guardaRaSo = []; //declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
+        var guardaNom = []; //declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
         console.log(arrInfo.indexOf("(s):"));//busqueda el indice de la palabra
         console.log(arrInfo.indexOf("Primer"));//busqueda el indice de la palabra
         if (arrInfo.includes("(s):") == true) { //si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion
@@ -722,11 +722,11 @@ function personaFisNom(string,stringRfc) {
             for (i = arrInfo.indexOf("(s):") + 1; i <= arrInfo.indexOf("Primer") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
                 if (arrInfo[i] != '') {
                     console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
-                    guardaRaSo.push(arrInfo[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i 
+                    guardaRaSo.push(guardaNom[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i
                 }
             }
         }
-        console.log(arrInfo);
+        console.log(guardaNom);
     } else {
         return 'NULL'
     }
