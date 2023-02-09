@@ -444,7 +444,7 @@ function download(filename, query) {
 }
 // comineza la descarga
 document.getElementById("dwn-btn").addEventListener("click", function () {
-    var filename = "query" + guardaRFC + ".sql";
+    var filename = "QUERY-" + guardaRFC + ".sql";
     download(filename, query);
 }, false);
 function extraeRFCAux(string) { //funcion que extrae el pdf 
