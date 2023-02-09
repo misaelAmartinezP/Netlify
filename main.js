@@ -499,7 +499,7 @@ function guardar() {
         alert("SE REQUIERE CUENTA BANCARIA");
         document.getElementById("ctaBancaria").focus();
     } else {
-        document.getElementById("banco").value = "";
+        document.getElementById("banco1").value = "";
         document.getElementById("clabe").value = "";
         document.getElementById("ctaBancaria").value = "";
         alert("DATOS GUARDADOS");
