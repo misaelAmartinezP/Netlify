@@ -16,8 +16,10 @@ var query = ""; //guarda query
 var guardaBanco = "";//guarda nombre del banco
 var guardaClabe = "";//guardaClabe bancaria
 var guardaCtaBancaria = ""; //guarda cuenta bancaria
+
 alert("LLENAR PRIMERO LOS DATOS BANCARIOS")
 PDFJS.workerSrc = '';
+
 //extraccion del pdf
 function ExtractText() {
     var input = document.getElementById("file-id");
@@ -88,7 +90,7 @@ function pdfAsArray(pdfAsArray) {
 //terimina extraccion del pdf
 function parceoDatos(string) {
     separaDatos = string.split(" ");
-    //console.log(separaDatos);
+    console.log(separaDatos);
     //extraeRFC(separaDatos); 
     guardaRFC = extraeRFC(separaDatos);//guarda RFC
     guardaRaSo = extraeRaSo(separaDatos);    //extraeRaSo(separaDatos);//guarda razon social
@@ -103,7 +105,7 @@ function parceoDatos(string) {
     guardaPersonaMoral = personaMoral(extraeRFCAux(separaDatos));//determina 1 o 0 para campo personaMoral
     guardaBancoSat = bancoSat(guardaBanco);//este es la Clave que da el SAT
     guardaIdBancoSat = idBancoSat(guardaBanco);//este es de nuestro catalogo
-    console.log(guardaIdBancoSat);
+    guardaPersonaFisNom = personaFisNom(separaDatos, extraeRFCAux(separaDatos));
     //generando el query
                                                                           //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
     query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "','NULL',2,'" + guardaRFC + "',idCidad,'" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago,'" + guardaPersonaMoral + "', CURP, PersonasAtiendenPedidos, Suspendido, 'IdCuentaProveedor', 'IdCuentaAnticipo', IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, '" + guardaCtaBancaria + "','" + guardaIdBancoSat + "','MXN','" + guardaBancoSat + "', TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, '6853', IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) set identity_insert AcProveedores off";
@@ -706,8 +708,26 @@ function personaMoral(string) {
     return pm
 }
 
-function personaMoralNomApAm(string) {
-
+function personaFisNom(string,string) {
+    if ((rfc.length) == 13) {//si es persona fisica
+        arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
+        //console.log("persona fisica nombre") //imprime el nombre de la funcion en consola 
+        var guardaRaSo = []; //declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
+        //console.log(arrInfo.indexOf("Contribuyentes"));//busqueda el indice de la palabra
+        //console.log(arrInfo.indexOf("Nombre,"));//busqueda el indice de la palabra
+        if (arrInfo.includes("Contribuyentes") == true) { //si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion 
+            //console.log("estoy en el if y soy true") //verificar que si se cumplio la condicion linea de apoyo 
+            for (i = arrInfo.indexOf("Contribuyentes") + 1; i <= arrInfo.indexOf("Nombre,") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
+                if (arrInfo[i] != '') {
+                    //console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
+                    //console.log(arrInfo[i].substring(0, 3)); //prueba para extraer los 3 primeros caracteres de cada palabra
+                    guardaRaSo.push(arrInfo[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i 
+                }
+            }
+        }
+    } else {
+        return 'NULL'
+    }
 }
 
 
