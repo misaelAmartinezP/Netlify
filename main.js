@@ -691,7 +691,7 @@ function idBancoSat(string) {//este es nuestro id de la base de datos
     if (nomIdBancoSat == 'OPCIONES EMPRESARIALES DEL NOROESTE') { return '267' }
     if (nomIdBancoSat == 'LIBERTAD') { return '268' }
     if (nomIdBancoSat == 'N/A') { return '269' }
-    if (nomIdBancoSat == 'SABADELL') { return '2130' }
+    if (nomIdBancoSat == 'SABADELL') { return '2130' } 
 }
 
 function personaMoral(string) {
