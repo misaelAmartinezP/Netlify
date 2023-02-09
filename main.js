@@ -503,15 +503,10 @@ function guardar() {
     } if (ctaBancaria == "") {//verifica que el campo cuenta bancaria no este vacio
         alert("SE REQUIERE CUENTA BANCARIA");
         document.getElementById("ctaBancaria").focus();
-    } if (bancoSat == "") {//verifica que el campo cuenta bancaria no este vacio
-        alert("SE REQUIERE BANCO SAT");
-        document.getElementById("bancoSat").focus();
-        bancoSat = 'NULL';
     } else {
         document.getElementById("banco").value = "";
         document.getElementById("clabe").value = "";
         document.getElementById("ctaBancaria").value = "";
-        document.getElementById("bancoSat").value = "";
         alert("DATOS GUARDADOS");
     }
 }
