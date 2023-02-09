@@ -713,7 +713,7 @@ function personaFisNom(string,stringRfc) {
     if ((stringRfc.length) == 13) {//si es persona fisica
         arrInfo = Object.values(string); //convertimos el contenido de la extracion en un arreglo
         console.log("persona fisica nombre"); //imprime el nombre de la funcion en consola
-        console.log(string1);
+        console.log(string);
         var guardaRaSo = []; //declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
         console.log(arrInfo.indexOf("(s):"));//busqueda el indice de la palabra
         console.log(arrInfo.indexOf("Primer"));//busqueda el indice de la palabra
