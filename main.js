@@ -479,7 +479,7 @@ function extraeRaSoAux(string) { //funcion que extrae la razon social
 
 function guardar() {
     var banco = document.getElementById("banco1").value;//guarda banco 
-    console.log(banco);
+    //console.log(banco);
     guardaBanco = banco;//pasa nombre del banco
     var clabe = document.getElementById("clabe").value;//guarda clabe
     //console.log(clabe);
