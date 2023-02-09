@@ -599,7 +599,7 @@ function bancoSat(string) {//este es la Clave que da el SAT
 }
 function idBancoSat(string) {//este es nuestro id de la base de datos
     nomIdBancoSat = string;
-    console.log(nomIdBancoSat);
+    //console.log(nomIdBancoSat);
     if (nomIdBancoSat == 'BANAMEX') { return '1' }
     if (nomIdBancoSat == 'BANCOMEXT') { return '2' }
     if (nomIdBancoSat == 'BANOBRAS') { return '3' }
@@ -722,7 +722,7 @@ function personaFisNom(string,stringRfc) {
             for (i = arrInfo.indexOf("(s):") + 1; i <= arrInfo.indexOf("Primer") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
                 if (arrInfo[i] != '') {
                     console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
-                    guardaRaSo.push(guardaNom[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i
+                    guardaNom.push(guardaNom[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i
                 }
             }
         }
