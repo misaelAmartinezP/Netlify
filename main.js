@@ -726,10 +726,10 @@ function personaFisNom(string,stringRfc) {
                 }
             }
         }
-        console.log(guardaNom.join(' '));
     } else {
         return 'NULL'
     }
+    console.log(guardaNom.join(' '));
 }
 
 
