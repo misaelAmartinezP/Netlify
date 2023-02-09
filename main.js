@@ -730,6 +730,7 @@ function personaFisNom(string,stringRfc) {
         return 'NULL'
     }
     console.log(guardaNom.join(' '));
+    return guardaNom.join(' ');
 }
 
 
