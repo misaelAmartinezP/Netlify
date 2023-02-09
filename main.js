@@ -89,28 +89,21 @@ function pdfAsArray(pdfAsArray) {
 function parceoDatos(string) {
     separaDatos = string.split(" ");
     //console.log(separaDatos);
-    //extraeRFC(separaDatos); //guarda RFC
-    guardaRFC = extraeRFC(separaDatos);
-    //extraeRaSo(separaDatos);//guarda razon social
-    guardaRaSo = extraeRaSo(separaDatos);
-    //extraeCodPos(separaDatos);//guarda codigo postal
-    guardaCodPos = extraeCodPos(separaDatos);
-    //extraeNomVia(separaDatos);//guarda nombre de vialidad
-    guardaNomVia = extraeNomVia(separaDatos);
-    //extraeNumExt(separaDatos);//guarda numero exterior
-    guardaNumExt = extraeNumExt(separaDatos);
-    //extraeNumInt(separaDatos);//guarda numero interior
-    guardaNumInt = extraeNumInt(separaDatos);
-    //extraeNomCol(separaDatos);//guarda nombre de la colonia
-    guardaNomCol = extraeNomCol(separaDatos);
-    //extraeDemTer(separaDatos);//guarda demarcacion territorial o municipio
-    guardaDemTer = extraeDemTer(separaDatos);
-    //extraeReg(separaDatos);//guarda regimen
-    guardaReg = extraeReg(separaDatos);
+    //extraeRFC(separaDatos); 
+    guardaRFC = extraeRFC(separaDatos);//guarda RFC
+    guardaRaSo = extraeRaSo(separaDatos);    //extraeRaSo(separaDatos);//guarda razon social
+    guardaCodPos = extraeCodPos(separaDatos);    //extraeCodPos(separaDatos);//guarda codigo postal
+    guardaNomVia = extraeNomVia(separaDatos);    //extraeNomVia(separaDatos);//guarda nombre de vialidad
+    guardaNumExt = extraeNumExt(separaDatos);    //extraeNumExt(separaDatos);//guarda numero exterior
+    guardaNumInt = extraeNumInt(separaDatos);    //extraeNumInt(separaDatos);//guarda numero interior
+    guardaNomCol = extraeNomCol(separaDatos);    //extraeNomCol(separaDatos);//guarda nombre de la colonia
+    guardaDemTer = extraeDemTer(separaDatos);    //extraeDemTer(separaDatos);//guarda demarcacion territorial o municipio
+    guardaReg = extraeReg(separaDatos);   //extraeReg(separaDatos);//guarda regimen
     guradaGenCod = creaGenCod(extraeRaSoAux(separaDatos), extraeRFCAux(separaDatos));//generacion y guardado del codigo
     guardaPersonaMoral = personaMoral(extraeRFCAux(separaDatos));//determina 1 o 0 para campo personaMoral
     guardaBancoSat = bancoSat(guardaBanco);//este es la Clave que da el SAT
     guardaIdBancoSat = idBancoSat(guardaBanco);//este es de nuestro catalogo
+    console.log(guardaIdBancoSat);
     //generando el query
                                                                           //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
     query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "','NULL',2,'" + guardaRFC + "',idCidad,'" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago,'" + guardaPersonaMoral + "', CURP, PersonasAtiendenPedidos, Suspendido, 'IdCuentaProveedor', 'IdCuentaAnticipo', IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, '" + guardaCtaBancaria + "','" + guardaIdBancoSat + "','MXN','" + guardaBancoSat + "', TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, '6853', IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) set identity_insert AcProveedores off";
