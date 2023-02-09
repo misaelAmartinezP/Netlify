@@ -600,7 +600,7 @@ function bancoSat(string) {//este es la Clave que da el SAT
     if (nomBanco == 'LIBERTAD') { return '670' }
     if (nomBanco == 'N/A') { return '999' }
 }
-function idBancoSat
+function idBancoSat() { }
 
 function personaMoral(string) {
     rfc = string;
