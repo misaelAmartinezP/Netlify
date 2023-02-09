@@ -749,7 +749,7 @@ function personaFisApPa(string, stringRfc) {
                     guardaApPa.push(arrInfo[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i
                 }
             }
-        }
+        } 
     } else {
         return 'NULL'
     }
