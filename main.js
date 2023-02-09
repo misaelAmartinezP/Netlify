@@ -722,7 +722,7 @@ function personaFisNom(string,stringRfc) {
             for (i = arrInfo.indexOf("(s):") + 1; i <= arrInfo.indexOf("Primer") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
                 if (arrInfo[i] != '') {
                     console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
-                    guardaNom.push(guardaNom[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i
+                    guardaNom.push(arrInfo[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i
                 }
             }
         }
