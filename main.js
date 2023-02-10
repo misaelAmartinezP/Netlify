@@ -500,12 +500,6 @@ function guardar() {
     } if (ctaBancaria == "") {//verifica que el campo cuenta bancaria no este vacio
         alert("SE REQUIERE CUENTA BANCARIA");
         document.getElementById("ctaBancaria").focus();
-    } if ((clabe.length) < 18) {
-        alert("LA LONGITUD DE LA CLABE NO PUEDE TENER MENOS DE 18 DIGITOS");
-        document.getElementById("clabe").focus();
-    } if ((clabe.length) > 18) {
-        alert("LA LONGITUD DE LA CLABE TIENE QUE SER IGUAL A 18 DIGITOS");
-        document.getElementById("clabe").focus();
     }else {
         document.getElementById("banco1").value = "";
         document.getElementById("clabe").value = "";
