@@ -90,7 +90,7 @@ function pdfAsArray(pdfAsArray) {
 //terimina extraccion del pdf
 function parceoDatos(string) {
     separaDatos = string.split(" ");
-    console.log(separaDatos);
+    //console.log(separaDatos);
     //extraeRFC(separaDatos); 
     guardaRFC = extraeRFC(separaDatos);//guarda RFC
     guardaRaSo = extraeRaSo(separaDatos);    //extraeRaSo(separaDatos);//guarda razon social
@@ -768,17 +768,17 @@ function personaFisApPa(string, stringRfc) {
 function personaFisApMa(string, stringRfc) {
     if ((stringRfc.length) == 13) {//si es persona fisica
         arrInfo = Object.values(string); //convertimos el contenido de la extracion en un arreglo
-        console.log("persona fisica nombre"); //imprime el nombre de la funcion en consola
-        console.log(string);
+        //console.log("persona fisica nombre"); //imprime el nombre de la funcion en consola
+        //console.log(string);
         var guardaApMa = []; //declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
-        console.log(arrInfo.indexOf("Segundo"));//busqueda el indice de la palabra
-        console.log(arrInfo.indexOf("inicio"));//busqueda el indice de la palabra
+        //console.log(arrInfo.indexOf("Segundo"));//busqueda el indice de la palabra
+        //console.log(arrInfo.indexOf("inicio"));//busqueda el indice de la palabra
         if ((arrInfo.length) != 0) {
             if (arrInfo.includes("Segundo") == true) { //si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion
-                console.log("estoy en el if y soy true") //verificar que si se cumplio la condicion linea de apoyo 
+                //console.log("estoy en el if y soy true") //verificar que si se cumplio la condicion linea de apoyo 
                 for (i = arrInfo.indexOf("Segundo") + 2; i <= arrInfo.indexOf("inicio") - 2; i++) {//recorrido de indices para obtener la informacion necesaria
                     if (arrInfo[i] != '') {
-                        console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
+                        //console.log(arrInfo[i]); //ver en consola si el contenido es el esperado 
                         guardaApMa.push(arrInfo[i]); //guarda en el arreglo guardaRaSo el contenido del indice del arreglo arrInfo en la posicion i
                     }
                 }
