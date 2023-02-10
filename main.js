@@ -110,8 +110,8 @@ function parceoDatos(string) {
     gaurdaPersonaFisApMa = personaFisApMa(separaDatos, extraeRFCAux(separaDatos));//segundo apellido para persona fisica 
     guardaIdCiudad = idCiudad(extraeCodPosAux(separaDatos)); //genera id cidad
 
-   //generando el query                                                   //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
-    query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "','NULL',2,'" + guardaRFC + "',idCiudad,'" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda,'" + guardaPersonaFisNom + "','" + gaurdaPersonaFisApPa + "', '" + gaurdaPersonaFisApMa +"', Celular, PaginaWeb, CondicionesPago,'" + guardaPersonaMoral + "', CURP, PersonasAtiendenPedidos, Suspendido, 'IdCuentaProveedor', 'IdCuentaAnticipo', IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, '" + guardaCtaBancaria + "','" + guardaIdBancoSat + "','MXN','" + guardaBancoSat + "', TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, '6853', IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) set identity_insert AcProveedores off";
+    //generando el query                                                   //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
+    query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "','NULL',2,'" + guardaRFC + "','" + guardaIdCiudad + "','" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda,'" + guardaPersonaFisNom + "','" + gaurdaPersonaFisApPa + "', '" + gaurdaPersonaFisApMa + "', Celular, PaginaWeb, CondicionesPago,'" + guardaPersonaMoral + "', CURP, PersonasAtiendenPedidos, Suspendido, 'IdCuentaProveedor', 'IdCuentaAnticipo', IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, '" + guardaCtaBancaria + "','" + guardaIdBancoSat + "','MXN','" + guardaBancoSat + "', TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, '6853', IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) set identity_insert AcProveedores off";
     //console.log(query);
 }
 function creaGenCod(string, string1) {//funcion para generar el codigo 
@@ -804,7 +804,62 @@ function extraeCodPosAux(string) { //funcion que extrae el codigo postal
 
 function idCiudad(string) {
     codPos = parseInt(string, 10);
-    console.log(codPos);
+    console.log(codPos);//ver variable como numero 
+    if (codPos >= 39300 && codPos <= 39899) { return '1'   console.log("ACAPULCO"); } //regresa el idCiudad de 
+    if (codPos >= 20000 && codPos <= 20299) { return '2'   console.log("AGUASCALIENTES"); } //regresa el idCiudad
+    if (codPos >= 94286 && codPos <= 94299) { return '3'   console.log("BOCA DEL RIO"); } //regresa el idCiudad
+    if (codPos >= 23450 && codPos <= 23597) { return '4'   console.log("LOS CABOS"); } //regresa el idCiudad
+    if (codPos >= 77500 && codPos <= 77539) { return '5'   console.log("CANCUN"); } //regresa el idCiudad
+    if (codPos >= 24100 && codPos <= 24199) { return '6'   console.log("CIUDAD DEL CARMEN"); } //regresa el idCiudad
+    if (codPos >= 32000 && codPos <= 32699) { return '7'   console.log("CIUDAD JUAREZ"); } //regresa el idCiudad
+    if (codPos >= 87000 && codPos <= 87183) { return '8'   console.log("CIUDAD VICTORIA"); } //regresa el idCiudad
+    if (codPos >= 38000 && codPos <= 38099) { return '9'   console.log("CELAYA"); } //regresa el idCiudad
+    if (codPos >= 39000 && codPos <= 39089) { return '10'   console.log("CHILPANCINGO DE LOS BRAVO"); } //regresa el idCiudad
+    if (codPos >= 94500 && codPos <= 94699) { return '11'   console.log("CORDOBA"); } //regresa el idCiudad
+    if (codPos >= 63732 && codPos <= ) { return '12'   console.log("LA CRUZ DE HUANACAXTLE"); } //regresa el idCiudad
+    if (codPos >= 23400 && codPos <= 23597) { return '13'   console.log("CABO SAN LUCAS"); } //regresa el idCiudad
+    if (codPos >= 62001 && codPos <= 62499) { return '14'   console.log("CUERNAVACA"); } //regresa el idCiudad
+    if (codPos >= 55000 && codPos <= 55549) { return '16'   console.log("ECATEPEC"); } //regresa el idCiudad
+    if (codPos >= 50000 && codPos <= 57950) { return '17'   console.log("ESTADO DE MEXICO"); } //regresa el idCiudad
+    if (codPos >= 44100 && codPos <= 44990) { return '19'   console.log("GUADALAJARA"); } //regresa el idCiudad
+    if (codPos >= 23000 && codPos <= 23099) { return '20'   console.log("LA PAZ"); } //regresa el idCiudad
+    if (codPos >= 28200 && codPos <= 28279) { return '21'   console.log("MANZANILLO"); } //regresa el idCiudad
+    if (codPos >= 52140 && codPos <= 52179) { return '22'   console.log("METEPEC"); } //regresa el idCiudad
+    if (codPos >= 58000 && codPos <= 58337) { return '24'   console.log("MORELIA"); } //regresa el idCiudad
+    if (codPos >= 64000 && codPos <= 6499) { return '25'   console.log("MONTERREY"); } //regresa el idCiudad
+    if (codPos >= 57000 && codPos <= 57950) { return '26'   console.log("NEZAHUALCOYOTL"); } //regresa el idCiudad
+    if (codPos >= 88000 && codPos <= 88299) { return '27'   console.log("NUEVO LAREDO"); } //regresa el idCiudad
+    if (codPos >= 72000 && codPos <= 72599) { return '28'   console.log("PUEBLA"); } //regresa el idCiudad
+    if (codPos >= 76000 && codPos <= 76199) { return '29'   console.log("QUERETARO"); } //regresa el idCiudad
+    if (codPos >= 72803 && codPos <= 72848) { return '30'   console.log("SAN ANDRES CHULULA"); } //regresa el idCiudad
+    if (codPos >= 23400 && codPos <= 23445) { return '31'   console.log("SAN JOSE DEL CABO"); } //regresa el idCiudad
+    if (codPos >= 78000 && codPos <= 78399) { return '32'   console.log("SAN LUIS POTOSI"); } //regresa el idCiudad
+    if (codPos >= 66200 && codPos <= 66297) { return '33'   console.log("SAN PEDRO GARZA GARCIA"); } //regresa el idCiudad
+    if (codPos >= 45500 && codPos <= 45638) { return '34'   console.log("TLAQUEPAQUE"); } //regresa el idCiudad
+    if (codPos >= 87200 && codPos <= 89970) { return '35'   console.log("TAMAULIPAS"); } //regresa el idCiudad
+    if (codPos >= 63000 && codPos <= 63197) { return '36'   console.log("TEPIC"); } //regresa el idCiudad
+    if (codPos >= 50000 && codPos <= 50190) { return '37'   console.log("TOLUCA"); } //regresa el idCiudad
+    if (codPos >= 43600 && codPos <= 43699) { return '38'   console.log("TULANCINGO"); } //regresa el idCiudad
+    if (codPos >= 45010 && codPos <= 45199) { return '39'   console.log("ZAPOPAN"); } //regresa el idCiudad
+    if (codPos >= 43830 && codPos <= 43859) { return '40'   console.log("ZEMPOALA"); } //regresa el idCiudad
+    if (codPos >= 90000 && codPos <= 90099) { return '41'   console.log("TLAXCALA"); } //regresa el idCiudad
+    if (codPos >= 91500 && codPos <= 91589) { return '42'   console.log("COATEPEC"); } //regresa el idCiudad
+    if (codPos >= 42000 && codPos <= 42099) { return '43'   console.log("PACHUCA"); } //regresa el idCiudad
+    if (codPos >= 37000 && codPos <= 37590) { return '48'   console.log("LEON"); } //regresa el idCiudad
+    if (codPos >= 92800 && codPos <= 92895) { return '49'   console.log("TUXPAN"); } //regresa el idCiudad
+    if (codPos >= 36000 && codPos <= 36094) { return '50'   console.log("GUANAJUATO"); } //regresa el idCiudad
+    if (codPos >= 77710 && codPos <= 77728) { return '58'   console.log("PLAYA DEL CARMEN"); } //regresa el idCiudad
+    if (codPos >= 91690 && codPos <= 91860) { return '63'   console.log("VERACRUZ"); } //regresa el idCiudad
+    if (codPos >= 80000 && codPos <= 80308) { return '65'   console.log("CULIACAN ROSALES"); } //regresa el idCiudad
+    if (codPos >= 22020 && codPos <= 22667) { return '66'   console.log("TIJUANA"); } //regresa el idCiudad
+    if (codPos >= 97000 && codPos <= 97316) { return '67'   console.log("MERIDA"); } //regresa el idCiudad
+    if (codPos >= 81200 && codPos <= 81295) { return '68'   console.log("LOS MOCHIS"); } //regresa el idCiudad
+    if (codPos >= 67100 && codPos <= 67205) { return '69'   console.log("CIUDAD GUADALUPE"); } //regresa el idCiudad
+    if (codPos >= 68000 && codPos <= 68284) { return '71'   console.log("OAXACA DE JUAREZ"); } //regresa el idCiudad
+    if (codPos >= 1389 && codPos <= 4030) { return '72'   console.log("Ciudad de Mexico"); } //regresa el idCiudad
+    if (codPos >= 83000 && codPos <= 83299) { return '74'   console.log("HERMOSILLO"); } //regresa el idCiudad
+    if (codPos >= 29000 && codPos <= 30997) { return '1074'   console.log("CHIAPAS"); } //regresa el idCiudad
+    else { return 'NULL'}
 }
 
 
