@@ -506,7 +506,7 @@ function guardar() {
     } if (ctaBancaria == "") {//verifica que el campo cuenta bancaria no este vacio
         alert("SE REQUIERE CUENTA BANCARIA");
         document.getElementById("ctaBancaria").focus();
-    }if(clabe ==18 && banco!="" && clabe!="") {
+    }if(clabe = 18 && banco!="" && clabe!="") {
         document.getElementById("banco1").value = "";
         document.getElementById("clabe").value = "";
         document.getElementById("ctaBancaria").value = "";
