@@ -816,7 +816,7 @@ function idCiudad(string) {
     if (codPos >= 38000 && codPos <= 38099) { console.log("CELAYA"); return '9' } //regresa el idCiudad
     if (codPos >= 39000 && codPos <= 39089) { console.log("CHILPANCINGO DE LOS BRAVO"); return '10' } //regresa el idCiudad
     if (codPos >= 94500 && codPos <= 94699) { console.log("CORDOBA"); return '11' } //regresa el idCiudad
-    if (codPos >= 63732 && codPos <= ) { console.log("LA CRUZ DE HUANACAXTLE"); return '12' } //regresa el idCiudad
+    if (codPos == 63732) { console.log("LA CRUZ DE HUANACAXTLE"); return '12' } //regresa el idCiudad
     if (codPos >= 23400 && codPos <= 23597) { console.log("CABO SAN LUCAS"); return '13' } //regresa el idCiudad
     if (codPos >= 62001 && codPos <= 62499) { console.log("CUERNAVACA"); return '14' } //regresa el idCiudad
     if (codPos >= 55000 && codPos <= 55549) { console.log("ECATEPEC"); return '16' } //regresa el idCiudad
