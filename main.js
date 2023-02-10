@@ -108,8 +108,10 @@ function parceoDatos(string) {
     guardaPersonaFisNom = personaFisNom(separaDatos, extraeRFCAux(separaDatos));//nombre para persona fisica 
     gaurdaPersonaFisApPa = personaFisApPa(separaDatos, extraeRFCAux(separaDatos));//primer apellido para persona fisica 
     gaurdaPersonaFisApMa = personaFisApMa(separaDatos, extraeRFCAux(separaDatos));//segundo apellido para persona fisica 
-    //generando el query
-                                                                          //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
+    guardaIdCiudad = idCiudad(extraeCodPosAux(separaDatos)); //genera id cidad
+    console.log(extraeCodPosAux(separaDatos));
+
+   //generando el query                                                   //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
     query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "','NULL',2,'" + guardaRFC + "',idCiudad,'" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda,'" + guardaPersonaFisNom + "','" + gaurdaPersonaFisApPa + "', '" + gaurdaPersonaFisApMa +"', Celular, PaginaWeb, CondicionesPago,'" + guardaPersonaMoral + "', CURP, PersonasAtiendenPedidos, Suspendido, 'IdCuentaProveedor', 'IdCuentaAnticipo', IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, '" + guardaCtaBancaria + "','" + guardaIdBancoSat + "','MXN','" + guardaBancoSat + "', TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, '6853', IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) set identity_insert AcProveedores off";
     //console.log(query);
 }
@@ -248,6 +250,7 @@ function creaGenCod(string, string1) {//funcion para generar el codigo
     }
 
 }
+
 function extraeRFC(string) { //funcion que extrae el pdf 
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
     for (i = 0; i < arrInfo.length; i++) { //recorrido del arreglo
@@ -260,6 +263,7 @@ function extraeRFC(string) { //funcion que extrae el pdf
     }
     return arrInfo[i + 1];
 }
+
 function extraeRaSo(string) { //funcion que extrae la razon social 
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
     //console.log("estoy en la funcion extrae razon social ") //imprime el nombre de la funcion en consola 
@@ -283,6 +287,7 @@ function extraeRaSo(string) { //funcion que extrae la razon social
     div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");//imprime el contenido en la pagina web
     return guardaRaSo.join(' ');
 }
+
 function extraeCodPos(string) { //funcion que extrae el codigo postal 
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo  
     //console.log("estoy en la funcion extrae codigo postal ")//imprime el nombre de la funcion en consola 
@@ -300,6 +305,7 @@ function extraeCodPos(string) { //funcion que extrae el codigo postal
     div.innerHTML += ("<br/>" + guardaCodPos.join(' ') + "<br/>"); //imprime el contenido en la pagina web
     return guardaCodPos;
 }
+
 function extraeNomVia(string) { //funcion que extrae nombre de vialidad
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
     //console.log("estoy en la funcion extrae nombre vialidad")//imprime el nombre de la funcion en consola 
@@ -447,6 +453,7 @@ document.getElementById("dwn-btn").addEventListener("click", function () {
     var filename = "QUERY-" + guardaRFC + ".sql";
     download(filename, query);
 }, false);
+
 function extraeRFCAux(string) { //funcion que extrae el pdf 
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
     for (i = 0; i < arrInfo.length; i++) { //recorrido del arreglo
@@ -784,6 +791,22 @@ function personaFisApMa(string, stringRfc) {
     }
     return 'NULL'
 }
+
+function extraeCodPosAux(string) { //funcion que extrae el codigo postal 
+    arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo  
+    var guardaCodPosAux = [];//declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
+    if (arrInfo.includes("Postal:") == true) {//si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion
+        for (i = arrInfo.indexOf("Postal:") + 1; i <= arrInfo.indexOf("Tipo") - 1; i++) {//recorrido de indices para obtener la informacion necesaria
+            guardaCodPosAux.push(arrInfo[i]);//guarda en el arreglo guardaCodPos el contenido del indice del arreglo arrInfo en la posicion i
+        }
+    }
+    return guardaCodPosAux;
+}
+
+function idCiudad(string) {
+
+}
+
 
 
 
