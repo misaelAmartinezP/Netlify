@@ -803,6 +803,7 @@ function extraeCodPosAux(string) { //funcion que extrae el codigo postal
 }
 
 function idCiudad(string) {
+    console.log(string);
     codPos = parseInt(string, 10);
     console.log(codPos);//ver variable como numero 
     if (codPos >= 39300 && codPos <= 39899) { console.log("ACAPULCO"); return '1' } //regresa el idCiudad
