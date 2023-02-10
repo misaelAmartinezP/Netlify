@@ -805,60 +805,61 @@ function extraeCodPosAux(string) { //funcion que extrae el codigo postal
 function idCiudad(string) {
     codPos = parseInt(string, 10);
     console.log(codPos);//ver variable como numero 
-    if (codPos >= 39300 && codPos <= 39899) { return '1'   console.log("ACAPULCO"); } //regresa el idCiudad de 
-    if (codPos >= 20000 && codPos <= 20299) { return '2'   console.log("AGUASCALIENTES"); } //regresa el idCiudad
-    if (codPos >= 94286 && codPos <= 94299) { return '3'   console.log("BOCA DEL RIO"); } //regresa el idCiudad
-    if (codPos >= 23450 && codPos <= 23597) { return '4'   console.log("LOS CABOS"); } //regresa el idCiudad
-    if (codPos >= 77500 && codPos <= 77539) { return '5'   console.log("CANCUN"); } //regresa el idCiudad
-    if (codPos >= 24100 && codPos <= 24199) { return '6'   console.log("CIUDAD DEL CARMEN"); } //regresa el idCiudad
-    if (codPos >= 32000 && codPos <= 32699) { return '7'   console.log("CIUDAD JUAREZ"); } //regresa el idCiudad
-    if (codPos >= 87000 && codPos <= 87183) { return '8'   console.log("CIUDAD VICTORIA"); } //regresa el idCiudad
-    if (codPos >= 38000 && codPos <= 38099) { return '9'   console.log("CELAYA"); } //regresa el idCiudad
-    if (codPos >= 39000 && codPos <= 39089) { return '10'   console.log("CHILPANCINGO DE LOS BRAVO"); } //regresa el idCiudad
-    if (codPos >= 94500 && codPos <= 94699) { return '11'   console.log("CORDOBA"); } //regresa el idCiudad
-    if (codPos >= 63732 && codPos <= ) { return '12'   console.log("LA CRUZ DE HUANACAXTLE"); } //regresa el idCiudad
-    if (codPos >= 23400 && codPos <= 23597) { return '13'   console.log("CABO SAN LUCAS"); } //regresa el idCiudad
-    if (codPos >= 62001 && codPos <= 62499) { return '14'   console.log("CUERNAVACA"); } //regresa el idCiudad
-    if (codPos >= 55000 && codPos <= 55549) { return '16'   console.log("ECATEPEC"); } //regresa el idCiudad
-    if (codPos >= 50000 && codPos <= 57950) { return '17'   console.log("ESTADO DE MEXICO"); } //regresa el idCiudad
-    if (codPos >= 44100 && codPos <= 44990) { return '19'   console.log("GUADALAJARA"); } //regresa el idCiudad
-    if (codPos >= 23000 && codPos <= 23099) { return '20'   console.log("LA PAZ"); } //regresa el idCiudad
-    if (codPos >= 28200 && codPos <= 28279) { return '21'   console.log("MANZANILLO"); } //regresa el idCiudad
-    if (codPos >= 52140 && codPos <= 52179) { return '22'   console.log("METEPEC"); } //regresa el idCiudad
-    if (codPos >= 58000 && codPos <= 58337) { return '24'   console.log("MORELIA"); } //regresa el idCiudad
-    if (codPos >= 64000 && codPos <= 6499) { return '25'   console.log("MONTERREY"); } //regresa el idCiudad
-    if (codPos >= 57000 && codPos <= 57950) { return '26'   console.log("NEZAHUALCOYOTL"); } //regresa el idCiudad
-    if (codPos >= 88000 && codPos <= 88299) { return '27'   console.log("NUEVO LAREDO"); } //regresa el idCiudad
-    if (codPos >= 72000 && codPos <= 72599) { return '28'   console.log("PUEBLA"); } //regresa el idCiudad
-    if (codPos >= 76000 && codPos <= 76199) { return '29'   console.log("QUERETARO"); } //regresa el idCiudad
-    if (codPos >= 72803 && codPos <= 72848) { return '30'   console.log("SAN ANDRES CHULULA"); } //regresa el idCiudad
-    if (codPos >= 23400 && codPos <= 23445) { return '31'   console.log("SAN JOSE DEL CABO"); } //regresa el idCiudad
-    if (codPos >= 78000 && codPos <= 78399) { return '32'   console.log("SAN LUIS POTOSI"); } //regresa el idCiudad
-    if (codPos >= 66200 && codPos <= 66297) { return '33'   console.log("SAN PEDRO GARZA GARCIA"); } //regresa el idCiudad
-    if (codPos >= 45500 && codPos <= 45638) { return '34'   console.log("TLAQUEPAQUE"); } //regresa el idCiudad
-    if (codPos >= 87200 && codPos <= 89970) { return '35'   console.log("TAMAULIPAS"); } //regresa el idCiudad
-    if (codPos >= 63000 && codPos <= 63197) { return '36'   console.log("TEPIC"); } //regresa el idCiudad
-    if (codPos >= 50000 && codPos <= 50190) { return '37'   console.log("TOLUCA"); } //regresa el idCiudad
-    if (codPos >= 43600 && codPos <= 43699) { return '38'   console.log("TULANCINGO"); } //regresa el idCiudad
-    if (codPos >= 45010 && codPos <= 45199) { return '39'   console.log("ZAPOPAN"); } //regresa el idCiudad
-    if (codPos >= 43830 && codPos <= 43859) { return '40'   console.log("ZEMPOALA"); } //regresa el idCiudad
-    if (codPos >= 90000 && codPos <= 90099) { return '41'   console.log("TLAXCALA"); } //regresa el idCiudad
-    if (codPos >= 91500 && codPos <= 91589) { return '42'   console.log("COATEPEC"); } //regresa el idCiudad
-    if (codPos >= 42000 && codPos <= 42099) { return '43'   console.log("PACHUCA"); } //regresa el idCiudad
-    if (codPos >= 37000 && codPos <= 37590) { return '48'   console.log("LEON"); } //regresa el idCiudad
-    if (codPos >= 92800 && codPos <= 92895) { return '49'   console.log("TUXPAN"); } //regresa el idCiudad
-    if (codPos >= 36000 && codPos <= 36094) { return '50'   console.log("GUANAJUATO"); } //regresa el idCiudad
-    if (codPos >= 77710 && codPos <= 77728) { return '58'   console.log("PLAYA DEL CARMEN"); } //regresa el idCiudad
-    if (codPos >= 91690 && codPos <= 91860) { return '63'   console.log("VERACRUZ"); } //regresa el idCiudad
-    if (codPos >= 80000 && codPos <= 80308) { return '65'   console.log("CULIACAN ROSALES"); } //regresa el idCiudad
-    if (codPos >= 22020 && codPos <= 22667) { return '66'   console.log("TIJUANA"); } //regresa el idCiudad
-    if (codPos >= 97000 && codPos <= 97316) { return '67'   console.log("MERIDA"); } //regresa el idCiudad
-    if (codPos >= 81200 && codPos <= 81295) { return '68'   console.log("LOS MOCHIS"); } //regresa el idCiudad
-    if (codPos >= 67100 && codPos <= 67205) { return '69'   console.log("CIUDAD GUADALUPE"); } //regresa el idCiudad
-    if (codPos >= 68000 && codPos <= 68284) { return '71'   console.log("OAXACA DE JUAREZ"); } //regresa el idCiudad
-    if (codPos >= 1389 && codPos <= 4030) { return '72'   console.log("Ciudad de Mexico"); } //regresa el idCiudad
-    if (codPos >= 83000 && codPos <= 83299) { return '74'   console.log("HERMOSILLO"); } //regresa el idCiudad
-    if (codPos >= 29000 && codPos <= 30997) { return '1074'   console.log("CHIAPAS"); } //regresa el idCiudad
+    if (codPos >= 39300 && codPos <= 39899) { console.log("ACAPULCO"); return '1' } //regresa el idCiudad
+    if (codPos >= 20000 && codPos <= 20299) { console.log("AGUASCALIENTES"); return '2' } //regresa el idCiudad
+    if (codPos >= 94286 && codPos <= 94299) { console.log("BOCA DEL RIO"); return '3' } //regresa el idCiudad
+    if (codPos >= 23450 && codPos <= 23597) { console.log("LOS CABOS"); return '4' } //regresa el idCiudad
+    if (codPos >= 77500 && codPos <= 77539) { console.log("CANCUN"); return '5' } //regresa el idCiudad
+    if (codPos >= 24100 && codPos <= 24199) { console.log("CIUDAD DEL CARMEN"); return '6' } //regresa el idCiudad
+    if (codPos >= 32000 && codPos <= 32699) { console.log("CIUDAD JUAREZ"); return '7' } //regresa el idCiudad
+    if (codPos >= 87000 && codPos <= 87183) { console.log("CIUDAD VICTORIA"); return '8' } //regresa el idCiudad
+    if (codPos >= 38000 && codPos <= 38099) { console.log("CELAYA"); return '9' } //regresa el idCiudad
+    if (codPos >= 39000 && codPos <= 39089) { console.log("CHILPANCINGO DE LOS BRAVO"); return '10' } //regresa el idCiudad
+    if (codPos >= 94500 && codPos <= 94699) { console.log("CORDOBA"); return '11' } //regresa el idCiudad
+    if (codPos >= 63732 && codPos <= ) { console.log("LA CRUZ DE HUANACAXTLE"); return '12' } //regresa el idCiudad
+    if (codPos >= 23400 && codPos <= 23597) { console.log("CABO SAN LUCAS"); return '13' } //regresa el idCiudad
+    if (codPos >= 62001 && codPos <= 62499) { console.log("CUERNAVACA"); return '14' } //regresa el idCiudad
+    if (codPos >= 55000 && codPos <= 55549) { console.log("ECATEPEC"); return '16' } //regresa el idCiudad
+    if (codPos >= 50000 && codPos <= 57950) { console.log("ESTADO DE MEXICO"); return '17' } //regresa el idCiudad
+    if (codPos >= 44100 && codPos <= 44990) { console.log("GUADALAJARA"); return '19' } //regresa el idCiudad
+    if (codPos >= 23000 && codPos <= 23099) { console.log("LA PAZ"); return '20' } //regresa el idCiudad
+    if (codPos >= 28200 && codPos <= 28279) { console.log("MANZANILLO"); return '21' } //regresa el idCiudad
+    if (codPos >= 52140 && codPos <= 52179) { console.log("METEPEC"); return '22' } //regresa el idCiudad
+    if (codPos >= 58000 && codPos <= 58337) { console.log("MORELIA"); return '24' } //regresa el idCiudad
+    if (codPos >= 64000 && codPos <= 6499) { console.log("MONTERREY"); return '25' } //regresa el idCiudad
+    if (codPos >= 57000 && codPos <= 57950) { console.log("NEZAHUALCOYOTL"); return '26' } //regresa el idCiudad
+    if (codPos >= 88000 && codPos <= 88299) { console.log("NUEVO LAREDO"); return '27' } //regresa el idCiudad
+    if (codPos >= 72000 && codPos <= 72599) { console.log("PUEBLA"); return '28' } //regresa el idCiudad
+    if (codPos >= 76000 && codPos <= 76199) { console.log("QUERETARO"); return '29' } //regresa el idCiudad
+    if (codPos >= 72803 && codPos <= 72848) { console.log("SAN ANDRES CHULULA"); return '30' } //regresa el idCiudad
+    if (codPos >= 23400 && codPos <= 23445) { console.log("SAN JOSE DEL CABO"); return '31' } //regresa el idCiudad
+    if (codPos >= 78000 && codPos <= 78399) { console.log("SAN LUIS POTOSI"); return '32' } //regresa el idCiudad
+    if (codPos >= 66200 && codPos <= 66297) { console.log("SAN PEDRO GARZA GARCIA"); return '33' } //regresa el idCiudad
+    if (codPos >= 45500 && codPos <= 45638) { console.log("TLAQUEPAQUE"); return '34' } //regresa el idCiudad
+    if (codPos >= 87200 && codPos <= 89970) { console.log("TAMAULIPAS"); return '35' } //regresa el idCiudad
+    if (codPos >= 63000 && codPos <= 63197) { console.log("TEPIC"); return '36' } //regresa el idCiudad
+    if (codPos >= 50000 && codPos <= 50190) { console.log("TOLUCA"); return '37' } //regresa el idCiudad
+    if (codPos >= 43600 && codPos <= 43699) { console.log("TULANCINGO"); return '38' } //regresa el idCiudad
+    if (codPos >= 45010 && codPos <= 45199) { console.log("ZAPOPAN"); return '39' } //regresa el idCiudad
+    if (codPos >= 43830 && codPos <= 43859) { console.log("ZEMPOALA"); return '40' } //regresa el idCiudad
+    if (codPos >= 90000 && codPos <= 90099) { console.log("TLAXCALA"); return '41' } //regresa el idCiudad
+    if (codPos >= 91500 && codPos <= 91589) { console.log("COATEPEC"); return '42' } //regresa el idCiudad
+    if (codPos >= 42000 && codPos <= 42099) { console.log("PACHUCA"); return '43' } //regresa el idCiudad
+    if (codPos >= 37000 && codPos <= 37590) { console.log("LEON"); return '48' } //regresa el idCiudad
+    if (codPos >= 92800 && codPos <= 92895) { console.log("TUXPAN"); return '49' } //regresa el idCiudad
+    if (codPos >= 36000 && codPos <= 36094) { console.log("GUANAJUATO"); return '50' } //regresa el idCiudad
+    if (codPos >= 77710 && codPos <= 77728) { console.log("PLAYA DEL CARMEN"); return '58' } //regresa el idCiudad
+    if (codPos >= 91690 && codPos <= 91860) { console.log("VERACRUZ"); return '63' } //regresa el idCiudad
+    if (codPos >= 80000 && codPos <= 80308) { console.log("CULIACAN ROSALES"); return '65' } //regresa el idCiudad
+    if (codPos >= 22020 && codPos <= 22667) { console.log("TIJUANA"); return '66' } //regresa el idCiudad
+    if (codPos >= 97000 && codPos <= 97316) { console.log("MERIDA"); return '67' } //regresa el idCiudad
+    if (codPos >= 81200 && codPos <= 81295) { console.log("LOS MOCHIS"); return '68' } //regresa el idCiudad
+    if (codPos >= 67100 && codPos <= 67205) { console.log("CIUDAD GUADALUPE"); return '69' } //regresa el idCiudad
+    if (codPos >= 68000 && codPos <= 68284) { console.log("OAXACA DE JUAREZ"); return '71' } //regresa el idCiudad
+    if (codPos >= 1389 && codPos <= 4030) { console.log("Ciudad de Mexico"); return '72' } //regresa el idCiudad
+    if (codPos >= 83000 && codPos <= 83299) { console.log("HERMOSILLO"); return '74' } //regresa el idCiudad
+    if (codPos >= 29000 && codPos <= 30997) { console.log("CHIAPAS"); return '1074' } //regresa el idCiudad
+
     else { return 'NULL'}
 }
 
