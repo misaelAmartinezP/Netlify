@@ -857,7 +857,7 @@ function idCiudad(string) {
     if (codPos >= 81200 && codPos <= 81295) { console.log("LOS MOCHIS"); return '68' } //regresa el idCiudad
     if (codPos >= 67100 && codPos <= 67205) { console.log("CIUDAD GUADALUPE"); return '69' } //regresa el idCiudad
     if (codPos >= 68000 && codPos <= 68284) { console.log("OAXACA DE JUAREZ"); return '71' } //regresa el idCiudad
-    if (codPos >= 1389 && codPos <= 4030) { console.log("Ciudad de Mexico"); return '72' } //regresa el idCiudad
+    if (codPos >= 1389 && codPos <= 16900) { console.log("Ciudad de Mexico"); return '72' } //regresa el idCiudad
     if (codPos >= 83000 && codPos <= 83299) { console.log("HERMOSILLO"); return '74' } //regresa el idCiudad
     if (codPos >= 29000 && codPos <= 30997) { console.log("CHIAPAS"); return '1074' } //regresa el idCiudad
 
