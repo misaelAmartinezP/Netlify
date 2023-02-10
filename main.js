@@ -497,8 +497,7 @@ function guardar() {
     } if ((clabe.length) > 18) {//verificacion de la clabe 
         alert("LA LONGITUD DE LA CLABE TIENE QUE SER IGUAL A 18 DIGITOS");
         document.getElementById("clabe").focus();
-    }
-    if (banco == "") {//verifica que el campo banco no este vacio
+    }if (banco == "") {//verifica que el campo banco no este vacio
         alert("SE REQUIERE NOMBRE DEL BANCO");
         document.getElementById("banco1").focus();
     } if (clabe == "") { //verifica que el campo clabe no este vacio
@@ -507,7 +506,7 @@ function guardar() {
     } if (ctaBancaria == "") {//verifica que el campo cuenta bancaria no este vacio
         alert("SE REQUIERE CUENTA BANCARIA");
         document.getElementById("ctaBancaria").focus();
-    }else {
+    }if(clabe ==18 && banco!="" && clabe!="") {
         document.getElementById("banco1").value = "";
         document.getElementById("clabe").value = "";
         document.getElementById("ctaBancaria").value = "";
