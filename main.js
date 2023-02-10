@@ -491,6 +491,13 @@ function guardar() {
     //console.log(ctaBancaria);
     guardaCtaBancaria = ctaBancaria;
 
+    if ((clabe.length) < 18) {//Verificacion de la clabe
+        alert("LA LONGITUD DE LA CLABE NO PUEDE TENER MENOS DE 18 DIGITOS");
+        document.getElementById("clabe").focus();
+    } if ((clabe.length) > 18) {//verificacion de la clabe 
+        alert("LA LONGITUD DE LA CLABE TIENE QUE SER IGUAL A 18 DIGITOS");
+        document.getElementById("clabe").focus();
+    }
     if (banco == "") {//verifica que el campo banco no este vacio
         alert("SE REQUIERE NOMBRE DEL BANCO");
         document.getElementById("banco1").focus();
