@@ -803,9 +803,9 @@ function extraeCodPosAux(string) { //funcion que extrae el codigo postal
 }
 
 function idCiudad(string) {
-    console.log(string);
+    //console.log(string);
     codPos = parseInt(string, 10);
-    console.log(codPos);//ver variable como numero 
+    //console.log(codPos);//ver variable como numero 
     if (codPos >= 1000 && codPos <= 16900) { console.log("cdmx"); return '1' } //cdmx
     if (codPos >= 31000 && codPos <= 33997) { console.log("chihuahua"); return '2' } //chihuahua
     if (codPos >= 20000 && codPos <= 20997) { console.log("aguascalientes"); return '3' } //aguascalientes
@@ -838,7 +838,6 @@ function idCiudad(string) {
     if (codPos >= 87000 && codPos <= 89970) { console.log("tamaulipas"); return '30' } //tamaulipas
     if (codPos >= 86000 && codPos <= 86998) { console.log("tabasco"); return '31' } //tabasco
     if (codPos >= 83000 && codPos <= 85994) { console.log("sonora"); return '32' } //sonora
-
     else { return 'NULL'}
 }
 
