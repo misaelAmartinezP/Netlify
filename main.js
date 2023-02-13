@@ -110,8 +110,11 @@ function parceoDatos(string) {
     gaurdaPersonaFisApMa = personaFisApMa(separaDatos, extraeRFCAux(separaDatos));//segundo apellido para persona fisica 
     guardaIdCiudad = idCiudad(extraeCodPosAux(separaDatos)); //genera id cidad
 
+    //query="set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores on insert into InmobiliariaCaboBallena.dbo.AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT)values   (9999, 'CISMEDMIGUMXN', 'extraeRaSo', NULL, 2, 'CIMM6909298U9', idCiudad, '5 DE FEBRERO, MANZANA 129, LOTE 13', 'RICARDO FLORES MAGON', '39700', 'ACAPULCO DE JUAREZ', Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores off";
+
     //generando el query                                                   //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
-    query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "','NULL',2,'" + guardaRFC + "','" + guardaIdCiudad + "','" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL','" + guardaPersonaFisNom + "','" + gaurdaPersonaFisApPa + "', '" + gaurdaPersonaFisApMa + "', 'NULL', 'NULL', 'NULL','" + guardaPersonaMoral + "', 'NULL', 'NULL', 'NULL', 'IdCuentaProveedor', 'IdCuentaAnticipo', 'NULL', 'NULL', 'NULL','" + guardaClabe + "','" + guardaBanco + "', '1', '4', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', '" + guardaCtaBancaria + "','" + guardaIdBancoSat + "','MXN','" + guardaBancoSat + "', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', '6853', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL') set identity_insert AcProveedores off";
+    query = "set identity_insert AcProveedores on insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) values(9999,'" + guradaGenCod + "','" + guardaRaSo + "',NULL,2,'" + guardaRFC + "','" + guardaIdCiudad + "','" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",'NULL', 'NULL', 'NULL', 0, 0, 0, 0, 0, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', '6','" + guardaPersonaFisNom + "','" + gaurdaPersonaFisApPa + "', '" + gaurdaPersonaFisApMa + "', 'NULL', 'NULL', 'NULL'," + guardaPersonaMoral + ", 'NULL', 'NULL', 0, 'IdCuentaProveedor', 'IdCuentaAnticipo', 'NULL', 'NULL', 0,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', '0', 'NULL', 'NULL', 'NULL', 0, '" + guardaCtaBancaria + "','" + guardaIdBancoSat + "','MXN','" + guardaBancoSat + "', '', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', '6853', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL') set identity_insert AcProveedores off";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              //(9999, 'ROSHERJOSEMXN', 'JOSE ALFREDO ROSAS HERNANDEZ', NULL, 2, 'ROHA711201IJ7', 1, 'PUCCINI, 85 B, ALTOS 2 HAB', 'VALLEJO', '07870', 'GUSTAVO A MADERO', 'NULL', 'NULL', 'NULL', 0, 0, 0, 0, 0, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6, 'JOSE ALFREDO', 'ROSAS', 'HERNANDEZ', 'NULL', 'NULL', 'NULL', 0, 'NULL', 'NULL', 0, 31421, 31422, NULL, NULL, 0, '123456987562145962', 'BBVA BANCOMER',                                                                                                                                                                                                            '1', '4', '0', 'NULL', 'NULL', NULL, 0, '897698',                                                4, 'MXN', '012', '', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6853, NULL, 'NULL', 'NULL', NULL, NULL)
     //console.log(query);
 }
 function creaGenCod(string, string1) {//funcion para generar el codigo 
@@ -436,7 +439,6 @@ function extraeReg(string) {//funcion que extrae el regimen
     div.innerHTML += ("<br/>" + guardaReg.join(' ') + "<br/>");//imprime el contenido del arreglo guardaReg en la pagina web
     //return guardaReg;
 }
-//"set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores on insert into InmobiliariaCaboBallena.dbo.AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT)values(9999, 'CISMEDMIGUMXN', 'extraeRaSo', NULL, 2, 'CIMM6909298U9', idCiudad, '5 DE FEBRERO, MANZANA 129, LOTE 13', 'RICARDO FLORES MAGON', '39700', 'ACAPULCO DE JUAREZ', Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores off";
 //descarga .sql
 function download(filename, query) {
     var element = document.createElement('a');
@@ -812,38 +814,38 @@ function idCiudad(string) {
     //console.log(string);
     codPos = parseInt(string, 10);
     //console.log(codPos);//ver variable como numero 
-    if (codPos >= 1000 && codPos <= 16900) { /*console.log("cdmx");*/ return '1' } //cdmx
-    if (codPos >= 31000 && codPos <= 33997) { /*console.log("chihuahua");*/ return '2' } //chihuahua
-    if (codPos >= 20000 && codPos <= 20997) { /*console.log("aguascalientes");*/ return '3' } //aguascalientes
-    if (codPos >= 97000 && codPos <= 97990) { /*console.log("yucatan");*/ return '4' } //yucatan
-    if (codPos >= 21000 && codPos <= 20997) { /*console.log("baja california");*/ return '5' } //baja california
-    if (codPos >= 23000 && codPos <= 23997) { /*console.log("baja california sur");*/ return '6' } //baja california sur
-    if (codPos >= 24000 && codPos <= 24940) { /*console.log("campeche");*/ return '7' } //campeche
-    if (codPos >= 25000 && codPos <= 27997) { /*console.log("coahulia");*/ return '8' } //coahulia
-    if (codPos >= 28000 && codPos <= 28989) { /*console.log("colima");*/ return '9' } //colima
-    if (codPos >= 29000 && codPos <= 30997) { /*console.log("chiapas");*/ return '10' } //chiapas
-    if (codPos >= 34000 && codPos <= 35987) { /*console.log("durango");*/ return '11' } //durango
-    if (codPos >= 39000 && codPos <= 41998) { /*console.log("guerrero");*/ return '12' } //guerrero
-    if (codPos >= 36000 && codPos <= 38997) { /*console.log("guanajuato");*/ return '13' } //guanajuato
-    if (codPos >= 42000 && codPos <= 43998) { /*console.log("hidalgo");*/ return '14' } //hidalgo
-    if (codPos >= 44100 && codPos <= 49996) { /*console.log("jalisco");*/ return '15' } //jalisco
-    if (codPos >= 50000 && codPos <= 57950) { /*console.log("edo mex o mex");*/ return '16' } //edo mex o mex
-    if (codPos >= 58000 && codPos <= 61998) { /*console.log("michoacan");*/ return '17' } //michoacan
-    if (codPos >= 62000 && codPos <= 62996) { /*console.log("morelos");*/ return '18' } //morelos
-    if (codPos >= 63000 && codPos <= 63996) { /*console.log("nayarit");*/ return '19' } //nayarit
-    if (codPos >= 64000 && codPos <= 67996) { /*console.log("nuevo leon");*/ return '20' } //nuevo leon
-    if (codPos >= 68000 && codPos <= 71998) { /*console.log("oaxaca");*/ return '21' } //oaxaca
-    if (codPos >= 72000 && codPos <= 75997) { /*console.log("puebla");*/ return '22' } //puebla
-    if (codPos >= 77000 && codPos <= 77997) { /*console.log("quinta roo");*/ return '23' } //quinta roo
-    if (codPos >= 76000 && codPos <= 76998) { /*console.log("queretaro");*/ return '24' } //queretaro
-    if (codPos >= 80000 && codPos <= 82996) { /*console.log("sinaloa");*/ return '25' }  //sinaloa
-    if (codPos >= 78000 && codPos <= 79998) { /*console.log("san luis potosi");*/ return '26' } //san luis potosi
-    if (codPos >= 98000 && codPos <= 99998) { /*console.log("zacatecas");*/ return '27' } //zacatecas
-    if (codPos >= 91000 && codPos <= 96998) { /*console.log("veracruz");*/ return '28' } //veracruz
-    if (codPos >= 90000 && codPos <= 90990) { /*console.log("tlaxcala");*/ return '29' } //tlaxcala
-    if (codPos >= 87000 && codPos <= 89970) { /*console.log("tamaulipas");*/ return '30' } //tamaulipas
-    if (codPos >= 86000 && codPos <= 86998) { /*console.log("tabasco");*/ return '31' } //tabasco
-    if (codPos >= 83000 && codPos <= 85994) { /*console.log("sonora")*/; return '32' } //sonora
+    if (codPos >= 1000 && codPos <= 16900) { /*console.log("cdmx");*/ return '72' } //cdmx  
+    if (codPos >= 31000 && codPos <= 33997) { /*console.log("chihuahua");*/ return '7' } //chihuahua
+    if (codPos >= 20000 && codPos <= 20997) { /*console.log("aguascalientes");*/ return '2' } //aguascalientes 
+    if (codPos >= 97000 && codPos <= 97990) { /*console.log("yucatan");*/ return '67' } //yucatan 
+    if (codPos >= 21000 && codPos <= 20997) { /*console.log("baja california");*/ return '66' } //baja california 
+    if (codPos >= 23000 && codPos <= 23997) { /*console.log("baja california sur");*/ return '4' } //baja california sur
+    if (codPos >= 24000 && codPos <= 24940) { /*console.log("campeche");*/ return '' } //campeche ***********
+    if (codPos >= 25000 && codPos <= 27997) { /*console.log("coahulia");*/ return '' } //coahulia ***********
+    if (codPos >= 28000 && codPos <= 28989) { /*console.log("colima");*/ return '' } //colima ***********
+    if (codPos >= 29000 && codPos <= 30997) { /*console.log("chiapas");*/ return '10' } //chiapas 
+    if (codPos >= 34000 && codPos <= 35987) { /*console.log("durango");*/ return '' } //durango ***********
+    if (codPos >= 39000 && codPos <= 41998) { /*console.log("guerrero");*/ return '1' } //guerrero 
+    if (codPos >= 36000 && codPos <= 38997) { /*console.log("guanajuato");*/ return '9' } //guanajuato 
+    if (codPos >= 42000 && codPos <= 43998) { /*console.log("hidalgo");*/ return '38' } //hidalgo 
+    if (codPos >= 44100 && codPos <= 49996) { /*console.log("jalisco");*/ return '19' } //jalisco 
+    if (codPos >= 50000 && codPos <= 57950) { /*console.log("edo mex o mex");*/ return '16' } //edo mex o mex 
+    if (codPos >= 58000 && codPos <= 61998) { /*console.log("michoacan");*/ return '' } //michoacan ***********
+    if (codPos >= 62000 && codPos <= 62996) { /*console.log("morelos");*/ return '14' } //morelos 
+    if (codPos >= 63000 && codPos <= 63996) { /*console.log("nayarit");*/ return '12' } //nayarit 
+    if (codPos >= 64000 && codPos <= 67996) { /*console.log("nuevo leon");*/ return '25' } //nuevo leon 
+    if (codPos >= 68000 && codPos <= 71998) { /*console.log("oaxaca");*/ return '71' } //oaxaca 
+    if (codPos >= 72000 && codPos <= 75997) { /*console.log("puebla");*/ return '28' } //puebla 
+    if (codPos >= 77000 && codPos <= 77997) { /*console.log("quinta roo");*/ return '5' } //quinta roo 
+    if (codPos >= 76000 && codPos <= 76998) { /*console.log("queretaro");*/ return '29' } //queretaro 
+    if (codPos >= 80000 && codPos <= 82996) { /*console.log("sinaloa");*/ return '65' }  //sinaloa 
+    if (codPos >= 78000 && codPos <= 79998) { /*console.log("san luis potosi");*/ return '32' } //san luis potosi  
+    if (codPos >= 98000 && codPos <= 99998) { /*console.log("zacatecas");*/ return '' } //zacatecas ***********
+    if (codPos >= 91000 && codPos <= 96998) { /*console.log("veracruz");*/ return '3' } //veracruz 
+    if (codPos >= 90000 && codPos <= 90990) { /*console.log("tlaxcala");*/ return '41' } //tlaxcala 
+    if (codPos >= 87000 && codPos <= 89970) { /*console.log("tamaulipas");*/ return '8' } //tamaulipas 
+    if (codPos >= 86000 && codPos <= 86998) { /*console.log("tabasco");*/ return '' } //tabasco ***********
+    if (codPos >= 83000 && codPos <= 85994) { /*console.log("sonora")*/; return '74' } //sonora 
     else { return 'NULL'}
 }
 
