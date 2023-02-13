@@ -882,7 +882,7 @@ function guardarCtc() {
     } if (ctaAnt2 == "") { //verifica que el campo clabe no este vacio
         alert("SE REQUIERE CUENTA ANTICIPO B");
         document.getElementById("ctaAnt2").focus();
-    } else (ctaConta1 != "" && ctaConta2 != "" && ctaAnt1 != "" && ctaAnt2 !="") {
+    } if (ctaConta1 != "" && ctaConta2 != "" && ctaAnt1 != "" && ctaAnt2 != "") {
         document.getElementById("ctaConta1").value = "";
         document.getElementById("ctaConta2").value = "";
         document.getElementById("ctaAnt1").value = "";
