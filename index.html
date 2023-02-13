@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.worker.min.js"></script>
     <form>
         Nombre del Banco:<br>
-        <input list="banco"  id="banco1" name="banco2" placeholder="Nombre del Banco"/>
+        <input list="banco" id="banco1" name="banco2" placeholder="Nombre del Banco" />
         <datalist id="banco">
             <option value="BANAMEX">
             <option value="BANCOMEXT">
@@ -114,6 +114,27 @@
         <br />
         <br /><br />
         <button type="button" onclick="guardar()">Guardar Datos</button>
+        <br />
+        <br /><br />
+        Cuenta Contable A:<br>
+        <input type="number" name="ctaConta1" id="ctaConta1" placeholder="Cuenta Contable A" />
+        <br />
+        Cuenta Contable B:<br>
+        <input type="number" name="ctaConta2" id="ctaConta2" placeholder="Cuenta Contable B" />
+        <br />
+        Cuenta Anticipo A:<br>
+        <input type="number" name="ctaAnt1" id="ctaAnt1" placeholder="Cuenta Anticipo A" />
+        <br />
+        <br /><br />
+        Cuenta Anticipo B:<br>
+        <input type="number" name="ctaAnt2" id="ctaAnt2" placeholder="Cuenta Anticipo B" />
+        <br />
+        <br /><br />
+        <button type="button" onclick="guardarCtc()">Guardar Datos</button>
+
+
+
+
     </form>
     <br />
     <br /><br />
