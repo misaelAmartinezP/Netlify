@@ -900,6 +900,7 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
 
 function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, string) {
     rfc = string;
+    var guardatipOracion = "";
     if ((rfc.length) == 13) {//si es persona fisica
         //console.log("persona fisica");
         var oracion = (gaurdaPersonaFisApPa+" " + gaurdaPersonaFisApMa+" " + guardaPersonaFisNom).toLowerCase();
@@ -908,6 +909,8 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
             return tipOracion[0].toUpperCase() + tipOracion.slice(1)
         })
         //console.log(tipOracion)
+        guardatipOracion = tipOracion.join(' ');
+        
     } if ((rfc.length) == 12) {//si es persona moral
         //console.log("persona moral")
         var oracion = (guardaRaSo).toLowerCase();
@@ -916,9 +919,9 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
             return tipOracion[0].toUpperCase() + tipOracion.slice(1)
         })
         //console.log(tipOracion)
-        
+        guardatipOracion= tipOracion.join(' ');
     }
-    return tipOracion.join(' ');
+    return guardatipOracion;
 }
 
 function querysCtas(string, guardaTipOracion, guardaCtaConta1, guardaCtaConta2, guardaCtaAnt1, guardaCtaAnt2,) {
