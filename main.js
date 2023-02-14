@@ -458,8 +458,8 @@ function download(filename, query) {
 }
 
 const fecha = new Date();
-fechaQuery = fecha.toDateString;
-console.log(fechaQuery);
+
+console.log(fecha.toDateString);
 
 // comineza la descarga
 document.getElementById("dwn-btn").addEventListener("click", function () {
