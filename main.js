@@ -926,7 +926,7 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
     return guardatipOracion;
 }
 
-function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2, guardaCtaAnt1, guardaCtaAnt2,) {
+function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2, guardaCtaAnt1, guardaCtaAnt2,) { 
     console.log(guardaTipoOracion);
     rfc = string; //Esta funcion determina si es persona moral o persona fisica y en base a eso genera el query para persona fisica y moral 
     queryCtasContAnt = "";
