@@ -902,7 +902,7 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
 function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, string) {
     rfc = string;
     if ((rfc.length) == 12) {//si es persona moral
-        var oracion = (gaurdaPersonaFisApPa + gaurdaPersonaFisApMa + guardaPersonaFisNom).toLowerCAse();
+        var oracion = (gaurdaPersonaFisApPa + gaurdaPersonaFisApMa + guardaPersonaFisNom).toLowerCase();
         console.log(oracion);
         let tipOracion = oracion.split(" ").map(tipOracion => {
             return tipOracion.toUpperCase() + tipOracion.slice(1)
