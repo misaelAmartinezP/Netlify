@@ -888,7 +888,7 @@ function guardarCtc() {
         document.getElementById("ctaConta2").value = "";
         document.getElementById("ctaAnt1").value = "";
         document.getElementById("ctaAnt2").value = "";
-        alert("DATOS CONTABLES GUARDADOS");
+        alert("DATOS CONTABLES GUARDADOS"); 
     }
 }
 
