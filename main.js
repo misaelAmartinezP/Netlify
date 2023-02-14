@@ -459,7 +459,7 @@ function download(filename, query) {
 
 const fecha = new Date();
 
-console.log(fecha);
+console.log(fecha.toLocaleDateString());
 
 // comineza la descarga
 document.getElementById("dwn-btn").addEventListener("click", function () {
