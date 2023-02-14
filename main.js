@@ -912,4 +912,4 @@ function querysCtas(string, guardaApPa, guardaApMa, guardaPersonaFisNom, guardaC
     return queryCtasContAnt
 }
 
-window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña
+window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña 
