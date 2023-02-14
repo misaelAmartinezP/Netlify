@@ -892,7 +892,7 @@ function guardarCtc() {
     }
 }
 
-function querysCtas(string) { 
+function querysCtas(string, guardaApPa, guardaApMa, guardaPersonaFisNom, guardaCtaConta1, guardaCtaConta2, guardaCtaAnt1, guardaCtaAnt2, guardaRaSo) {
     rfc = string;
     queryCtasContAnt = "";
     if ((rfc.length) == 12) {//si es persona moral
