@@ -905,14 +905,14 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
         var oracion = (gaurdaPersonaFisApPa + gaurdaPersonaFisApMa + guardaPersonaFisNom).toLowerCase();
         console.log(oracion);
         let tipOracion = oracion.split(" ").map(tipOracion => {
-            return tipOracion.toUpperCase() + tipOracion.slice(1)
+            return tipOracion[0].toUpperCase() + tipOracion.slice(1)
         })
         console.log(tipOracion)
     } if ((rfc.length) == 13) {//si es persona fisica
         var oracion = (guardaRaSo).toLowerCAse();
         console.log(oracion);
         let tipOracion = oracion.split(" ").map(tipOracion => {
-            return tipOracion.toUpperCase() + tipOracion.slice(1)
+            return tipOracion[0].toUpperCase() + tipOracion.slice(1)
         })
         console.log(tipOracion)
     }
