@@ -892,7 +892,7 @@ function guardarCtc() {
     }
 }
 
-function querysCtas(string) {
+function querysCtas(string) { 
     rfc = string;
     queryCtasContAnt = "";
     if ((rfc.length) == 12) {//si es persona moral
