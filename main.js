@@ -459,11 +459,11 @@ function download(filename, query) {
 
 const fecha = new Date();
 
-console.log(fecha.toDateString);
+console.log(fecha);
 
 // comineza la descarga
 document.getElementById("dwn-btn").addEventListener("click", function () {
-    var filename = "_CtbCuentas,AcProveedores_" + guardaRFC + ".sql";
+    var filename = fecha + "_CtbCuentas,AcProveedores_" + guardaRFC + ".sql";
     download(filename, query);
 }, false);
 
