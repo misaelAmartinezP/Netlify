@@ -23,7 +23,7 @@ var guardaCtaAnt2 = ""; //guarda cunenta anticipo
 var queryCtas = "";
 var queryAnt = "";
 
-alert("LLENAR PRIMERO LOS DATOS BANCARIOS")
+alert("Llenar primero los datos bancarios")
 PDFJS.workerSrc = '';
 
 //extraccion del pdf
@@ -459,7 +459,7 @@ function download(filename, query) {
 
 const fecha = new Date();
 fechaQuery = fecha.toLocaleDateString();
-console.log(fechaQuery);
+//console.log(fechaQuery);
 
 // comineza la descarga
 document.getElementById("dwn-btn").addEventListener("click", function () {
@@ -506,26 +506,27 @@ function guardar() {
     guardaCtaBancaria = ctaBancaria;
 
     if ((clabe.length) < 18) {//Verificacion de la clabe
-        alert("LA LONGITUD DE LA CLABE NO PUEDE TENER MENOS DE 18 DIGITOS");
+        alert("La longitud de la CLABE no puede tener menos de 18 digitos");
         document.getElementById("clabe").focus();
     } if ((clabe.length) > 18) {//verificacion de la clabe 
-        alert("LA LONGITUD DE LA CLABE TIENE QUE SER IGUAL A 18 DIGITOS");
+        alert("La longitud de la CLABE tiene que ser igual a 18 digitos");
         document.getElementById("clabe").focus();
     }if (banco == "") {//verifica que el campo banco no este vacio
-        alert("SE REQUIERE NOMBRE DEL BANCO");
+        alert("Se requiere nombre del banco");
         document.getElementById("banco1").focus();
     } if (clabe == "") { //verifica que el campo clabe no este vacio
-        alert("SE REQUIERE CLABE BANCARIA");
+        alert("Se requiere CLABE bancaria");
         document.getElementById("clabe").focus();
     } if (ctaBancaria == "") {//verifica que el campo cuenta bancaria no este vacio
-        alert("SE REQUIERE CUENTA BANCARIA");
+        alert("Se requiere cuenta bancaria");
         document.getElementById("ctaBancaria").focus();
     } if ((clabe.length) == 18 && banco != "" && clabe != "") {
         document.getElementById("banco1").value = "";
         document.getElementById("clabe").value = "";
         document.getElementById("ctaBancaria").value = "";
-        alert("DATOS BANCARIOS GUARDADOS");
-        alert("LLENAR DATOS DE CUENTAS CONTABLES Y CUENTA ANTICIPO")
+        alert("Datos bancarios guardados");
+        alert("Llenar datos de cuentas contables y cuenta anticipo")
+        
     }
 }
 
@@ -877,23 +878,23 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
     guardaCtaAnt2 = ctaAnt2;
 
     if (ctaConta1 =="") {//Verificacion de la clabe
-        alert("SE REQUIERE IdCUENTA CONTABLE");
+        alert("Se requiere IdCuenta Contable");
         document.getElementById("ctaConta1").focus();
     } if (ctaConta2 =="") {//verificacion de la clabe
-        alert("SE REQUIERE CUENTA");
+        alert("Se requiere cuenta");
         document.getElementById("ctaConta2").focus();
     } if (ctaAnt1 == "") {//verifica que el campo banco no este vacio
-        alert("SE REQUIERE IdCUENTA");
+        alert("Se requiere IdCuenta");
         document.getElementById("ctaAnt1").focus();
     } if (ctaAnt2 == "") { //verifica que el campo clabe no este vacio
-        alert("SE REQUIERE CUENTA");
+        alert("Se requiere cuenta");
         document.getElementById("ctaAnt2").focus();
     } else{
         document.getElementById("ctaConta1").value = "";
         document.getElementById("ctaConta2").value = "";
         document.getElementById("ctaAnt1").value = "";
         document.getElementById("ctaAnt2").value = "";
-        alert("DATOS CONTABLES GUARDADOS"); 
+        alert("Datos contable guardados"); 
     }
 }
 
