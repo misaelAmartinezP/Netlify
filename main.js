@@ -921,6 +921,7 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
         //console.log(tipOracion)
         guardatipOracion= tipOracion.join(' ');
     }
+    console.log(guardatipOracion);
     return guardatipOracion;
 }
 
