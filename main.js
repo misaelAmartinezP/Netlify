@@ -457,7 +457,7 @@ function download(filename, query) {
     document.body.removeChild(element);
 }
 
-const fecha = new Date();
+const fecha = new Date().toDateString;
 console.log(fecha);
 
 // comineza la descarga
