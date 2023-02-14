@@ -911,7 +911,7 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
         console.log(tipOracion)
     } if ((rfc.length) == 12) {//si es persona moral
         console.log("persona moral")
-        var oracion = (guardaRaSo).toLowerCAse();
+        var oracion = (guardaRaSo).toLowerCase();
         console.log(oracion);
         let tipOracion = oracion.split(" ").map(tipOracion => {
             return tipOracion[0].toUpperCase() + tipOracion.slice(1)
