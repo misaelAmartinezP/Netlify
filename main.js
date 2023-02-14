@@ -463,7 +463,7 @@ console.log(fechaQuery);
 
 // comineza la descarga
 document.getElementById("dwn-btn").addEventListener("click", function () {
-    var filename = fecha + "_CtbCuentas,AcProveedores_" + guardaRFC + ".sql";
+    var filename = fechaQuery + "_CtbCuentas,AcProveedores_" + guardaRFC + ".sql";
     download(filename, query);
 }, false);
 
