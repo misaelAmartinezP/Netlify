@@ -502,6 +502,18 @@ function guardar() {
     var ctaBancaria = document.getElementById("ctaBancaria").value;//guarda cuenta bancaria 
     //console.log(ctaBancaria);
     guardaCtaBancaria = ctaBancaria;
+    var ctaConta1 = document.getElementById("ctaConta1").value;//guarda banco
+    //console.log(ctaConta1);
+    guardaCtaConta1 = ctaConta1;//pasa nombre del banco
+    var ctaConta2 = document.getElementById("ctaConta2").value;//guarda banco
+    //console.log(ctaConta2);
+    guardaCtaConta2 = ctaConta2;//pasa nombre del banco
+    var ctaAnt1 = document.getElementById("ctaAnt1").value;//guarda clabe
+    //console.log(ctaAnt1);
+    guardaCtaAnt1 = ctaAnt1;
+    var ctaAnt2 = document.getElementById("ctaAnt2").value;//guarda clabe
+    //console.log(ctaAnt2);
+    guardaCtaAnt2 = ctaAnt2;
 
     if ((clabe.length) < 18) {//Verificacion de la clabe
         alert("LA LONGITUD DE LA CLABE NO PUEDE TENER MENOS DE 18 DIGITOS");
@@ -517,11 +529,26 @@ function guardar() {
         document.getElementById("clabe").focus();
     } if (ctaBancaria == "") {//verifica que el campo cuenta bancaria no este vacio
         alert("SE REQUIERE CUENTA BANCARIA");
-        document.getElementById("ctaBancaria").focus();
-    } if ((clabe.length) == 18 && banco != "" && clabe != "") {
+    }if (ctaConta1 == "") {//Verificacion de la clabe
+            alert("SE REQUIERE IdCUENTA CONTABLE");
+            document.getElementById("ctaConta1").focus();
+    } if (ctaConta2 == "") {//verificacion de la clabe
+            alert("SE REQUIERE CUENTA");
+            document.getElementById("ctaConta2").focus();
+    } if (ctaAnt1 == "") {//verifica que el campo banco no este vacio
+            alert("SE REQUIERE IdCUENTA");
+            document.getElementById("ctaAnt1").focus();
+    } if (ctaAnt2 == "") { //verifica que el campo clabe no este vacio
+            alert("SE REQUIERE CUENTA");
+            document.getElementById("ctaAnt2").focus();
+    } if ((clabe.length) == 18 && banco != "" && clabe != "" && ctaConta1 != "" && ctaConta2 != "" && ctaAnt1 != "" && ctaAnt2 != "") {
         document.getElementById("banco1").value = "";
         document.getElementById("clabe").value = "";
         document.getElementById("ctaBancaria").value = "";
+        document.getElementById("ctaConta1").value = "";
+        document.getElementById("ctaConta2").value = "";
+        document.getElementById("ctaAnt1").value = "";
+        document.getElementById("ctaAnt2").value = "";
         alert("DATOS GUARDADOS");
     }
 }
@@ -860,40 +887,5 @@ function idCiudad(string) {
 }
 
 
-function guardarCtc() {
-    var ctaConta1 = document.getElementById("ctaConta1").value;//guarda banco
-    //console.log(ctaConta1);
-    guardaCtaConta1 = ctaConta1;//pasa nombre del banco
-    var ctaConta2 = document.getElementById("ctaConta2").value;//guarda banco
-    //console.log(ctaConta2);
-    guardaCtaConta2 = ctaConta2;//pasa nombre del banco
-    var ctaAnt1 = document.getElementById("ctaAnt1").value;//guarda clabe
-    //console.log(ctaAnt1);
-    guardaCtaAnt1 = ctaAnt1;
-    var ctaAnt2 = document.getElementById("ctaAnt2").value;//guarda clabe
-    //console.log(ctaAnt2);
-    guardaCtaAnt2 = ctaAnt2;
-
-
-    if (ctaConta1 =="") {//Verificacion de la clabe
-        alert("SE REQUIERE IdCUENTA CONTABLE");
-        document.getElementById("ctaConta1").focus();
-    } if (ctaConta2 =="") {//verificacion de la clabe
-        alert("SE REQUIERE CUENTA");
-        document.getElementById("ctaConta2").focus();
-    } if (ctaAnt1 == "") {//verifica que el campo banco no este vacio
-        alert("SE REQUIERE IdCUENTA");
-        document.getElementById("ctaAnt1").focus();
-    } if (ctaAnt2 == "") { //verifica que el campo clabe no este vacio
-        alert("SE REQUIERE CUENTA");
-        document.getElementById("ctaAnt2").focus();
-    } else{
-        document.getElementById("ctaConta1").value = "";
-        document.getElementById("ctaConta2").value = "";
-        document.getElementById("ctaAnt1").value = "";
-        document.getElementById("ctaAnt2").value = "";
-        alert("DATOS GUARDADOS");
-    }
-}
 
 window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña
