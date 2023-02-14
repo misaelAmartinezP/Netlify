@@ -862,17 +862,17 @@ function idCiudad(string) {
 
 function guardarCtc() {
     var ctaConta1 = document.getElementById("ctaConta1").value;//guarda banco
-    console.log(ctaConta1);
-    guardaCtaConta = ctaConta1;//pasa nombre del banco
+    //console.log(ctaConta1);
+    guardaCtaConta1 = ctaConta1;//pasa nombre del banco
     var ctaConta2 = document.getElementById("ctaConta2").value;//guarda banco
-    console.log(ctaConta2);
-    guardaCtaConta = ctaConta2;//pasa nombre del banco
+    //console.log(ctaConta2);
+    guardaCtaConta2 = ctaConta2;//pasa nombre del banco
     var ctaAnt1 = document.getElementById("ctaAnt1").value;//guarda clabe
-    console.log(ctaAnt1);
-    guardaCtaAnt = ctaAnt1;
+    //console.log(ctaAnt1);
+    guardaCtaAnt1 = ctaAnt1;
     var ctaAnt2 = document.getElementById("ctaAnt2").value;//guarda clabe
-    console.log(ctaAnt2);
-    guardaCtaAnt = ctaAnt2;
+    //console.log(ctaAnt2);
+    guardaCtaAnt2 = ctaAnt2;
 
 
     if (ctaConta1 =="") {//Verificacion de la clabe
