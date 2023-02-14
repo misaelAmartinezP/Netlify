@@ -859,7 +859,7 @@ function idCiudad(string) {
 
 function guardarCtc() {
     var ctaConta1 = document.getElementById("ctaConta1").value;//guarda banco
-    console.log(ctaConta);
+    console.log(ctaConta1);
     guardaCtaConta = ctaConta1;//pasa nombre del banco
     var ctaConta2 = document.getElementById("ctaConta2").value;//guarda banco
     console.log(ctaConta2);
@@ -873,16 +873,16 @@ function guardarCtc() {
 
 
     if (ctaConta1 =="") {//Verificacion de la clabe
-        alert("SE REQUIERE CUENTA CONTABLE A");
+        alert("SE REQUIERE IdCUENTA CONTABLE");
         document.getElementById("ctaConta1").focus();
     } if (ctaConta2 =="") {//verificacion de la clabe
-        alert("SE REQUIERE CUENTA CONTABLE B");
+        alert("SE REQUIERE CUENTA");
         document.getElementById("ctaConta2").focus();
     } if (ctaAnt1 == "") {//verifica que el campo banco no este vacio
-        alert("SE REQUIERE CUENTA ANTICIPO A");
+        alert("SE REQUIERE IdCUENTA");
         document.getElementById("ctaAnt1").focus();
     } if (ctaAnt2 == "") { //verifica que el campo clabe no este vacio
-        alert("SE REQUIERE CUENTA ANTICIPO B");
+        alert("SE REQUIERE CUENTA");
         document.getElementById("ctaAnt2").focus();
     } else{
         document.getElementById("ctaConta1").value = "";
