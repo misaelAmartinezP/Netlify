@@ -115,7 +115,8 @@ function parceoDatos(string) {
     gaurdaPersonaFisApPa = personaFisApPa(separaDatos, extraeRFCAux(separaDatos));//primer apellido para persona fisica 
     gaurdaPersonaFisApMa = personaFisApMa(separaDatos, extraeRFCAux(separaDatos));//segundo apellido para persona fisica 
     guardaIdCiudad = idCiudad(extraeCodPosAux(separaDatos)); //genera id cidad
-
+    guardaTipOracion = descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, guardaRFC)//tipo oracion
+    consolo.log(guardaTipOracion);
     //query="set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores on insert into InmobiliariaCaboBallena.dbo.AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT)values   (9999, 'CISMEDMIGUMXN', 'extraeRaSo', NULL, 2, 'CIMM6909298U9', idCiudad, '5 DE FEBRERO, MANZANA 129, LOTE 13', 'RICARDO FLORES MAGON', '39700', 'ACAPULCO DE JUAREZ', Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores off";
 
     //generando el query                                                   //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
@@ -896,6 +897,27 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
         document.getElementById("ctaAnt2").value = "";
         alert("Datos contables guardados"); 
     }
+}
+
+function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, string) {
+    rfc = string;
+    if ((rfc.length) == 12) {//si es persona moral
+        var oracion = (gaurdaPersonaFisApPa + gaurdaPersonaFisApMa + guardaPersonaFisNom).toLowerCAse();
+        console.log(oracion);
+        let tipOracion = oracion.split(" ").map(tipOracion => {
+            return tipOracion.toUpperCase() + tipOracion.slice(1)
+        })
+        console.log(tipOracion)
+    } if ((rfc.length) == 13) {//si es persona fisica
+        var oracion = (guardaRaSo).toLowerCAse();
+        console.log(oracion);
+        let tipOracion = oracion.split(" ").map(tipOracion => {
+            return tipOracion.toUpperCase() + tipOracion.slice(1)
+        })
+        console.log(tipOracion)
+    }
+
+
 }
 
 function querysCtas(string, gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaCtaConta1, guardaCtaConta2, guardaCtaAnt1, guardaCtaAnt2, guardaRaSo) {
