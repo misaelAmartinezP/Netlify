@@ -456,9 +456,13 @@ function download(filename, query) {
     element.click();
     document.body.removeChild(element);
 }
+
+const fecha = newDate().toDateString();
+console.log(fecha);
+
 // comineza la descarga
 document.getElementById("dwn-btn").addEventListener("click", function () {
-    var filename = "QUERY-" + guardaRFC + ".sql";
+    var filename = "_CtbCuentas,AcProveedores_" + guardaRFC + ".sql";
     download(filename, query);
 }, false);
 
