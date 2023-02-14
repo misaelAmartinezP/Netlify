@@ -909,6 +909,7 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
             return tipOracion[0].toUpperCase() + tipOracion.slice(1)
         })
         console.log(tipOracion)
+        return tipOracion.join(' ')
     } if ((rfc.length) == 12) {//si es persona moral
         console.log("persona moral")
         var oracion = (guardaRaSo).toLowerCase();
@@ -917,6 +918,7 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
             return tipOracion[0].toUpperCase() + tipOracion.slice(1)
         })
         console.log(tipOracion)
+        return tipOracion.join(' ')
     }
 
 
