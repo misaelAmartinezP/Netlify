@@ -948,7 +948,7 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 
 function activarDatBanc() {
     var check = document.getElementById(cboxDatBan);
-    if (check == true) {
+    if (check == false) {
         document.getElementById('banco1').disable = false
         document.getElementById('clabe').disable = false
         document.getElementById('ctaBancaria').disable = false
@@ -956,10 +956,10 @@ function activarDatBanc() {
         console.log(banco);
         guardaBanco = banco;//pasa nombre del banco
         var clabe = 'NULL'.value;//guarda clabe
-        //console.log(clabe);
+        console.log(clabe);
         guardaClabe = clabe;
         var ctaBancaria = 'NULL'//guarda cuenta bancaria 
-        //console.log(ctaBancaria);
+        console.log(ctaBancaria);
         guardaCtaBancaria = ctaBancaria;
     }
 }
