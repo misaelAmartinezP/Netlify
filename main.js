@@ -955,7 +955,9 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 }
 
 function desactivarDatBanc() {
-    document.getElementById('clabe').disable = true;
+    document.getElementById('clabe').addEventListener('input', function (event) {
+        document.getElementById('clabe').disabled = !this.value;
+    }, false);
         var banco = 'NULL'//guarda banco 
         console.log(banco);
         guardaBanco = banco;//pasa nombre del banco
