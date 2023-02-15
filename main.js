@@ -954,14 +954,8 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
     return queryCtasContAnt
 }
 
-function activarDatBanc() {
-    const checkDatBanV = document.getElementById("checkDatBan");
-    checkDatBanV.addEventListener("change", (event) => {
-        banco1.disable = !event.target.checked;
-        clabe.disable = !event.target.checked;
-        ctaBancaria.disable = !event.target.checked;
-        guardarBtn.disable = !event.target.checked;
-    }, false);
+function desactivarDatBanc() {
+    document.getElementById('clabe').disable = true;
         var banco = 'NULL'//guarda banco 
         console.log(banco);
         guardaBanco = banco;//pasa nombre del banco
