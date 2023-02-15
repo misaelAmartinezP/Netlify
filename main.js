@@ -957,8 +957,8 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 function activarDatBanc() {
     document.getElementById("banco1").disable = false
     document.getElementById("clabe").disable = true
-    document.getElementById("ctaBancaria").disable = true
-    if (check == true) {
+    document.getElementById("ctaBancaria").disable = true 
+    if (true == true) {
         var banco = 'NULL'//guarda banco 
         console.log(banco);
         guardaBanco = banco;//pasa nombre del banco
