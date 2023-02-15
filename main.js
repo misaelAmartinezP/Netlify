@@ -889,7 +889,7 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
     } if (ctaAnt2 == "") { //verifica que el campo clabe no este vacio
         alert("Se requiere cuenta");
         document.getElementById("ctaAnt2").focus();
-    } else{
+    } if (((ctaConta1 + 1) = ctaAnt2), ((ctaAnt1 - 1) = ctaConta1)) {
         document.getElementById("ctaConta1").value = "";
         document.getElementById("ctaConta2").value = "";
         document.getElementById("ctaAnt1").value = "";
