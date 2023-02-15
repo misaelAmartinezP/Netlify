@@ -895,12 +895,6 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
         document.getElementById("ctaAnt1").value = "";
         document.getElementById("ctaAnt2").value = "";
         alert("Datos contables guardados");
-    } if ((ctaAnt1 - 1) == ctaConta1) {
-        document.getElementById("ctaConta1").value = "";
-        document.getElementById("ctaConta2").value = "";
-        document.getElementById("ctaAnt1").value = "";
-        document.getElementById("ctaAnt2").value = "";
-        alert("Datos contables guardados");
     } else {
         alert("Los IdCuenta tiene que ser consecutivos")
     }
