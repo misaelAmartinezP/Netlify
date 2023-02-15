@@ -954,9 +954,11 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
     return queryCtasContAnt
 }
 
-function pasaNullBanco() {
-    
-    if (dataBanco.value == true) {
+
+var checkbox = document.getElementById('dataBanco');
+checkbox.addEventListener('change', function () {
+    if (this.checked) {
+        console.log('checkbox esta seleccionado');
         var banco = 'NULL'//guarda banco
         console.log(banco);
         guardaBanco = banco;//pasa nombre del banco
@@ -967,13 +969,6 @@ function pasaNullBanco() {
         console.log(ctaBancaria);
         guardaCtaBancaria = ctaBancaria;
         alert("Datos Bancarios Nullos")
-    }
-}
-
-var checkbox = document.getElementById('dataBanco');
-checkbox.addEventListener('change', function () {
-    if (this.checked) {
-        alert('checkbox esta seleccionado');
     }
 });
 
