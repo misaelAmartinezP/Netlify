@@ -956,7 +956,7 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 
 function pasaNullBanco() {
     console.log(dataBanco.value);
-    if (document.getElementById('dataBanco').spellcheck) {
+    if (document.getElementById('dataBanco').checked) {
         console.log('el check esta seleccionado ')
     }
     if (dataBanco.value == true) {
