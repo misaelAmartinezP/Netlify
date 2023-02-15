@@ -625,6 +625,8 @@ function bancoSat(string) {//este es la Clave que da el SAT
     if (nomBanco == 'INDEVAL') { return '902' }
     if (nomBanco == 'LIBERTAD') { return '670' }
     if (nomBanco == 'N/A') { return '999' }
+    if (nomBanco == 'NULL') { return 'NULL' }
+    if (nomBanco == '') { return 'NULL' }
 }
 function idBancoSat(string) {//este es nuestro id de la base de datos
     nomIdBancoSat = string;
@@ -723,7 +725,9 @@ function idBancoSat(string) {//este es nuestro id de la base de datos
     if (nomIdBancoSat == 'OPCIONES EMPRESARIALES DEL NOROESTE') { return '267' }
     if (nomIdBancoSat == 'LIBERTAD') { return '268' }
     if (nomIdBancoSat == 'N/A') { return '269' }
-    if (nomIdBancoSat == 'SABADELL') { return '2130' } 
+    if (nomIdBancoSat == 'SABADELL') { return '2130' }
+    if (nomIdBancoSat == 'NULL') { return 'NULL' }
+    if (nomIdBancoSat == '') { return 'NULL'}
 }
 
 function personaMoral(string) {
@@ -968,10 +972,6 @@ checkbox.addEventListener('change', function () {
         var ctaBancaria = 'NULL'//guarda cuenta bancaria 
         console.log(ctaBancaria);
         guardaCtaBancaria = ctaBancaria;
-        guardaIdBancoSat = 'NULL';
-        console.log(guardaIdBancoSat);
-        guardaBancoSat = 'NULL'
-        console.log(guardaBancoSat);
         alert("Datos Bancarios Nullos")
     }
 });
