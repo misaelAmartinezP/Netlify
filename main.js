@@ -960,6 +960,7 @@ function activarDatBanc() {
         banco1.disable = !event.target.checked;
         clabe.disable = !event.target.checked;
         ctaBancaria.disable = !event.target.checked;
+        guardarBtn.disable = !event.target.checked;
     }, false);
         var banco = 'NULL'//guarda banco 
         console.log(banco);
