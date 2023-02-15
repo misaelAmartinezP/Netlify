@@ -954,19 +954,22 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
     return queryCtasContAnt
 }
 
-function desactivarDatBanc() {
-    document.getElementById('clabe').addEventListener('input', function (event) {
-        document.getElementById('clabe').disabled = !this.value;
-    }, false);
-        var banco = 'NULL'//guarda banco 
-        console.log(banco);
-        guardaBanco = banco;//pasa nombre del banco
-        var clabe = 'NULL';//guarda clabe
-        console.log(clabe);
-        guardaClabe = clabe;
-        var ctaBancaria = 'NULL'//guarda cuenta bancaria 
-        console.log(ctaBancaria);
-        guardaCtaBancaria = ctaBancaria;
+function disable() {//w  ww.ja  va2  s  .c  o  m
+    document.getElementById("clabe").disabled = true;
 }
+
+function undisable() {
+    document.getElementById("clabe").disabled = false;
+}
+
+/*var banco = 'NULL'//guarda banco 
+console.log(banco);
+guardaBanco = banco;//pasa nombre del banco
+var clabe = 'NULL';//guarda clabe
+console.log(clabe);
+guardaClabe = clabe;
+var ctaBancaria = 'NULL'//guarda cuenta bancaria 
+console.log(ctaBancaria);
+guardaCtaBancaria = ctaBancaria;*/
 
 window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña 
