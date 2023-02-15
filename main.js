@@ -956,8 +956,13 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 
 function pasaNullBanco() {
     console.log(dataBanco.value);
-    if (document.getElementById('dataBanco').checked) {
-        console.log('el check esta seleccionado ')
+    var checkbox = document.getElementById('dataBanco');
+    checkbox.addEventListener("change", validaCheckbox, false);
+    function validaCheckbox() {
+        var checked = checkbox.checked;
+        if (checked) {
+            alert('checkbox1 esta seleccionado');
+        }
     }
     if (dataBanco.value == true) {
         var banco = 'NULL'//guarda banco
