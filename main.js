@@ -947,6 +947,8 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 }
 
 function activarDatBanc() {
+    var check = document.getElementById(checkDatBan);
+    if(check == false){
         document.getElementById("banco1").disable = false 
         document.getElementById("clabe").disable = true
         document.getElementById("ctaBancaria").disable = true
@@ -959,6 +961,7 @@ function activarDatBanc() {
         var ctaBancaria = 'NULL'//guarda cuenta bancaria 
         console.log(ctaBancaria);
         guardaCtaBancaria = ctaBancaria;
+    }
 }
 
 window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña 
