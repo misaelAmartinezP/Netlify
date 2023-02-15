@@ -951,7 +951,7 @@ function activarDatBanc() {
     document.getElementById("banco1").disable = false
     document.getElementById("clabe").disable = true
     document.getElementById("ctaBancaria").disable = true
-    if(check == false){
+    if(check == true){
         var banco = 'NULL'//guarda banco 
         console.log(banco);
         guardaBanco = banco;//pasa nombre del banco
