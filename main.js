@@ -948,7 +948,7 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 
 function activarDatBanc() {
     var checkbox = document.getElementById(checkDatBan);
-    if (checkbox == false) {
+    if (checkbox == true) {
         document.getElementById('banco1').disable = false
         document.getElementById('clabe').disable = false
         document.getElementById('ctaBancaria').disable = false
