@@ -968,6 +968,8 @@ checkbox.addEventListener('change', function () {
         var ctaBancaria = 'NULL'//guarda cuenta bancaria 
         console.log(ctaBancaria);
         guardaCtaBancaria = ctaBancaria;
+        guardaIdBancoSat = 'NULL';
+        guardaBancoSat='NULL'
         alert("Datos Bancarios Nullos")
     }
 });
