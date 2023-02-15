@@ -969,7 +969,9 @@ checkbox.addEventListener('change', function () {
         console.log(ctaBancaria);
         guardaCtaBancaria = ctaBancaria;
         guardaIdBancoSat = 'NULL';
-        guardaBancoSat='NULL'
+        console.log(guardaIdBancoSat);
+        guardaBancoSat = 'NULL'
+        console.log(guardaBancoSat);
         alert("Datos Bancarios Nullos")
     }
 });
