@@ -954,12 +954,12 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
     return queryCtasContAnt
 }
 
-function disable() {//w  ww.ja  va2  s  .c  o  m
-    document.getElementById("clabe").disabled = true;
+function disable() {
+    document.getElementById('clabe').disabled = true;
 }
 
 function undisable() {
-    document.getElementById("clabe").disabled = false;
+    document.getElementById('clabe').disabled = false;
 }
 
 /*var banco = 'NULL'//guarda banco 
