@@ -958,9 +958,9 @@ function activarDatBanc() {
     const checkDatBanV = document.getElementById("checkDatBan");
 
     checkDatBanV.addEventListener("change", (event) => {
-        document.getElementById("banco2").disable = false;
-        document.getElementById("clabe").disable = false;
-        document.getElementById("ctaBancaria").disable = false;
+        banco2.disable = !event.target.checked;
+        clabe.disable = !event.target.checked;
+        ctaBancaria.disable = !event.target.checked;
     })
         var banco = 'NULL'//guarda banco 
         console.log(banco);
