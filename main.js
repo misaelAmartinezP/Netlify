@@ -626,7 +626,7 @@ function bancoSat(string) {//este es la Clave que da el SAT
     if (nomBanco == 'INDEVAL') { return '902' }
     if (nomBanco == 'LIBERTAD') { return '670' }
     if (nomBanco == 'N/A') { return '999' }
-    if (nomBanco == 'NULL') { return 'NULL' }
+    if (nomBanco == 'NULL') { return '' }
     if (nomBanco == '') { return '' }
 }
 function idBancoSat(string) {//este es nuestro id de la base de datos
