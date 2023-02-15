@@ -968,8 +968,8 @@ checkbox.addEventListener('change', function () {
         var ctaBancaria = 'NULL'//guarda cuenta bancaria 
         console.log(ctaBancaria);
         guardaCtaBancaria = ctaBancaria;
-        alert("Datos Bancarios Nullos")
     }
+    alert("Datos Bancarios Nullos")
 });
 
 window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña 
