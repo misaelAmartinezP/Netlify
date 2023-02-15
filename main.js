@@ -921,12 +921,12 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
         //console.log(tipOracion)
         guardatipOracion= tipOracion.join(' ');
     }
-    console.log(guardatipOracion);
+    //console.log(guardatipOracion);
     return guardatipOracion;
 }
 
 function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2, guardaCtaAnt1, guardaCtaAnt2) { 
-    console.log(guardaTipoOracion);
+    //console.log(guardaTipoOracion);
     rfc = string; //Esta funcion determina si es persona moral o persona fisica y en base a eso genera el query para persona fisica y moral 
     queryCtasContAnt = "";
     if ((rfc.length) == 12) {//si es persona moral
