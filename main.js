@@ -465,6 +465,7 @@ fechaQuery = fecha.toLocaleDateString();
 document.getElementById("dwn-btn").addEventListener("click", function () {
     var filename = fechaQuery + "_CtbCuentas,AcProveedores_" + guardaRFC + ".sql";
     download(filename, query);
+    location.reload();
 }, false);
 
 function extraeRFCAux(string) { //funcion que extrae el pdf 
@@ -964,13 +965,13 @@ checkbox.addEventListener('change', function () {
     if (this.checked) {
         console.log('checkbox esta seleccionado');
         var banco = 'NULL'//guarda banco
-        console.log(banco);
+        //console.log(banco);
         guardaBanco = banco;//pasa nombre del banco
         var clabe = 'NULL';//guarda clabe
-        console.log(clabe);
+        //console.log(clabe);
         guardaClabe = clabe;
         var ctaBancaria = 'NULL'//guarda cuenta bancaria 
-        console.log(ctaBancaria);
+        //console.log(ctaBancaria);
         guardaCtaBancaria = ctaBancaria;
         alert("Datos Bancarios Nullos")
     }
