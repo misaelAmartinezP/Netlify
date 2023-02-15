@@ -955,8 +955,8 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 }
 
 function pasaNullBanco() {
-    console.log(dataBanco);
-    if (dataBanco == true) {
+    console.log(dataBanco.value);
+    if (dataBanco.value == true) {
         var banco = 'NULL'//guarda banco
         console.log(banco);
         guardaBanco = banco;//pasa nombre del banco
