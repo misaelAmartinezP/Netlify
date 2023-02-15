@@ -955,15 +955,18 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 }
 
 function pasaNullBanco() {
-    var banco = 'NULL'//guarda banco
-    console.log(banco);
-    guardaBanco = banco;//pasa nombre del banco
-    var clabe = 'NULL';//guarda clabe
-    console.log(clabe);
-    guardaClabe = clabe;
-    var ctaBancaria = 'NULL'//guarda cuenta bancaria 
-    console.log(ctaBancaria);
-    guardaCtaBancaria = ctaBancaria;
+    if (dataBanco == true) {
+        var banco = 'NULL'//guarda banco
+        console.log(banco);
+        guardaBanco = banco;//pasa nombre del banco
+        var clabe = 'NULL';//guarda clabe
+        console.log(clabe);
+        guardaClabe = clabe;
+        var ctaBancaria = 'NULL'//guarda cuenta bancaria 
+        console.log(ctaBancaria);
+        guardaCtaBancaria = ctaBancaria;
+        alert("Datos Bancarios Nullos")
+    }
 }
 
 window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña 
