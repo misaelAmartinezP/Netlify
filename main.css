@@ -4,8 +4,8 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    text-align: center;
+    background-size: cover;
 }
 
 file-id {
