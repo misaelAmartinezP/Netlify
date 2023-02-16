@@ -935,7 +935,7 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
             return tipOracion[0].toUpperCase() + tipOracion.slice(1)// hace la primer letra de cada palabra mayuscula
         })
         //console.log(tipOracion)
-        guardatipOracion = tipOracion.join(' ') +" "+ guardaRegimenCapital;//concatena el resultado dejando un espacio en blanco y guarda el resultado
+        guardatipOracion = tipOracion.join(' ') + " " + guardaRegimenCapital;//concatena el resultado dejando un espacio en blanco y guarda el resultado
     }
     //console.log(guardatipOracion);
     return guardatipOracion;//regresar el valor del resultado
@@ -962,7 +962,7 @@ function regimenCapital(string, rfc) {
             //console.log(regCapital)
         }
     }
-    console.log(regCapital+"regimenCapital la funcion");
+    //console.log(regCapital);
     return regCapital;
 }
 
