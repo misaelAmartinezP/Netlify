@@ -935,6 +935,34 @@ function regimenCapital(string, rfc) {
             regCapital = 'SA de CV';
             //console.log(regCapital)
         }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD DE RESPONSABILIDAD LIMITADA DE CAPITAL VARIABLE') {
+            regCapital = 'S de RL de CV';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD CIVIL') {
+            regCapital = 'SC';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'ASOCIACION CIVIL') {
+            regCapital = 'AC';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD ANONIMA PROMOTORA DE INVERSION DE CAPITAL VARIABLE') {
+            regCapital = 'SAPI de CV';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD ANONIMA PROMOTORA DE INVERSION') {
+            regCapital = 'SAPI';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD ANONIMA') {
+            regCapital = 'SA';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD POR ACCIONES SIMPLIFICADA') {
+            regCapital = 'SAS';
+            //console.log(regCapital)
+        }
     }
     //console.log(regCapital);
     return regCapital;
