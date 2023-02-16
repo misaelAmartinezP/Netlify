@@ -96,7 +96,7 @@ function pdfAsArray(pdfAsArray) {
 //terimina extraccion del pdf
 function parceoDatos(string) {
     separaDatos = string.split(" ");
-    console.log(separaDatos);
+    //console.log(separaDatos);
     //extraeRFC(separaDatos); 
     guardaRFC = extraeRFC(separaDatos);//guarda RFC
     guardaRaSo = extraeRaSo(separaDatos);    //extraeRaSo(separaDatos);//guarda razon social
@@ -944,24 +944,24 @@ function regimenCapital(string, rfc) {
     var regCapital = "";
     if ((rfc.length) == 12) {
         arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
-        console.log("estoy en la funcion  regimen Capital")//imprime el nombre de la funcion en consola 
+        //console.log("estoy en la funcion  regimen Capital")//imprime el nombre de la funcion en consola 
         var guardaRegCap = [];//declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
-        console.log(arrInfo.indexOf("Capital:"));//busqueda el indice de la palabra
-        console.log(arrInfo.indexOf("Comercial:"));//busqueda el indice de la palabra
+        //console.log(arrInfo.indexOf("Capital:"));//busqueda el indice de la palabra
+        //console.log(arrInfo.indexOf("Comercial:"));//busqueda el indice de la palabra
         if (arrInfo.includes("Capital:") == true) {//si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion
             //console.log("estoy en el if y soy true")//verificar que si se cumplio la condicion linea de apoyo 
             for (i = arrInfo.indexOf("Capital:") + 1; i <= arrInfo.indexOf("Comercial:") - 2; i++) {
-                console.log(arrInfo[i]);//ver en consola si el contenido es el esperado
+                //console.log(arrInfo[i]);//ver en consola si el contenido es el esperado
                 guardaRegCap.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
             }
         }
 
         if ((guardaRegCap.join(' ')) == 'SOCIEDAD ANONIMA DE CAPITAL VARIABLE') {
             regCapital = 'SA de CV';
-            console.log(regCapital)
+            //console.log(regCapital)
         }
     }
-    console.log(regCapital);
+    //console.log(regCapital);
     return regCapital;
 }
 
