@@ -962,7 +962,7 @@ function regimenCapital(string, rfc) {
             //console.log(regCapital)
         }
     }
-    //console.log(regCapital);
+    console.log(regCapital+"regimenCapital la funcion");
     return regCapital;
 }
 
