@@ -11,7 +11,8 @@ var guardaNumExt = "";//guarda numero exterior
 var guardaNumInt = "";//guarda numero interior
 var guardaNomCol = "";//guarda nombre de la colonia
 var guardaDemTer = "";//guarda demarcacion territorial o municipio
-var guardaRegimenCapital = "";//guarda regimenCapital para persona fisica  
+var guardaRegimenCapitalDes = "";//guarda regimenCapDescripcion para persona fisica  
+var guardaRegimenCapitaRaSo = "";//guarda regimenCapRaSo para persona fisica 
 var guardaReg = "";//guarda regimen
 var query = ""; //guarda query 
 var guardaBanco = "";//guarda nombre del banco
@@ -117,14 +118,15 @@ function parceoDatos(string) {
     gaurdaPersonaFisApPa = personaFisApPa(separaDatos, extraeRFCAux(separaDatos));//primer apellido para persona fisica 
     gaurdaPersonaFisApMa = personaFisApMa(separaDatos, extraeRFCAux(separaDatos));//segundo apellido para persona fisica 
     guardaIdCiudad = idCiudad(extraeCodPosAux(separaDatos)); //genera id cidad
-    guardaRegimenCapital = regimenCapital(separaDatos, extraeRFCAux(separaDatos));
-    guardaTipoOracion = descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, guardaRFC, guardaRegimenCapital)//tipo oracion
+    guardaRegimenCapitalDes = regimenCapDescripcion(separaDatos, extraeRFCAux(separaDatos));//regimen capital para persona morales descripcion
+    guardaRegimenCapitaRaSo = regimenCapitalRaSo(separaDatos, extraeRFCAux(separaDatos));//regimen capital para personas morales razon social 
+    guardaTipoOracion = descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, guardaRFC, guardaRegimenCapitalDes)//tipo oracion
     //query="set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores on insert into InmobiliariaCaboBallena.dbo.AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT)values   (9999, 'CISMEDMIGUMXN', 'extraeRaSo', NULL, 2, 'CIMM6909298U9', idCiudad, '5 DE FEBRERO, MANZANA 129, LOTE 13', 'RICARDO FLORES MAGON', '39700', 'ACAPULCO DE JUAREZ', Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT) set identity_insert InmobiliariaCaboBallena.dbo.AcProveedores off";
 
     //generando el query                                                   //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
 
-    guardaQueryCtas = querysCtas(extraeRFCAux(separaDatos), guardaTipoOracion , guardaCtaConta1, guardaCtaConta2, guardaCtaAnt1, guardaCtaAnt2, guardaRaSo);
-    query = "\n select * from CtbCuentas order by idCuenta desc; \n select * from AcProveedores order by idProveedor desc; \n" + queryCtas + "\n" + queryAnt + " \n set identity_insert AcProveedores on \n insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) \n select 9999,'" + guradaGenCod + "','" + guardaRaSo + "',NULL,2,'" + guardaRFC + "','" + guardaIdCiudad + "','" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",'NULL', 'NULL', 'NULL', 0, 0, 0, 0, 0, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6,'" + guardaPersonaFisNom + "','" + gaurdaPersonaFisApPa + "', '" + gaurdaPersonaFisApMa + "', 'NULL', 'NULL', 'NULL'," + guardaPersonaMoral + ", 'NULL', 'NULL', 0, " + guardaCtaConta1 + ", " + guardaCtaAnt1 + ", NULL, NULL, 0,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', '0', 'NULL', 'NULL', NULL, 0, '" + guardaCtaBancaria + "'," + guardaIdBancoSat + ",'MXN','" + guardaBancoSat + "', '', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6853, NULL, 'NULL', 'NULL', NULL, NULL \nwhere not exists (select Codigo from AcProveedores where Codigo='" + guradaGenCod + "') \n set identity_insert AcProveedores off  \n ";
+    guardaQueryCtas = querysCtas(extraeRFCAux(separaDatos), guardaTipoOracion, guardaCtaConta1, guardaCtaConta2, guardaCtaAnt1, guardaCtaAnt2, guardaRaSo);
+    query = "\n select * from CtbCuentas order by idCuenta desc; \n select * from AcProveedores order by idProveedor desc; \n" + queryCtas + "\n" + queryAnt + " \n set identity_insert AcProveedores on \n insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) \n select 9999,'" + guradaGenCod + "','" + guardaRaSo + " " + guardaRegimenCapitaRaSo + "',NULL,2,'" + guardaRFC + "','" + guardaIdCiudad + "','" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",'NULL', 'NULL', 'NULL', 0, 0, 0, 0, 0, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6,'" + guardaPersonaFisNom + "','" + gaurdaPersonaFisApPa + "', '" + gaurdaPersonaFisApMa + "', 'NULL', 'NULL', 'NULL'," + guardaPersonaMoral + ", 'NULL', 'NULL', 0, " + guardaCtaConta1 + ", " + guardaCtaAnt1 + ", NULL, NULL, 0,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', '0', 'NULL', 'NULL', NULL, 0, '" + guardaCtaBancaria + "'," + guardaIdBancoSat + ",'MXN','" + guardaBancoSat + "', '', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6853, NULL, 'NULL', 'NULL', NULL, NULL \nwhere not exists (select Codigo from AcProveedores where Codigo='" + guradaGenCod + "') \n set identity_insert AcProveedores off  \n ";
     //console.log(query);
 }
 function creaGenCod(string, string1) {//funcion para generar el codigo 
@@ -914,7 +916,7 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
     }
 }
 
-function regimenCapital(string, rfc) {
+function regimenCapDescripcion(string, rfc) {
     var regCapital = "";
     if ((rfc.length) == 12) {
         arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
@@ -967,10 +969,63 @@ function regimenCapital(string, rfc) {
     return regCapital;
 }
 
-function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, string, guardaRegimenCapital) {//para la descripcion de cuentas es en tipo Oracion el texto
+function regimenCapitalRaSo(string, rfc) {
+    var regCapital = "";
+    if ((rfc.length) == 12) {
+        arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
+        //console.log("estoy en la funcion  regimen Capital")//imprime el nombre de la funcion en consola 
+        var guardaRegCap = [];//declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
+        //console.log(arrInfo.indexOf("Capital:"));//busqueda el indice de la palabra
+        //console.log(arrInfo.indexOf("Comercial:"));//busqueda el indice de la palabra
+        if (arrInfo.includes("Capital:") == true) {//si la palabra se encuentra en el arreglo y el valor de este es verdadero entonces realiza la condicion
+            //console.log("estoy en el if y soy true")//verificar que si se cumplio la condicion linea de apoyo 
+            for (i = arrInfo.indexOf("Capital:") + 1; i <= arrInfo.indexOf("Comercial:") - 2; i++) {
+                //console.log(arrInfo[i]);//ver en consola si el contenido es el esperado
+                guardaRegCap.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
+            }
+        }
+
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD ANONIMA DE CAPITAL VARIABLE') {
+            regCapital = 'SA DE CV';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD DE RESPONSABILIDAD LIMITADA DE CAPITAL VARIABLE') {
+            regCapital = 'S DE RL DE CV';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD CIVIL') {
+            regCapital = 'SC';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'ASOCIACION CIVIL') {
+            regCapital = 'AC';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD ANONIMA PROMOTORA DE INVERSION DE CAPITAL VARIABLE') {
+            regCapital = 'SAPI DE CV';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD ANONIMA PROMOTORA DE INVERSION') {
+            regCapital = 'SAPI';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD ANONIMA') {
+            regCapital = 'SA';
+            //console.log(regCapital)
+        }
+        if ((guardaRegCap.join(' ')) == 'SOCIEDAD POR ACCIONES SIMPLIFICADA') {
+            regCapital = 'SAS';
+            //console.log(regCapital)
+        }
+    }
+    //console.log(regCapital);
+    return regCapital;
+}
+
+function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, string, guardaRegimenCapitalDes) {//para la descripcion de cuentas es en tipo Oracion el texto
     rfc = string;
     var guardatipOracion = "";
-    //console.log(guardaRegimenCapital);
+    //console.log(guardaRegimenCapitalDes);
     if ((rfc.length) == 13) {//si es persona fisica
         //console.log("persona fisica");
         var oracion = (gaurdaPersonaFisApPa+" " + gaurdaPersonaFisApMa+" " + guardaPersonaFisNom).toLowerCase();//los contcatena y los vuelve minusculas todas las letras
@@ -989,7 +1044,7 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
             return tipOracion[0].toUpperCase() + tipOracion.slice(1)// hace la primer letra de cada palabra mayuscula
         })
         //console.log(tipOracion)
-        guardatipOracion = tipOracion.join(' ') + " " + guardaRegimenCapital;//concatena el resultado dejando un espacio en blanco y guarda el resultado
+        guardatipOracion = tipOracion.join(' ') + " " + guardaRegimenCapitalDes;//concatena el resultado dejando un espacio en blanco y guarda el resultado
     }
     //console.log(guardatipOracion);
     return guardatipOracion;//regresar el valor del resultado
