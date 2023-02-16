@@ -727,8 +727,8 @@ function idBancoSat(string) {//este es nuestro id de la base de datos
     if (nomIdBancoSat == 'LIBERTAD') { return '268' }
     if (nomIdBancoSat == 'N/A') { return '269' }
     if (nomIdBancoSat == 'SABADELL') { return '2130' }
-    if (nomIdBancoSat == 'NULL') { return 'NULL' }
-    if (nomIdBancoSat == '') { return 'NULL'}
+    if (nomIdBancoSat == 'NULL') { return '' }
+    if (nomIdBancoSat == '') { return ''}
 }
 
 function personaMoral(string) {
