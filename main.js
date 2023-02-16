@@ -912,7 +912,7 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
     }
 }
 
-function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, string) {//para la descripcion de cuentas es en tipo Oracion el texto 
+function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, string, guardaRegimenCapital) {//para la descripcion de cuentas es en tipo Oracion el texto
     rfc = string;
     var guardatipOracion = "";
     if ((rfc.length) == 13) {//si es persona fisica
@@ -933,7 +933,7 @@ function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guard
             return tipOracion[0].toUpperCase() + tipOracion.slice(1)// hace la primer letra de cada palabra mayuscula
         })
         //console.log(tipOracion)
-        guardatipOracion= tipOracion.join(' ');//concatena el resultado dejando un espacio en blanco y guarda el resultado 
+        guardatipOracion = tipOracion.join(' ') + guardaRegimenCapital;//concatena el resultado dejando un espacio en blanco y guarda el resultado
     }
     //console.log(guardatipOracion);
     return guardatipOracion;//regresar el valor del resultado
