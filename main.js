@@ -951,7 +951,7 @@ function regimenCapital(string, rfc) {
             //console.log("estoy en el if y soy true")//verificar que si se cumplio la condicion linea de apoyo 
             for (i = arrInfo.indexOf("Capital:") + 1; i <= arrInfo.indexOf("Comercial:") - 2; i++) {
                 console.log(arrInfo[i]);//ver en consola si el contenido es el esperado
-                guardaDemTer.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
+                guardaRegCap.push(arrInfo[i]);//guarda en el arreglo guardaReg el contenido del indice del arreglo arrInfo en la posicion i
             }
         }
 
