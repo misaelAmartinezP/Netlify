@@ -894,13 +894,13 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
     } if (ctaAnt2 == "") { //verifica que el campo clabe no este vacio
         alert("Se requiere cuenta");
         document.getElementById("ctaAnt2").focus();
-    } if ((ctaConta1 + 1) == ctaAnt1) {
+    } if ((ctaConta1 + 1) == ctaAnt1) {//verifica numero consecutivos en ctaConta1 y ctaAnt1
         document.getElementById("ctaConta1").value = "";
         document.getElementById("ctaConta2").value = "";
         document.getElementById("ctaAnt1").value = "";
         document.getElementById("ctaAnt2").value = "";
         alert("Datos contables guardados");
-    } if ((ctaAnt1 - 1) == ctaConta1) {
+    } if ((ctaAnt1 - 1) == ctaConta1) {//verifica numero consecutivos en ctaConta1 y ctaAnt1
         document.getElementById("ctaConta1").value = "";
         document.getElementById("ctaConta2").value = "";
         document.getElementById("ctaAnt1").value = "";
@@ -911,44 +911,44 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
     }
 }
 
-function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, string) {
+function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, string) {//para la descripcion de cuentas es en tipo Oracion el texto 
     rfc = string;
     var guardatipOracion = "";
     if ((rfc.length) == 13) {//si es persona fisica
         //console.log("persona fisica");
-        var oracion = (gaurdaPersonaFisApPa+" " + gaurdaPersonaFisApMa+" " + guardaPersonaFisNom).toLowerCase();
+        var oracion = (gaurdaPersonaFisApPa+" " + gaurdaPersonaFisApMa+" " + guardaPersonaFisNom).toLowerCase();//los contcatena y los vuelve minusculas todas las letras
         //console.log(oracion);
         let tipOracion = oracion.split(" ").map(tipOracion => {
-            return tipOracion[0].toUpperCase() + tipOracion.slice(1)
+            return tipOracion[0].toUpperCase() + tipOracion.slice(1)//hace la primer letra de cada palabra mayuscula 
         })
         //console.log(tipOracion)
-        guardatipOracion = tipOracion.join(' ');
+        guardatipOracion = tipOracion.join(' ');//concatena el resultado dejando un espacio en blanco y guarda el resultado 
         
     } if ((rfc.length) == 12) {//si es persona moral
         //console.log("persona moral")
-        var oracion = (guardaRaSo).toLowerCase();
+        var oracion = (guardaRaSo).toLowerCase();//los contcatena y los vuelve minusculas todas las letras
         //console.log(oracion);
         let tipOracion = oracion.split(" ").map(tipOracion => {
-            return tipOracion[0].toUpperCase() + tipOracion.slice(1)
+            return tipOracion[0].toUpperCase() + tipOracion.slice(1)// hace la primer letra de cada palabra mayuscula
         })
         //console.log(tipOracion)
-        guardatipOracion= tipOracion.join(' ');
+        guardatipOracion= tipOracion.join(' ');//concatena el resultado dejando un espacio en blanco y guarda el resultado 
     }
     //console.log(guardatipOracion);
-    return guardatipOracion;
+    return guardatipOracion;//regresar el valor del resultado
 }
 
 function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2, guardaCtaAnt1, guardaCtaAnt2) { 
     //console.log(guardaTipoOracion);
     rfc = string; //Esta funcion determina si es persona moral o persona fisica y en base a eso genera el query para persona fisica y moral 
     queryCtasContAnt = "";
-    if ((rfc.length) == 12) {//si es persona moral
+    if ((rfc.length) == 12) {//si es persona moral se pasa la razon social en cadena como mayusculas y minusculas para el campo descripcion  
         queryCtas = "set identity_insert CtbCuentas on \n insert into CtbCuentas(idCuenta,Cuenta,Descripcion,idTipoCuenta,Acepta_Mov,EsProveedor,EsCliente,ToparChequeVsSaldo,EmisionCheque,idCuentaComplementaria,EsDolares,idTipoMoneda,PermitirDeposito,EsDeudor,SaldoLimiteDeudor,EsAcreedor,EsCuentaIVA,IdConceptoDIOT,PermitirProgramarPago,IdAgaCatIVA,IdCtaCostoTAC,IdAgrupadorSAT,Agrupador) \n values(" + guardaCtaConta1 + "," + guardaCtaConta2 + ",'" + guardaTipoOracion + "',1,1,0,0,1,0,NULL,0,6,0,0,0,0,0,NULL,0,NULL,NULL,NULL,'NULL') \n set identity_insert CtbCuentas off \n"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             //(9999, 'ROSHERJOSEMXN', 'JOSE ALFREDO ROSAS HERNANDEZ', NULL, 2, 'ROHA711201IJ7', 1, 'PUCCINI, 85 B, ALTOS 2 HAB', 'VALLEJO', '07870', 'GUSTAVO A MADERO', 'NULL', 'NULL', 'NULL', 0, 0, 0, 0, 0, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6, 'JOSE ALFREDO', 'ROSAS', 'HERNANDEZ', 'NULL', 'NULL', 'NULL', 0, 'NULL', 'NULL', 0, 31421, 31422, NULL, NULL, 0, '123456987562145962', 'BBVA BANCOMER',                                                                                                                                                                                                            '1', '4', '0', 'NULL', 'NULL', NULL, 0, '897698',                                                4, 'MXN', '012', '', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6853, NULL, 'NULL', 'NULL', NULL, NULL)
         //console.log(queryCtas);
         queryAnt = "\n set identity_insert CtbCuentas on \n insert into CtbCuentas(idCuenta,Cuenta,Descripcion,idTipoCuenta,Acepta_Mov,EsProveedor,EsCliente,ToparChequeVsSaldo,EmisionCheque,idCuentaComplementaria,EsDolares,idTipoMoneda,PermitirDeposito,EsDeudor,SaldoLimiteDeudor,EsAcreedor,EsCuentaIVA,IdConceptoDIOT,PermitirProgramarPago,IdAgaCatIVA,IdCtaCostoTAC,IdAgrupadorSAT,Agrupador) \n values(" + guardaCtaAnt1 + "," + guardaCtaAnt2 + ",'" + guardaTipoOracion + "',4,1,1,0,0,1,NULL,0,6,0,0,0,0,0,NULL,0,NULL,NULL,NULL,'NULL') \n set identity_insert CtbCuentas off \n"
         //console.log(queryAnt);
-        pm = queryCtas + queryAnt;
-    } if ((rfc.length) == 13) {//si es persona fisica
+        queryCtasContAnt = queryCtas + queryAnt;
+    } if ((rfc.length) == 13) {//si es persona fisica pasa los apellidos luego nombres en mayusculas y minusculas 
         queryCtas = "set identity_insert CtbCuentas on \n insert into CtbCuentas(idCuenta,Cuenta,Descripcion,idTipoCuenta,Acepta_Mov,EsProveedor,EsCliente,ToparChequeVsSaldo,EmisionCheque,idCuentaComplementaria,EsDolares,idTipoMoneda,PermitirDeposito,EsDeudor,SaldoLimiteDeudor,EsAcreedor,EsCuentaIVA,IdConceptoDIOT,PermitirProgramarPago,IdAgaCatIVA,IdCtaCostoTAC,IdAgrupadorSAT,Agrupador) \n values(" + guardaCtaConta1 + "," + guardaCtaConta2 + ",'" + guardaTipoOracion + "',1,1,0,0,1,0,NULL,0,6,0,0,0,0,0,NULL,0,NULL,NULL,NULL,'NULL') \n set identity_insert CtbCuentas off \n"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             //(9999, 'ROSHERJOSEMXN', 'JOSE ALFREDO ROSAS HERNANDEZ', NULL, 2, 'ROHA711201IJ7', 1, 'PUCCINI, 85 B, ALTOS 2 HAB', 'VALLEJO', '07870', 'GUSTAVO A MADERO', 'NULL', 'NULL', 'NULL', 0, 0, 0, 0, 0, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6, 'JOSE ALFREDO', 'ROSAS', 'HERNANDEZ', 'NULL', 'NULL', 'NULL', 0, 'NULL', 'NULL', 0, 31421, 31422, NULL, NULL, 0, '123456987562145962', 'BBVA BANCOMER',                                                                                                                                                                                                            '1', '4', '0', 'NULL', 'NULL', NULL, 0, '897698',                                                4, 'MXN', '012', '', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6853, NULL, 'NULL', 'NULL', NULL, NULL)
         //console.log(queryCtas);
         queryAnt = "\n set identity_insert CtbCuentas on \n insert into CtbCuentas(idCuenta,Cuenta,Descripcion,idTipoCuenta,Acepta_Mov,EsProveedor,EsCliente,ToparChequeVsSaldo,EmisionCheque,idCuentaComplementaria,EsDolares,idTipoMoneda,PermitirDeposito,EsDeudor,SaldoLimiteDeudor,EsAcreedor,EsCuentaIVA,IdConceptoDIOT,PermitirProgramarPago,IdAgaCatIVA,IdCtaCostoTAC,IdAgrupadorSAT,Agrupador) \n values(" + guardaCtaAnt1 + "," + guardaCtaAnt2 + ",'" + guardaTipoOracion + "',4,1,1,0,0,1,NULL,0,6,0,0,0,0,0,NULL,0,NULL,NULL,NULL,'NULL') \n set identity_insert CtbCuentas off \n"
