@@ -961,16 +961,16 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 
 
 var checkbox = document.getElementById('dataBanco');
-checkbox.addEventListener('change', function () {
+checkbox.addEventListener('change', function () {//checa que el check este seleccionado en casi de que asi sea 
     if (this.checked) {
         console.log('checkbox esta seleccionado');
-        var banco = 'NULL'//guarda banco
+        var banco = 'NULL'//guarda banco como null 
         //console.log(banco);
-        guardaBanco = banco;//pasa nombre del banco
+        guardaBanco = banco;//pasa nombre del banco como null 
         var clabe = 'NULL';//guarda clabe
         //console.log(clabe);
-        guardaClabe = clabe;
-        var ctaBancaria = 'NULL'//guarda cuenta bancaria 
+        guardaClabe = clabe; 
+        var ctaBancaria = 'NULL'//guarda cuenta bancaria como null
         //console.log(ctaBancaria);
         guardaCtaBancaria = ctaBancaria;
         alert("Datos Bancarios Nullos")
