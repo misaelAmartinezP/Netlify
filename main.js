@@ -970,7 +970,7 @@ function regimenCapital(string, rfc) {
 function descripcionTipOracion(gaurdaPersonaFisApPa, gaurdaPersonaFisApMa, guardaPersonaFisNom, guardaRaSo, string, guardaRegimenCapital) {//para la descripcion de cuentas es en tipo Oracion el texto
     rfc = string;
     var guardatipOracion = "";
-    console.log(guardaRegimenCapital);
+    //console.log(guardaRegimenCapital);
     if ((rfc.length) == 13) {//si es persona fisica
         //console.log("persona fisica");
         var oracion = (gaurdaPersonaFisApPa+" " + gaurdaPersonaFisApMa+" " + guardaPersonaFisNom).toLowerCase();//los contcatena y los vuelve minusculas todas las letras
