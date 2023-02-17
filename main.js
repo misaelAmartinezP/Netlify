@@ -1097,9 +1097,10 @@ function guardaidProveedor() {
     if (idProveedor == "") {//Verificacion de la clabe
         alert("Se requiere IdProveedor");
         document.getElementById("IdProveedor").focus();
-    } else {//verifica numero consecutivos en ctaConta1 y ctaAnt1
+    } else {
         document.getElementById("IdProveedor").value = "";
-        alert("Datos contables guardados");
+        alert("Id guardado");
+        guardaIdProveedor = idProveedor;
     }
 }
 
