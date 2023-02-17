@@ -1092,15 +1092,15 @@ checkbox.addEventListener('change', function () {//checa que el check este selec
 });
 
 function guardaidProveedor() {
-    var idProveedor = document.getElementById("IdProveedor").value;
-    console.log(idProveedor);
+    var idproveedor = document.getElementById("IdProveedor").value;
+    console.log(idproveedor);
     if (idProveedor == "") {//Verificacion de la clabe
         alert("Se requiere IdProveedor");
         document.getElementById("IdProveedor").focus();
     } else {
         document.getElementById("IdProveedor").value = "";
         alert("Id guardado");
-        guardaIdProveedor = idProveedor;
+        guardaIdProveedor = idproveedor;
     }
 }
 
