@@ -412,7 +412,7 @@ function extraeNomCol(string) {//funcion que extrae la colonia
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> NULL <br/>");//imprime sin nombre de colonia en la pagina web 
         return 'NULL';
-    } if (guardaNomCol == "OTRA NO ESPECIFICADA EN EL CATALOGO") {
+    } if ((guardaNomCol.join(' ')) == "OTRA NO ESPECIFICADA EN EL CATALOGO") {
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> OTRA NO ESPECIFICADA EN EL CATALOGOL <br/>");//imprime sin nombre de colonia en la pagina web
         return 'NULL';
