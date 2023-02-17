@@ -532,9 +532,8 @@ function guardar() {
         document.getElementById("banco1").value = "";
         document.getElementById("clabe").value = "";
         document.getElementById("ctaBancaria").value = "";
-        alert("Datos bancarios guardados");
-        alert("Llenar datos de cuentas contables y cuenta anticipo")
-        
+        var div = document.getElementById('outputDataBanc'); //variable para despues mandar el contenido que obtuvimos
+        div.innerHTML += ("<br/> Datos Bancarios Guardados <br/>"); //imprime el contenido del arreglo el que se encuentra en la posicion i+1
     }
 }
 
@@ -914,7 +913,8 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
         document.getElementById("ctaAnt2").value = "";
         alert("Datos contables guardados");
     } else {
-        alert("Los IdCuenta tiene que ser consecutivos")
+        var div = document.getElementById('outputCuentas'); //variable para despues mandar el contenido que obtuvimos
+        div.innerHTML += ("<br/> Cuentas Guardadas <br/>"); //imprime el contenido del arreglo el que se encuentra en la posicion i+1
     }
 }
 
@@ -926,8 +926,9 @@ function guardaridProveedor() {
         document.getElementById("proveedor").focus();
     } else {
         document.getElementById("proveedor").value = "";
-        alert("Id guardado");
         guardaIdProveedor = idproveedor;
+        var div = document.getElementById('outputProv'); //variable para despues mandar el contenido que obtuvimos
+        div.innerHTML += ("<br/> IdGuardado <br/>"); //imprime el contenido del arreglo el que se encuentra en la posicion i+1
     }
 }
 
