@@ -918,6 +918,19 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
     }
 }
 
+function guardaridProveedor() {
+    var idproveedor = document.getElementById("proveedor").value;
+    console.log(idproveedor);
+    if (idproveedor == "") {//Verificacion de la clabe
+        alert("Se requiere IdProveedor");
+        document.getElementById("proveedor").focus();
+    } else {
+        document.getElementById("proveedor").value = "";
+        alert("Id guardado");
+        guardaIdProveedor = idproveedor;
+    }
+}
+
 function regimenCapDescripcion(string, rfc) {
     var regCapital = "";
     if ((rfc.length) == 12) {
@@ -1090,18 +1103,5 @@ checkbox.addEventListener('change', function () {//checa que el check este selec
         alert("Datos Bancarios Nullos")
     }
 });
-
-function guardaridProveedor() {
-    var idproveedor = document.getElementById("IdProveedor").value;
-    console.log(idproveedor);
-    if (idproveedor == "") {//Verificacion de la clabe
-        alert("Se requiere IdProveedor");
-        document.getElementById("IdProveedor").focus();
-    } else {
-        document.getElementById("IdProveedor").value = "";
-        alert("Id guardado");
-        guardaIdProveedor = idproveedor;
-    }
-}
 
 window.document.title = 'CSF-QUERY-ALHEL';//nombre de la pestaña
