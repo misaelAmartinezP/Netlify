@@ -911,10 +911,10 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
         document.getElementById("ctaConta2").value = "";
         document.getElementById("ctaAnt1").value = "";
         document.getElementById("ctaAnt2").value = "";
-        alert("Datos contables guardados");
-    } else {
         var div = document.getElementById('outputCuentas'); //variable para despues mandar el contenido que obtuvimos
         div.innerHTML += ("<br/> Cuentas Guardadas <br/>"); //imprime el contenido del arreglo el que se encuentra en la posicion i+1
+    } else {
+        alert("Los IdCuenta tiene que ser consecutivos")
     }
 }
 
