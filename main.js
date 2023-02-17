@@ -1101,7 +1101,8 @@ checkbox.addEventListener('change', function () {//checa que el check este selec
         var ctaBancaria = 'NULL'//guarda cuenta bancaria como null
         //console.log(ctaBancaria);
         guardaCtaBancaria = ctaBancaria;
-        alert("Datos Bancarios Nullos")
+        var div = document.getElementById('outputDataBanc'); //variable para despues mandar el contenido que obtuvimos
+        div.innerHTML += ("<br/> Datos Bancarios nulos <br/>"); //imprime el contenido del arreglo el que se encuentra en la posicion i+1
     }
 });
 
