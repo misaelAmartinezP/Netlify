@@ -920,7 +920,7 @@ function guardarCtc() {//guarda los datos introducidos en los inputs y verifica 
 
 function guardaridProveedor() {
     var idproveedor = document.getElementById("proveedor").value;
-    console.log(idproveedor);
+    //console.log(idproveedor);
     if (idproveedor == "") {//Verificacion de la clabe
         alert("Se requiere IdProveedor");
         document.getElementById("proveedor").focus();
