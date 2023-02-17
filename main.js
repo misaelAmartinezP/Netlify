@@ -1088,7 +1088,7 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 }
 
 
-var checkbox = document.getElementById('dataBanco');
+var checkbox = document.getElementById('dataBanco'); 
 checkbox.addEventListener('change', function () {//checa que el check este seleccionado en casi de que asi sea 
     if (this.checked) {
         console.log('checkbox esta seleccionado');
