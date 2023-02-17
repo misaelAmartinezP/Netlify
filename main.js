@@ -1094,7 +1094,7 @@ checkbox.addEventListener('change', function () {//checa que el check este selec
 function guardaidProveedor() {
     var idproveedor = document.getElementById("IdProveedor").value;
     console.log(idproveedor);
-    if (idProveedor == "") {//Verificacion de la clabe
+    if (idproveedor == "") {//Verificacion de la clabe
         alert("Se requiere IdProveedor");
         document.getElementById("IdProveedor").focus();
     } else {
