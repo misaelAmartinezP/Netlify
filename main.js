@@ -23,8 +23,8 @@ var guardaCtaConta1 = ""; //guarda cuenta contable
 var guardaCtaConta2 = ""; //guarda cuenta contable
 var guardaCtaAnt1 = ""; //guarda cunenta anticipo
 var guardaCtaAnt2 = ""; //guarda cunenta anticipo 
-var queryCtas = "";
-var queryAnt = "";
+var queryCtas = "";//guarda el query de las cuentas 
+var queryAnt = "";//guarda el query de las cuentas de anticipo 
 
 
 
@@ -127,7 +127,7 @@ function parceoDatos(string) {
 
     //generando el query                                                   //idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones
 
-    guardaQueryCtas = querysCtas(extraeRFCAux(separaDatos), guardaTipoOracion, guardaCtaConta1, guardaCtaConta2, guardaCtaAnt1, guardaCtaAnt2, guardaRaSo);
+    guardaQueryCtas = querysCtas(extraeRFCAux(separaDatos), guardaTipoOracion, guardaCtaConta1, guardaCtaConta2, guardaCtaAnt1, guardaCtaAnt2, guardaRaSo);//datos del query de cuentas 
     query =  queryCtas + "\n" + queryAnt + " \n set identity_insert AcProveedores on \n insert into AcProveedores(idProveedor, Codigo, RazonSocial, idGiro, idTipoProveedor, Rfc, idCiudad, Direccion, Colonia, CodPost, Delegacion, Telefono, Fax, Mail, LimiteCredito, DiasCredito, DiasEntrega, CalifPuntualidad, CalifCalidad, Contacto, NombreJefe, PuestoJefe, Observaciones, RegistroPatronal, RegistroCamara, Infonavit, TipoFiscal, idTipoMoneda, Nombre, ApellidoPaterno, ApellidoMaterno, Celular, PaginaWeb, CondicionesPago, PersonaMoral, CURP, PersonasAtiendenPedidos, Suspendido, IdCuentaProveedor, IdCuentaAnticipo, IdCuentaFonGar, IdCuentaDeudor, ConPagoElectronico, CLABE, Banco, IdTipoTerceros, IdTipoOperacion, GastosFinancieros, ClaveCliente, CodigoSAP, IdAgaCatAcreedor, PermitirExentoIVA, CuentaBancaria, IdBancoSAT, MonedaSATDefault, BancoSAT, TipoDeCuentaCASH, ConceptoCIECASH, ReferenciaCIECASH, ConvenioCIECASH, NumRegIdFiscal, PlazaBanxico, IdPais, IdClaveTransferencia, Nacionalidad, Sucursal, IdCuentaPagoEnEspecie, IdCuentaOtrasRetenciones) \n select  " + guardaIdProveedor + ",'" + guradaGenCod + "','" + guardaRaSo + " " + guardaRegimenCapitaRaSo + "',NULL,2,'" + guardaRFC + "','" + guardaIdCiudad + "','" + guardaNomVia + ", " + guardaNumExt + ", " + guardaNumInt + "','" + guardaNomCol + "','" + guardaCodPos + "','" + guardaDemTer + "'" + ",'NULL', 'NULL', 'NULL', 0, 0, 0, 0, 0, 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6,'" + guardaPersonaFisNom + "','" + gaurdaPersonaFisApPa + "', '" + gaurdaPersonaFisApMa + "', 'NULL', 'NULL', 'NULL'," + guardaPersonaMoral + ", 'NULL', 'NULL', 0, " + guardaCtaConta1 + ", " + guardaCtaAnt1 + ", NULL, NULL, 0,'" + guardaClabe + "','" + guardaBanco + "', '1', '4', '0', 'NULL', 'NULL', NULL, 0, '" + guardaCtaBancaria + "'," + guardaIdBancoSat + ",'MXN','" + guardaBancoSat + "', '', 'NULL', 'NULL', 'NULL', 'NULL', 'NULL', 6853, NULL, 'NULL', 'NULL', NULL, NULL \nwhere not exists (select Codigo from AcProveedores where Codigo='" + guradaGenCod + "') \n set identity_insert AcProveedores off  \n ";
     //console.log(query);
 }
