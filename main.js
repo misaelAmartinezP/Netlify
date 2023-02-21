@@ -936,7 +936,7 @@ function guardaridProveedor() {
     }
 }
 
-function regimenCapDescripcion(string, rfc) {
+function regimenCapDescripcion(string, rfc) {//pasa el regimen capital para la descripcion de las cuentas 
     var regCapital = "";
     if ((rfc.length) == 12) {
         arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
@@ -989,7 +989,7 @@ function regimenCapDescripcion(string, rfc) {
     return regCapital;
 }
 
-function regimenCapitalRaSo(string, rfc) {
+function regimenCapitalRaSo(string, rfc) {//pasa el regimen capital para la razon social de proveedores 
     var regCapital = "";
     if ((rfc.length) == 12) {
         arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
@@ -1095,7 +1095,7 @@ function querysCtas(string, guardaTipoOracion, guardaCtaConta1, guardaCtaConta2,
 var checkbox = document.getElementById('dataBanco'); 
 checkbox.addEventListener('change', function () {//checa que el check este seleccionado en casi de que asi sea 
     if (this.checked) {
-        console.log('checkbox esta seleccionado');
+        //console.log('checkbox esta seleccionado');
         var banco = 'NULL'//guarda banco como null 
         //console.log(banco);
         guardaBanco = banco;//pasa nombre del banco como null 
@@ -1106,7 +1106,7 @@ checkbox.addEventListener('change', function () {//checa que el check este selec
         //console.log(ctaBancaria);
         guardaCtaBancaria = ctaBancaria;
         var div = document.getElementById('outputDataBanc'); //variable para despues mandar el contenido que obtuvimos
-        div.innerHTML += ("<br/> Datos Bancarios nulos <br/>"); //imprime el contenido del arreglo el que se encuentra en la posicion i+1
+        div.innerHTML += ("<br/> Datos Bancarios nulos <br/>"); //imprime el contenido 
     }
 });
 
