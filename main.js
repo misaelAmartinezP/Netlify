@@ -111,7 +111,7 @@ function parceoDatos(string) {
     guardaNumInt = extraeNumInt(separaDatos);    //extraeNumInt(separaDatos);//guarda numero interior
     guardaNomCol = extraeNomCol(separaDatos);    //extraeNomCol(separaDatos);//guarda nombre de la colonia
     guardaDemTer = extraeDemTer(separaDatos);    //extraeDemTer(separaDatos);//guarda demarcacion territorial o municipio
-    guardaReg = extraeReg(separaDatos);   //extraeReg(separaDatos);//guarda regimen
+    guardaReg = extraeReg(separaDatos);   //extraeReg(separaDatos);//guarda regimen 
     guradaGenCod = creaGenCod(extraeRaSoAux(separaDatos), extraeRFCAux(separaDatos));//generacion y guardado del codigo
     guardaPersonaMoral = personaMoral(extraeRFCAux(separaDatos));//determina 1 o 0 para campo personaMoral
     guardaBancoSat = bancoSat(guardaBanco);//este es la Clave que da el SAT
