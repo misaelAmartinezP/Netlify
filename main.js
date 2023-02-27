@@ -134,7 +134,7 @@ function parceoDatos(string) {
     //console.log(query);
 }
 function creaGenCod(string, string1) {//funcion para generar el codigo 
-    difPer = string1.length;//variable para diferenciar entre persona fisica y moral 
+    difPer = string1.length;//variable para diferenciar entre persona fisica y moral  
     //console.log(difPer);// ver si es persona fisica o moral
     cadMaInf = string.split(' ');//recibe el contenido que devulve extraeRaSoAux
     //console.log(cadMaInf);//ver contenido de cadMaInf
