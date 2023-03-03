@@ -311,20 +311,24 @@ function extraeRaSo(string, string1) { //funcion que extrae la razon social
     if ((rfc.length) == 13) {
         if ((guardaRaSo.length) == 4) {
             var div = document.getElementById('output');
-            div.innerHTML += ("<br/>" + guardaRaSo[2] + guardaRaSo[3] + guardaRaSo[0] + guardaRaSo[1]+"<br/>");//imprime el contenido en la pagina web
-            return guardaRaSo.join(' ');
+            div.innerHTML += ("<br/>" + guardaRaSo.join(' ') +"<br/>");//imprime el contenido en la pagina web
+            raSo = (guardaRaSo[2] + " " + guardaRaSo[3] + " " + guardaRaSo[1] + " " + guardaRaSo[0])
+            //console.log(raSo)
+            return raSo
         }
         if ((guardaRaSo.length) == 3) {
             var div = document.getElementById('output');
-            div.innerHTML += ("<br/>" + guardaRaSo[1] + guardaRaSo[2] + guardaRaSo[0] + "<br/>");//imprime el contenido en la pagina web
+            div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");//imprime el contenido en la pagina web
             raSo = (guardaRaSo[1] + " " + guardaRaSo[2] + " " + guardaRaSo[0])
-            console.log(raSo)
+            //console.log(raSo)
             return  raSo
         }
         if ((guardaRaSo.length) == 2) {
             var div = document.getElementById('output');
-            div.innerHTML += ("<br/>" + guardaRaSo[1] + guardaRaSo[0] + "<br/>");//imprime el contenido en la pagina web
-            return guardaRaSo.join(' ');
+            div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");//imprime el contenido en la pagina web
+            raSo = (guardaRaSo[1] + " " + guardaRaSo[0] )
+            //console.log(raSo)
+            return raSo
         }
     }
 }
