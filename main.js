@@ -312,7 +312,7 @@ function extraeRaSo(string, string1) { //funcion que extrae la razon social
         if ((guardaRaSo.length) == 4) {
             var div = document.getElementById('output');
             div.innerHTML += ("<br/>" + guardaRaSo.join(' ') +"<br/>");//imprime el contenido en la pagina web
-            raSo = (guardaRaSo[2] + " " + guardaRaSo[3] + " " + guardaRaSo[1] + " " + guardaRaSo[0])
+            raSo = (guardaRaSo[2] + " " + guardaRaSo[3] + " " + guardaRaSo[0] + " " + guardaRaSo[1])
             //console.log(raSo)
             return raSo
         }
