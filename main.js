@@ -309,19 +309,19 @@ function extraeRaSo(string, string1) { //funcion que extrae la razon social
         return guardaRaSo.join(' ');
     }
     if ((rfc.length) = 13) {
-        if ((arrAux.length) == 4) {
+        if ((guardaRaSo.length) == 4) {
             var div = document.getElementById('output');
             div.innerHTML += ("<br/>" + guardaRaSo[2] + guardaRaSo[3] + guardaRaSo[0] + guardaRaSo[1]+"<br/>");//imprime el contenido en la pagina web
             return guardaRaSo.join(' ');
         }
-        if ((arrAux.length) == 3) {
+        if ((guardaRaSo.length) == 3) {
             var div = document.getElementById('output');
             div.innerHTML += ("<br/>" + guardaRaSo[1] + guardaRaSo[2] + guardaRaSo[0] + "<br/>");//imprime el contenido en la pagina web
             raSo = (guardaRaSo[2] + guardaRaSo[3] + guardaRaSo[0] + guardaRaSo[1])
             console.log(raSo)
             return  raSo
         }
-        if ((arrAux.length) == 2) {
+        if ((guardaRaSo.length) == 2) {
             var div = document.getElementById('output');
             div.innerHTML += ("<br/>" + guardaRaSo[1] + guardaRaSo[0] + "<br/>");//imprime el contenido en la pagina web
             return guardaRaSo.join(' ');
