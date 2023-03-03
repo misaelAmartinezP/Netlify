@@ -104,7 +104,7 @@ function parceoDatos(string) {
     //console.log(separaDatos);
     //extraeRFC(separaDatos); 
     guardaRFC = extraeRFC(separaDatos);//guarda RFC
-    guardaRaSo = extraeRaSo(separaDatos);    //extraeRaSo(separaDatos);//guarda razon social
+    guardaRaSo = extraeRaSo(separaDatos, guardaRFC);    //extraeRaSo(separaDatos);//guarda razon social
     guardaCodPos = extraeCodPos(separaDatos);    //extraeCodPos(separaDatos);//guarda codigo postal
     guardaNomVia = extraeNomVia(separaDatos);    //extraeNomVia(separaDatos);//guarda nombre de vialidad
     guardaNumExt = extraeNumExt(separaDatos);    //extraeNumExt(separaDatos);//guarda numero exterior
@@ -282,7 +282,8 @@ function extraeRFC(string) { //funcion que extrae el pdf
     return arrInfo[i + 1];
 }
 
-function extraeRaSo(string) { //funcion que extrae la razon social 
+function extraeRaSo(string, string1) { //funcion que extrae la razon social 
+    rfc = string1;
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
     //console.log("estoy en la funcion extrae razon social ") //imprime el nombre de la funcion en consola 
     var guardaRaSo = []; //declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
@@ -301,9 +302,28 @@ function extraeRaSo(string) { //funcion que extrae la razon social
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> 'EL PDF NO ES UNA CONSTANCIA FISCAL'");//valida que el pdf sea una constancia fiscal y lo imprime en la pagina web 
     }
-    var div = document.getElementById('output');
-    div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");//imprime el contenido en la pagina web
-    return guardaRaSo.join(' ');
+    if ((rfc.length) = 12) {
+        var div = document.getElementById('output');
+        div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");//imprime el contenido en la pagina web
+        return guardaRaSo.join(' ');
+    }
+    if ((rfc.length) = 13) {
+        if ((arrAux.length) == 4) {
+            var div = document.getElementById('output');
+            div.innerHTML += ("<br/>" + guardaRaSo[2] + guardaRaSo[3] + guardaRaSo[0] + guardaRaSo[]+"<br/>");//imprime el contenido en la pagina web
+            return guardaRaSo.join(' ');
+        }
+        if ((arrAux.length) == 3) {
+            var div = document.getElementById('output');
+            div.innerHTML += ("<br/>" + guardaRaSo[1] + guardaRaSo[2] + guardaRaSo[0] + "<br/>");//imprime el contenido en la pagina web
+            return guardaRaSo.join(' ');
+        }
+        if ((arrAux.length) == 2) {
+            var div = document.getElementById('output');
+            div.innerHTML += ("<br/>" + guardaRaSo[1] + guardaRaSo[0] + "<br/>");//imprime el contenido en la pagina web
+            return guardaRaSo.join(' ');
+        }
+    }
 }
 
 function extraeCodPos(string) { //funcion que extrae el codigo postal 
