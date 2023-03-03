@@ -285,6 +285,7 @@ function extraeRFC(string) { //funcion que extrae el pdf
 function extraeRaSo(string, string1) { //funcion que extrae la razon social 
     rfc = string1;
     arrInfo = Object.values(string) //convertimos el contenido de la extracion en un arreglo 
+    raSo = "";
     //console.log("estoy en la funcion extrae razon social ") //imprime el nombre de la funcion en consola 
     var guardaRaSo = []; //declaramos un array vacio para llenarlo con la informacion necesaria del campo a buscar 
     //console.log(arrInfo.indexOf("Contribuyentes"));//busqueda el indice de la palabra
@@ -316,7 +317,9 @@ function extraeRaSo(string, string1) { //funcion que extrae la razon social
         if ((arrAux.length) == 3) {
             var div = document.getElementById('output');
             div.innerHTML += ("<br/>" + guardaRaSo[1] + guardaRaSo[2] + guardaRaSo[0] + "<br/>");//imprime el contenido en la pagina web
-            return guardaRaSo[2] + guardaRaSo[3] + guardaRaSo[0] + guardaRaSo[1]
+            raSo = (guardaRaSo[2] + guardaRaSo[3] + guardaRaSo[0] + guardaRaSo[1])
+            console.log(raSo)
+            return  raSo
         }
         if ((arrAux.length) == 2) {
             var div = document.getElementById('output');
