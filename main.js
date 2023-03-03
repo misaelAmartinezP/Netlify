@@ -303,12 +303,12 @@ function extraeRaSo(string, string1) { //funcion que extrae la razon social
         var div = document.getElementById('output');
         div.innerHTML += ("<br/> 'EL PDF NO ES UNA CONSTANCIA FISCAL'");//valida que el pdf sea una constancia fiscal y lo imprime en la pagina web 
     }
-    if ((rfc.length) = 12) {
+    if ((rfc.length) == 12) {
         var div = document.getElementById('output');
         div.innerHTML += ("<br/>" + guardaRaSo.join(' ') + "<br/>");//imprime el contenido en la pagina web
         return guardaRaSo.join(' ');
     }
-    if ((rfc.length) = 13) {
+    if ((rfc.length) == 13) {
         if ((guardaRaSo.length) == 4) {
             var div = document.getElementById('output');
             div.innerHTML += ("<br/>" + guardaRaSo[2] + guardaRaSo[3] + guardaRaSo[0] + guardaRaSo[1]+"<br/>");//imprime el contenido en la pagina web
